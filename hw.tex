@@ -1,0 +1,108 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+
+    \textsc{\LARGE Quantum Physics I }\\[1.5cm] % Major heading such as course name
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework One}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Richard Kirian}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item Write down a brief explanation of what Planck did to explain the blackbody spectrum.  What was the small “tweak” that he made to Rayleigh’s derivation, which involved electromagnetic modes in a cavity? This does not need to be mathematically detailed since you haven’t taken statistical mechanics – just try to understand as best as you can based on Zettili and the lecture notes.  Explain how Einstein interpreted Planck's mathematical tweak.
+    
+      \textcolor{hwColor}{
+        Towards the end of the 19th-century physics was flourishing. The principle of thermodynamics had helped to kick-start the industrial revolution and faraday had recently discovered how to generate electricity. Furthermore, James Clark Maxwell's grand unification of electricity and Magnetism has led to the remarkable Realization that light was an electromagnetic wave that spurred on by the power and reach of these theories physicists began using them to address some of the big unsolved problems. One such problem involved explaining how hot objects emit light. It was well known that if you heat a lump of metal, it will first glow red and then orangey-red, then yellow and eventually bluey-white at the same time as getting brighter. Physicists wanted to explain how the intensity of light or its brightness of the emitted radiation, related to the wavelength or color. They realized that this would involve understanding how matter interacts with radiation. \\ \\
+        When Maxwell’s theory was used in conjunction with classical thermodynamics to calculate the emission of the profile of a hot object, it predicted that all such objects should be emitting an infinite amount of at small wavelengths or high frequencies because high-frequency light was dubbed ultraviolet light and because this prediction was clearly problematic, this issue became known as the ultraviolet catastrophe. It represented a complete failure of classical physics and it was in attempting to solve this problem that Max Planck was forced to the revolutionary concept of energy quantization. The idea of energy is transferred discretely in chunks rather than continuously. That was a turning point in the history of science.\\ \\
+        Physicists wanted to know what the spectral radiance function was and also, they wanted to be able to derive an expression for the spectral radiance using the known laws of physics. Rayleigh and Jeans wanted to study the radiation properties of a blackbody.  They used the highly successful laws of electromagnetism and in particular the recently discovered properties of electromagnetic radiation as elucidated by James Clark Maxwell.  
+        Max Planck was an unassuming German physicist who dedicated most of his life to the study of thermodynamics. In a now-famous lecture delivered on the 14th of December 1900. Planck announced that the conclusions obtained by Rayleigh and Jeans can be remedied and the danger of ultraviolet catastrophe avoided if one postulates that energy can only exist in the form of certain discrete packets called quanta. In order to reach this conclusion, Max Planck had worked tirelessly on the problem for several years at times despairing at the difficulties that he encountered. Planck decided to focus on the experimental results and compare them with Rayleigh and Jeans’ curve. Although Rayleigh and Jeans’ result breaks down at small wavelengths, it actually matches the experimental data quite well for long wavelengths suggesting that the average energy may indeed be $<E>=KT$ in the limit of long wavelengths. \\ \\
+        On the other hand, it is clear from the experimental data that the average energy should tend to zero for short wavelengths or high frequencies. Planck concluded from the data that the average energy of each wave should depend on the frequency of the wave and therefore the equipartition of energy should be abandoned. Planck’s great contribution came when he realized that he could obtain the required cutoff in energy if he modified the Boltzmann distribution calculation of the average energy. He did that by treating the energy as it if were a discrete variable instead of the continuous variable of classical physics. In particular, he imagined that the energy could only take certain discrete values, and the total energy of an object would be an integral multiple of the basic amount of energy. \\ \\ 
+        Detailed numerical work by Planck led him to propose that the energy is proportional to the frequency. He then introduced the constant of proportionality so that he could write $\epsilon=hv$. Planck combined the two equations with the density of state’s function to derive a new expression for the energy density of a blackbody radiator. When Planck plotted his new energy density function, he found remarkable agreement with the experimental data.
+        Despite, Planck’s work is grounded in the radiation properties of hot objects, his quantum hypothesis would trigger the birth of an entirely new branch of physics. Energy is quantized with n being the quantum number of an allowed quantum state. \\ \\
+        Planck described his state of mind during those productive years as follows:
+        “Briefly summarized, what I did can be described as simply an act of desperation. By nature, I am peacefully inclined and reject all doubtful adventures. But by then I had been wrestling unsuccessfully for 6 years with the problem of equilibrium between radiation and matter and I knew that this problem was of fundamental importance to physics. A theoretical interpretation, therefore, had to be found at any cost, no matter how high.” \\ \\
+        The man who was to carry the torch next was none other than Albert Einstien. In 1905, while working as a patent clerk, he published three papers: A) Brownian Motion B) Special Relativity C) The Photoelectric Effect.  For the last one, he made use of quantization which cemented the concept as more than just a fluke. The photoelectric effect has to do with the way light is able to eject an electron from a piece of metal. Einstein’s work showed that only light above a certain frequency could eject an electron, regardless of the intensity of the beam. And for this reason, he proposed that light was comprised of individual quanta called photons, whereby it was an individual photon of sufficient energy. \\ \\
+        In 1905, Einstein came up with a powerful consolidation to Planck’s quantum concept. In trying to understand the photoelectric effect, Einstein realized that Planck’s idea of the quantization of the electromagnetic waves must be valid for light as well. Following Planck’s approach, he posited that light itself is made of discrete boys of energy (or tiny particles), called photons, each of energy $hv$, v being the frequency of the light. \\
+      }
+    
+    \item Show that Planck’s formula for the blackbody spectrum agrees with Rayleigh's and Wien’s formulae in the appropriate (high/low) frequency limits.
+    
+      \textcolor{hwColor}{
+        Wien’s energy density distribution: \\
+        $u(v,T)=Av^3e^{-\dfrac{\beta v}{T}}$ \\
+        \\
+        \\
+        Rayleigh’s energy density distribution: \\
+        $u(v,T)=\dfrac{8 \pi v^2}{c^3}kT$ \\
+        \\ 
+        Planck’s energy density distribution: \\
+        $u(v,T)=\dfrac{8 \pi v^2}{c^3}\dfrac{hv}{e^{\dfrac{hv}{kT}}-1}$
+        \\
+        (A) In the case of very low frequencies $hv<<kT$, therefore we can say $e^{\dfrac{hv}{kT}}\approx 1+\dfrac{hv}{kT}$. By substituting this 
+        to the Planck’s formula for the blackbody, we have: \\
+        $u(v,T)=\dfrac{8 \pi v^2}{c^3}\dfrac{hv}{1+\dfrac{hv}{kT}-1}=\dfrac{8 \pi v^2}{c^3}kT \Rightarrow $ which shows that Planck’s formula for the blackbody
+        spectrum agrees with Rayleigh’s in low frequencies. \\
+        \\
+        (B) In the case of very high frequencies $hv>>kT$, and the exponential term in the denominator in Planck’s expression dominates
+        such that $e^{\dfrac{hv}{kT}}-1=e^{\dfrac{hv}{kT}}$. Using this, Planck’s expression becomes $\dfrac{8 \pi h v^3}{c^3}e^{\dfrac{-hv}{kT}}$
+        which is the Wien expresion.
+      }
+
+    \item (Exercise 1.2) Consider a star, a light bulb, and a slab of ice; their respective temperatures are 8500K, 850K, and 273.15K. \\
+    (a) Estimate the wavelength at which their radiated energies peak. \\
+    (b) Estimate the intensities of their radiation.
+    
+    \item (Exercise 1.5) The intensity reaching the surface of the Earth from the Sun is about $1.36 K Wm^{-2}$. Assuming the Sun to be a sphere (of radius $6.96 \times 10^8$ m) that radiates like a blackbody, estimate: \\
+    (a) The temperature at its surface and the wavelength of its strongest radiation. \\
+    (b) The total power radiated by the Sun (the Earth-Sun distance is $1.5 \times 10^{11} m$)
+    
+    \item A light beam of intensity I (units: power per area) exerts a radiation pressure of P = I/c where c is the speed of light**.  Suppose that you wish to levitate a marble at a height of one meter above a light bulb, by making use of the radiation pressure due to the light bulb.  Estimate the required power of the light bulb.  This is an order-of-magnitude question.  Explain any assumptions/approximations you make. 
+    
+    **This assumes that the light is incident on is totally absorbing surface.  The pressure is doubled for a totally reflective surface, because of the "recoil" of the photons.
+    
+  \end{enumerate}
+
+\end{document}
