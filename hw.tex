@@ -94,15 +94,82 @@
     \item (Exercise 1.2) Consider a star, a light bulb, and a slab of ice; their respective temperatures are 8500K, 850K, and 273.15K. \\
     (a) Estimate the wavelength at which their radiated energies peak. \\
     (b) Estimate the intensities of their radiation.
+
+    \textcolor{hwColor}{
+      (a): \\
+      We know that $c=\lambda v \Rightarrow \dfrac{dv}{d\lambda}=|\dfrac{c}{\lambda^2}|$ \\
+      $\tilde{u}(\lambda, T)=u(v, T)|\dfrac{dv}{d\lambda}|=\dfrac{8 \pi hc}{\lambda^5}\dfrac{1}{e^{(\dfrac{hc}{\lambda kT})}-1}$ \\
+      \\
+      \\
+      The maximum of $\tilde{u}(\lambda, T)$ occurs when $\dfrac{\partial \tilde{u}(\lambda, T)}{\partial \lambda}=0$ \\
+      $\dfrac{8 \pi hc}{\lambda^6}\left[\dfrac{hc}{\lambda kT}-5(1-e^{-\dfrac{hc}{\lambda kT}})\right]\dfrac{e^{\dfrac{hc}{\lambda kT}}}{(e^{\dfrac{hc}{\lambda kT}}-1)^2}=0$ \\
+      Let $\alpha=\dfrac{hc}{kT}$, then we have: \\
+      $\dfrac{\alpha}{\lambda}=5(1-e^{-\alpha/\lambda}) \Longrightarrow \lambda_{max}=\dfrac{hc}{4.9663 k}\dfrac{1}{T}=\dfrac{2898.9 \times 10^{-6} mK}{T}$ \\
+      \\
+      $
+        \begin{cases}
+          T=8500 K \Rightarrow \lambda_{max}=\dfrac{2898.9 \times 10^{-6} mK}{T}=\dfrac{2898.9 \times 10^{-6} mK}{8500K}=3.4104 \times 10^{-7} m \\
+          \\
+          T=850 K \Rightarrow \lambda_{max}=\dfrac{2898.9 \times 10^{-6} mK}{T}=\dfrac{2898.9 \times 10^{-6} mK}{850K}=3.4104 \times 10^{-6} m \\
+          \\
+          T=273.15 K \Rightarrow \lambda_{max}=\dfrac{2898.9 \times 10^{-6} mK}{T}=\dfrac{2898.9 \times 10^{-6} mK}{273.15K}=1.0612 \times 10^{-5} m
+        \end{cases}
+      $
+    }
+
+    \bigbreak
+
+    \textcolor{hwColor}{
+      (b): According to Stefan-Boltzmann'law. \\
+      $
+        \begin{cases}
+          P=\sigma T^4=5.67 \times 10^{-8} W m^{-2} K^{-4} \times (8500 K)^4 \approx 295.97 \times 10^6 W m^{-2} \\
+          \\
+          P=\sigma T^4=5.67 \times 10^{-8} W m^{-2} K^{-4} \times (850 K)^4 \approx 29.59 \times 10^3 W m^{-2} \\
+          \\
+          P=\sigma T^4=5.67 \times 10^{-8} W m^{-2} K^{-4} \times (273.15 K)^4 \approx 315.63 W m^{-2}
+        \end{cases}
+      $
+    }
     
     \item (Exercise 1.5) The intensity reaching the surface of the Earth from the Sun is about $1.36 K Wm^{-2}$. Assuming the Sun to be a sphere (of radius $6.96 \times 10^8$ m) that radiates like a blackbody, estimate: \\
     (a) The temperature at its surface and the wavelength of its strongest radiation. \\
     (b) The total power radiated by the Sun (the Earth-Sun distance is $1.5 \times 10^{11} m$)
-    
+
+      \textcolor{hwColor}{
+        a is a coefficient which is less than or equal to 1. In the case of 
+        blackbody $a=1$. \\
+        \\
+        $
+          P=A \times I \Rightarrow P=4\pi r_{earth}^2 \times I_{earth}=4\pi(1.5 \times 10^{11} m)^2 \times 1.36 \times 10^3 ~~ Wm^{-2}=1.22 \pi \times 10^{26} W \\
+          \\
+          I_{sun}=\dfrac{P}{4 \pi R_{sun}^2}=\dfrac{1.22 \pi \times 10^{26} W}{4\pi (6.96 \times 10^8 m)^2}=6.31 \times 10^7 Wm^{-2} \\
+        $
+        The Stefan-Boltzmann law: $I_{sun}=a \sigma T_{sun}^4 \Longrightarrow T_{sun}=\sqrt[4]{\dfrac{I_{sun}}{a\sigma}}=\sqrt[4]{\dfrac{6.31 \times 10^7 Wm^{-2}}{5.67 \times 10^{-8} W m^{-2} K^{-4}}}$ \\
+        $T_{sun} \approx 5.77 \times 10^3 K$ \\
+        \\
+        $\lambda_{max}=\dfrac{2898.9 \times 10^{-6} mK}{T_{sun}}=\dfrac{2898.9 \times 10^{-6} mK}{5.77 \times 10^3 K}$ \\
+        \\
+        $\lambda_{max}=5.02 \times 10^{-7} ~~ m$
+      }
+
+      \bigbreak
+
     \item A light beam of intensity I (units: power per area) exerts a radiation pressure of P = I/c where c is the speed of light**.  Suppose that you wish to levitate a marble at a height of one meter above a light bulb, by making use of the radiation pressure due to the light bulb.  Estimate the required power of the light bulb.  This is an order-of-magnitude question.  Explain any assumptions/approximations you make. 
     
     **This assumes that the light is incident on is totally absorbing surface.  The pressure is doubled for a totally reflective surface, because of the "recoil" of the photons.
     
+      \textcolor{hwColor}{
+        We need to set the radiation pressure equal to gravitational potential, hence: \\
+        $
+          P=\dfrac{I}{C}=mgh \Rightarrow I=mhgc \\
+          \\
+          \dfrac{P}{A}=mhgc \Rightarrow P=mhgc.A=1 \times 1 \times 9.8 \times 3 \times 10^8 \\
+          \\
+          P=2.94 \times 10^9 W
+        $
+      }
+
   \end{enumerate}
 
 \end{document}
