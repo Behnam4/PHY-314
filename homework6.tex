@@ -1,0 +1,123 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm]
+
+    \textsc{\LARGE Quantum Physics I }\\[1.5cm]
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework Six}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Richard Kirian}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill 
+
+  \end{titlepage}
+
+  \textbf{2.11}
+  \begin{itemize}
+    \item Compute $<x>, <p>, <x^2>,$ and $<p^2>$, for the states $\psi_0$ (Equation 2.60) and $\psi_1$ (Equation 2.63), by explicit integration. Comment: In this and other problems involving 
+    the harmonic oscillator it simplifies matters if you introduce the variable $\xi_\equiv \sqrt{\dfrac{m \omega}{\hbar}}x$ and the constant 
+    $\alpha \equiv (\dfrac{m \omega}{\pi \hbar})^{1/4}$
+
+    \item Check the uncertainty principle for those states.
+
+    \item Compute $<T>$ and $<V>$ for these states. (No new integration allowed!) Is their sum what you would expect?
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.12}
+  \begin{itemize}
+    \item Find $<x>, <p>, <x^2>, <p^2>$ and $<T>$, for the nth stationary state of the harmonic oscillator,
+    using the method of Example 2.5. Check that the uncertainty principle is satisfied. 
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.13}
+  \begin{itemize}
+    \item A particle in the harmonic oscillator potential starts out in the state 
+    $$\Psi(x, 0)=A \left[3\psi_0(x)+4\psi_1(x)\right]$$ 
+    \begin{enumerate}
+      \item Find $A$.
+
+      \item Construct $\Psi(x, t) and |\Psi(x, 0)|^2$. Don't get too excited if $|\Psi(x, )|^2$ oscillates 
+      at exactly the classical frequency; what would it have been had I specified $\psi_2(x)$, instead of
+      $\psi_1(x)$?
+
+      \item Find $<x>$ and $<p>$. Check that Ehrenfest's theorem (Equation 1.38) holds, for this wave function.
+
+      \item If you measured the energy of this particle, what values might you get, and with what probabilities?
+    \end{enumerate}
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.14}
+  \begin{itemize}
+    \item In the ground state of the harmonic oscillator, what is the probability (correct to three
+    significant digits) of finding the particle outside the classically allowed region?
+    \emph{Hint:} Classically, the energy of an oscillator is $E=\dfrac{1}{2}ka^2=\dfrac{1}{2}m \omega a^2$,
+    where $a$ is the amplitude. So the "classically allowed region" for an oscillator of energy $E$
+    extends from $-\sqrt{\dfrac{2E}{m \omega^2}}$ to $+\sqrt{\dfrac{2E}{m \omega^2}}$. Look in math table
+    under "Normal Distribution" or "Error Function" for the numerical value of the integral, or evaluate
+    it by computer.
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.44}
+  \begin{itemize}
+    \item If two (or more) distinct solutions to the (time-independent) Schr$\ddot{o}$dinger equation have the
+    same energy $E$, these states are said to be \textbf{degenerate}. For example the free particle states are 
+    doubly degenerate -- one solution representing motion to the right, and the other motion to the left. But
+    we have never encountered \emph{normalizable} degenerate solutions, and this is no accident. Prove the following,
+    theorem: \emph{In one dimension ($-\infty < x < +\infty$) there are no degenerate bound states. [Hint:} suppose
+    there are \emph{two} solutions, $\psi_1$ and $\psi_2$, with the same energy $E$. Multiply the Schr$\ddot{o}$dinger equation
+    for $\psi_1$ by $\psi_2$, and the Schr$\ddot{o}$dinger equation for $\psi_2$ by $\psi_1$, and subtract,
+    to show that $\left(\psi_2 \dfrac{d\psi_1}{dx}-\psi_1 \dfrac{d\psi_2}{dx}\right)$ is a constant. Use the 
+    fact that for normalizable solutions $\psi \longrightarrow 0$ at $\pm \infty$ to demonstrate that this constant
+    is in fact zero. Conclude that $\psi_2$ is a multiple of $\psi_1$, and hence that the two solutions
+    are not distinct.]
+  \end{itemize}
+
+\end{document}
