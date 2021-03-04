@@ -96,7 +96,34 @@
         \\
         =m\omega i \sqrt{\dfrac{m \omega}{\pi \hbar}} \bigints_{-\infty}^{+\infty} x ~ exp(-\dfrac{m \omega}{\hbar} x^2) dx=0 \\
         \\
-        \therefore ~ <p>=0
+        \therefore ~ <p>=0 \\
+        \\
+        \\
+        \\
+        \\
+        <p^2>=\bigints_{-\infty}^{+\infty} \psi^{*}_0(x) \left(-i\hbar\dfrac{\partial}{\partial x}\right)^2  \psi_0(x)dx=-\hbar^2 \bigints_{-\infty}^{+\infty} \psi^{*}_0(x) \dfrac{d^2 \psi_0(x)}{dx^2}dx \\
+        \\
+        \\
+        =-\hbar^2 \bigints_{-\infty}^{+\infty} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp(-\dfrac{m \omega}{2\hbar} x^2) \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left[exp\left(-\dfrac{m \omega}{2 \hbar}x^2\right) \left(-\dfrac{m \omega}{\hbar}x\right)^2+exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)\left(-\dfrac{m \omega}{\hbar}\right)\right]dx \\
+        \\
+        \\
+        =-\hbar^2 \sqrt{\dfrac{m \omega}{\pi \hbar}} \bigints_{-\infty}^{+\infty} ~ exp\left(-\dfrac{m \omega}{2 \hbar}x^2\right)  \left[\left(-\dfrac{m \omega}{\hbar}x\right)^2+\left(-\dfrac{m \omega}{\hbar}\right)\right]dx \\
+        \\
+        \\
+        =-\hbar^2 \sqrt{\dfrac{m^3 \omega^3}{\pi \hbar^3}} \bigints_{-\infty}^{+\infty} ~ exp\left(-\dfrac{m \omega}{\hbar} x^2\right) \left(\dfrac{m \omega x^2}{\hbar}-1\right)dx \\
+        \\
+      $
+      We, physicists suffer everyday, hence, why not we suffer LESS by introducing a new varaibale $\xi \equiv \sqrt{\dfrac{m \omega}{\hbar}x}$ since it makes our calculation slightly easier. $\ddot\smile$.\\
+      \\
+      \\
+      $
+        =-\hbar^2 \sqrt{\dfrac{m^3 \omega^3}{\pi \hbar^3}} \bigints_{-\infty}^{+\infty} \sqrt{\dfrac{\hbar}{m\omega}} \left(\xi^2-1\right) exp(-\xi^2) d\xi=-\dfrac{2\hbar m \omega}{\sqrt{\pi}} \bigints_{0}^{+\infty} \left(\xi^2-1\right) exp(-\xi^2) d\xi \\
+        \\
+        \\
+        =\dfrac{2\hbar m \omega}{\sqrt{\pi}} \left[\bigints_{0}^{+\infty} exp(-\xi^2) d\xi-\bigints_{0}^{+\infty} \xi^2 exp(-\xi^2) d\xi\right]=\dfrac{2\hbar m \omega}{\sqrt{\pi}} \times \dfrac{\sqrt{\pi}}{4} \\
+        \\
+        \\
+        \therefore ~ <p^2>=\dfrac{\hbar m \omega}{2}
       $
     }
 
