@@ -61,6 +61,45 @@
     \item Check the uncertainty principle for those states.
 
     \item Compute $<T>$ and $<V>$ for these states. (No new integration allowed!) Is their sum what you would expect?
+
+    \textcolor{hwColor}{
+      Let's use the first three eigenstates of the harmonic oscillator: \\ \\
+      $
+        \begin{cases}
+          \psi_0(x)=(\dfrac{m \omega}{\pi \hbar})^{1/4} ~ exp(-\dfrac{m \omega}{2\hbar}x^2) \\
+          \\
+          \psi_1(x)=(\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2) 
+        \end{cases} \\ \\
+      $
+    }
+
+    \textcolor{hwColor}{
+      \textbf{For $\psi_0$:} \\ \\
+      $
+        <x>=\bigints_{-\infty}^{+\infty} \psi^{*}_0(x) \psi_0(x)xdx=\bigints_{-\infty}^{+\infty}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2) ~ exp(-\dfrac{m \omega}{2\hbar}x^2)(\dfrac{m \omega}{\pi \hbar})^{1/4} dx \\
+        \\
+        =\left(\dfrac{m \omega}{\pi \hbar}\right)\bigints_{-\infty}^{+\infty} x ~ exp(-\dfrac{m \omega}{\hbar} x^2)dx=0 \\ \\
+        \therefore ~ <x>=0 \\
+        \\
+        \\
+        <x^2>=\bigints_{-\infty}^{+\infty} x^2 \psi^{*}_0(x) \psi_0(x) dx=\bigints_{-\infty}^{+\infty} x^2(\dfrac{m \omega}{\pi \hbar})^{1/4} (\dfrac{m \omega}{\pi \hbar})^{1/4} ~ exp(-\dfrac{m \omega}{2\hbar}x^2) ~ exp(-\dfrac{m \omega}{2\hbar}x^2)(\dfrac{m \omega}{\pi \hbar})^{1/4} dx \\
+        \\
+        =(\dfrac{m \omega}{\pi \hbar})^{1/2} \bigints_{-\infty}^{+\infty} x^2 ~ exp(-\dfrac{m \omega}{\hbar}x^2)dx=\dfrac{\hbar}{2m \omega} \\
+        \\
+        \therefore ~ <x^2>=\dfrac{\hbar}{2m \omega} \\
+        \\
+        \\
+        \\
+        <p>=\bigints_{-\infty}^{+\infty} \left(-i\hbar \dfrac{\partial}{\partial x}\right)\psi^{*}_0(x) \psi_0(x)dx=-i\hbar \bigints_{-\infty}^{+\infty} \psi^{*}_0(x) \dfrac{\partial \psi_0}{\partial x}dx \\
+        \\
+        =-i \hbar \bigints_{-\infty}^{+\infty} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp(-\dfrac{m \omega}{2\hbar} x^2) \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} (-\dfrac{m \omega}{\hbar}x) ~ exp(-\dfrac{m \omega}{2\hbar} x^2) dx \\
+        \\
+        =m\omega i \sqrt{\dfrac{m \omega}{\pi \hbar}} \bigints_{-\infty}^{+\infty} x ~ exp(-\dfrac{m \omega}{\hbar} x^2) dx=0 \\
+        \\
+        \therefore ~ <p>=0
+      $
+    }
+
   \end{itemize}
 
   \rule{15cm}{1pt}
