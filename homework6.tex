@@ -385,7 +385,74 @@
       \item If you measured the energy of this particle, what values might you get, and with what probabilities?
 
         \textcolor{hwColor}{
-          Behnam was here
+          Let's start by normalizing the initial wave function. \\ 
+          \\
+          $
+            1=\bigints_{-\infty}^{+\infty} |\Psi(x,0)|^2 dx=\bigints_{-\infty}^{+\infty} \Psi(x,0) \Psi^*(x,0)dx \\
+            \\
+            \\
+            =\bigints_{-\infty}^{+\infty} A^2\left(3\psi_0(x)+4 \psi_1(x)\right) \left(3 \psi^*_0(x)+4\psi^{*}_1(x)\right)dx=A^2 \bigints_{-\infty}^{+\infty} \left(3\psi_0(x)+4 \psi_1(x)\right) \left(3 \psi^*_0(x)+4\psi^{*}_1(x)\right)dx \\
+            \\
+            \therefore ~ A=\dfrac{1}{5} \surd \\ \\
+          $
+          so now we can have the wave function as: \\
+          \\
+          $
+            \Psi(x,0)=\dfrac{3}{5} \psi_0(x)+\dfrac{4}{5} \psi_1(x) \\
+            \\
+            \\
+            \therefore ~ \Psi(x,0)=\dfrac{3}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)+\dfrac{4}{5}x \left(\dfrac{4m^3 \omega^3}{\pi \hbar}\right)^{1/4} ~ exp\left(-\dfrac{m \omega}{2\hbar} x^2\right) \\ 
+            \\
+          $
+          The general solution to the Schr$\ddot{o}$dinger equation with a harmonic oscillator potential: \\
+          \\
+          $
+            \Psi(x,t)=B_0 \psi_0(x) \phi_0(t)+B_1 \psi_1(x) \phi_1(t)+B_2 \psi_2(x) \phi_2(t)+... \\
+            \\
+            =B_0 \psi_0(x) exp\left(-\dfrac{i\omega t}{2}\right)+B_1 \psi_1(x) exp\left(-\dfrac{i\omega t}{2}\right)+B_2 \psi_2(x) exp\left(-\dfrac{i\omega t}{2}\right)+... \\
+            \\
+            =B_0 \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp \left(-\dfrac{m \omega}{2\hbar}x^2\right)+B_1 x \left(\dfrac{4m^3 \omega^3}{\pi \hbar^3}\right)^{1/4} ~ exp\left(-\dfrac{m \omega}{2\hbar}x^2\right) ~ \exp\left(-3i\omega t/2\right)+B_2 \left(\dfrac{m \omega}{4 \pi \hbar}\right)^{1/4} \left(\dfrac{2 m \omega}{\hbar}x^2-1\right) ~ exp\left(-\dfrac{m\omega}{2\hbar}x^2\right)e^{-5i \omega t/2}+... \\
+            \\
+            \\
+          $
+          By setting $t=0$, we have: \\
+          \\
+          $
+            \Psi(x,t)=B_0 \psi_0(x)+B_1 \psi_1(x)+B_2 \psi_2(x)+... \\ \\
+            =B_0 \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)+B_1 x \left(\dfrac{4 m^3 \omega^3}{\pi \hbar^3}\right)^{1/4} ~ exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)+B_2 \dfrac{m \omega}{4 \pi \hbar}^{1/4} \left(\dfrac{2 m \omega}{\hbar}x^2-1\right) ~ exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)+... \\
+            \\
+            \\
+            \Longrightarrow \begin{cases}
+              B_0=\dfrac{3}{5} \\
+              \\
+              B_1=\dfrac{4}{5} \\
+              \\
+              B_n=0, ~~~ n\geq 2
+            \end{cases} \\ \\ 
+          $
+          The general solution. \\
+          \\
+          $
+            \Psi(x,t)=\dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(3 ~ exp(-i \omega t/2)+4\sqrt{\dfrac{2 m \omega}{\hbar}}x ~ exp(-3 i\omega t/2)\right) ~ exp \left(-\dfrac{m \omega}{2\hbar}x^2\right) \\
+            \\
+            \\
+          $
+          Now for the probabilities of measuring, we have $E_0=\dfrac{\hbar \omega}{2}$ and $E_1=\dfrac{3 \hbar \omega}{2}$. \\
+          \\
+          \\
+          $
+            \Psi(x,t)=\dfrac{3}{5} \psi_0(x) ~ exp\left(-i E_0 t/\hbar\right)+\dfrac{4}{5} \psi_1(x) ~ exp\left(-i E_1 t/ \hbar\right) \Rightarrow \begin{cases}
+              P(E_0)=|\dfrac{3}{5}|^2 \\
+              \\
+              P(E_1)=|\dfrac{4}{5}|^2
+            \end{cases}
+          $ \\ \\ \\
+          Now that the wave function is known, the probability distribution for the particle’s position at
+          time t can be found: \\\
+          \
+          $
+            Behnam 
+          $
         }
 
     \end{enumerate}
