@@ -448,10 +448,89 @@
             \end{cases}
           $ \\ \\ \\
           Now that the wave function is known, the probability distribution for the particle’s position at
-          time t can be found: \\\
-          \
+          time t can be found: \\
+          \\
           $
-            Behnam 
+            |\Psi(x,t)|^2=\Psi(x,t) \Psi^*(x,t)= \dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(3 ~ exp(-i \omega t/2)+4\sqrt{\dfrac{2 m \omega}{\hbar}}x ~ exp(-3 i\omega t/2)\right) ~ exp \left(-\dfrac{m \omega}{2\hbar}x^2\right) 
+            \times \dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(3 ~ exp(i \omega t/2)+4\sqrt{\dfrac{2 m \omega}{\hbar}}x ~ exp(3 i\omega t/2)\right) ~ exp \left(-\dfrac{m \omega}{2\hbar}x^2\right) \\
+            \\
+            \\
+            \therefore ~ |\Psi(x,t)|^2=\dfrac{1}{25}\sqrt{\dfrac{m \omega}{\pi \hbar}}\left(\dfrac{32 m \omega}{\hbar}+24\sqrt{\dfrac{2m \omega}{\hbar}}x cos(\omega t)+9\right) ~ exp\left(-\dfrac{m \omega}{\hbar}x^2\right) ~~~ \surd \\ \\
+          $
+          If the provided initial condition were instead: \\
+          \\
+          $
+            \Psi(x,0)=A\left(3 \psi_0(x)+4\psi_2(x)\right) \Longrightarrow A=\dfrac{1}{5} \Longrightarrow \Psi(x,0)=\dfrac{3}{5} \psi_0(x)+\dfrac{4}{5} \psi_2(x) \\ \\
+          $
+          Then the general solution: \\
+          \\
+          \\
+          $
+            \Psi(x,0)=\dfrac{3}{5} \psi_0(x) ~ exp\left(-iE_0 t/\hbar\right)+\dfrac{4}{5} \psi_2(x) ~ exp\left(-iE_2 t/\hbar\right) \\ 
+            \\
+            \\
+            \therefore ~ \Psi(x,t)=\dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left[3 e^{-i \omega t/2}+\dfrac{4}{\sqrt{2}}\left(\dfrac{2m\omega}{\hbar}x^2-1\right)e^{-5i \omega t/2}\right]~ exp\left(-\dfrac{m \omega }{2\hbar}x^2\right) \surd \\
+            \\
+            \\
+            \\
+            |\Psi(x,t)|^2=\Psi(x,t) \Psi^*(x,t)= \dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left[3 e^{-i \omega t/2}+\dfrac{4}{\sqrt{2}}\left(\dfrac{2m\omega}{\hbar}x^2-1\right)e^{-5i \omega t/2}\right]~ exp\left(-\dfrac{m \omega }{2\hbar}x^2\right) 
+            \times \dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left[3 e^{i \omega t/2}+\dfrac{4}{\sqrt{2}}\left(\dfrac{2m\omega}{\hbar}x^2-1\right)e^{5i \omega t/2}\right]~ exp\left(-\dfrac{m \omega }{2\hbar}x^2\right) \\
+            \\
+            \\
+            \therefore ~ |\Psi(x,t)|^2=\dfrac{1}{25} \sqrt{\dfrac{m \omega}{\pi \hbar}} \left[9+8\left(\dfrac{2m\omega}{\hbar}x^2-1\right)^2+12\sqrt{2} \left(\dfrac{2m\omega}{\hbar}x^2-1\right) cos(2\omega t)\right] ~ exp\left(-\dfrac{m \omega}{\hbar}x^2\right) \surd \\
+            \\
+            \\
+            \\
+          $
+          Now we can find $<x>, <p>$: \\
+          \\
+          \\
+          $
+            <x>=\bigints_{-\infty}^{+\infty} \Psi^*(x,t) \Psi(x,t) x dx=\bigints_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx \\
+            \\
+            =\bigints_{-\infty}^{+\infty} \dfrac{1}{25} \sqrt{\dfrac{m \omega}{\pi \hbar}}x \left(9+\dfrac{32 m\omega}{\hbar}x^2+24\sqrt{\dfrac{2m\omega}{\hbar}}x cos(\omega t)\right) ~ exp\left(-\dfrac{m\omega}{\hbar}x^2\right) dx \\
+            \\
+            =\dfrac{24}{25} \sqrt{\dfrac{2}{\pi}} cos(\omega t) \bigints_{-\infty}^{+\infty}\dfrac{m \omega}{\hbar} x^2 ~ exp\left(-\dfrac{m \omega}{\hbar}x^2\right)dx \\
+            \\
+            \\
+            =\dfrac{24}{25} \sqrt{\dfrac{2}{\pi}} cos(\omega t) \bigints_{-\infty}^{+\infty} \xi^2 ~ exp\left(-\xi^2\right) \sqrt{\dfrac{\hbar}{m \omega}} d\xi \\ 
+            \\
+            \\
+            \therefore ~ <x>=\dfrac{12}{25} \sqrt{\dfrac{2\hbar}{m\omega}} cos(\omega t) ~~~ \surd \\
+            \\
+          $
+          According to Ehrenfest’s theorem: \\
+          \\
+          $
+            <p>=m<v>=m\dfrac{d<x>}{dt}=m \dfrac{d}{dt} \left(\dfrac{12}{25} \sqrt{\dfrac{2\hbar}{m\omega}} cos(\omega t)\right)=-\dfrac{12}{25} \sqrt{2 \hbar m \omega} sin(\omega t) \\
+            \\
+            \\
+            \\
+          $
+          Check this result by calculating the expectation value of $p$ at time $t$ manually. \\
+          \\
+          $
+            <p>=\bigints_{-\infty}^{+\infty}  \Psi^*(x,t) \left(-i \hbar \dfrac{\partial}{\partial x}\right) \Psi(x,t) dx= \\
+            \\
+            =-i \hbar \bigints_{-\infty}^{+\infty} \Psi^*(x,t) \dfrac{\partial \Psi}{\partial x} dx \\
+            \\
+            \\
+            =-i \hbar \bigints_{-\infty}^{+\infty} \dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(3 e^{i \omega t/2}+4\sqrt{\dfrac{2m \omega}{\hbar}}x e^{3 i \omega t/2}\right) ~ exp\left(-\dfrac{m \omega}{2\hbar} x^2\right) \\ \\
+            \times \dfrac{\partial }{\partial x} \dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(3 e^{-i \omega t/2}+4\sqrt{\dfrac{2m \omega}{\hbar}}x e^{3 -i \omega t/2}\right) ~ exp\left(-\dfrac{m \omega}{2\hbar} x^2\right) \\
+            \\
+            \\
+            \\
+            \therefore ~~ <p>=-\dfrac{12}{25} \sqrt{2 \hbar m \omega} \omega cos(\omega t) ~~~ \surd \\
+          $ 
+            \\
+            \\
+            Now let's see if $\dfrac{d<p>}{dt}=<-\dfrac{\partial V}{\partial x}>$ is true or not. \\
+            \\
+            \\
+          $
+            \dfrac{d}{dt} \left(-\dfrac{12}{25} \sqrt{2 \hbar m \omega} sin(\omega t)\right)=<-\dfrac{\partial}{\partial}\left(\dfrac{1}{2} m \omega^2 x^2\right)> \\
+            \\
+            \therefore ~~ -\dfrac{12}{25} \sqrt{2 \hbar m \omega} \omega cos(\omega t)=-\dfrac{12}{25} \sqrt{2 \hbar m \omega} \omega cos(\omega t) ~~~ \surd
           $
         }
 
