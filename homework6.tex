@@ -253,12 +253,121 @@
     using the method of Example 2.5. Check that the uncertainty principle is satisfied.
     
     \textcolor{hwColor}{
-      Behnam was here
+      Starting off with the operators for the harmonic oscillator that are defined as: \\
+      \\
+      $
+        \begin{cases}
+          \hat{a}_+=\dfrac{1}{\sqrt{2 m \hbar \omega}}\left(-i \hat{p}+m \omega \hat{x}\right) \Rightarrow \hat{x}=\sqrt{\dfrac{\hbar}{2 m \omega}}(\hat{a}_+ + \hat{a}_-) \\
+          \\
+          \hat{a}_-=\dfrac{1}{\sqrt{2 m \hbar \omega}}\left(i \hat{p}+m \omega \hat{x}\right) \Rightarrow \hat{x}=i\sqrt{\dfrac{\hbar}{2 m \omega}}(\hat{a}_+ - \hat{a}_-)
+        \end{cases} \\
+        \\
+      $
+      We know that the energy of the nth eigenstate is $E_n=\left(n+\dfrac{1}{2}\right) \hbar \omega$ \\
+      \\
+      $
+      \begin{cases}
+        \hbar \omega \left(\hat{a}_+\hat{a}_-+\dfrac{1}{2}\right) \psi=E \psi \\
+        \\
+        \hbar \omega \left(\hat{a}_-\hat{a}_+-\dfrac{1}{2}\right) \psi=E \psi
+      \end{cases} \Rightarrow \begin{cases}
+        \hbar \omega \left(\hat{a}_+\hat{a}_-+\dfrac{1}{2}\right) \psi_n=\left(n+\dfrac{1}{2}\right) \hbar \omega \psi_n \\
+        \\
+        \hbar \omega \left(\hat{a}_-\hat{a}_+-\dfrac{1}{2}\right) \psi_n=\left(n+\dfrac{1}{2}\right) \hbar \omega \psi_n 
+      \end{cases} \\
+      \\
+      \\
+      \Longrightarrow \begin{cases}
+        \hat{a}_+\hat{a}_-\psi_n=n\psi_n \\
+        \\
+        \hat{a}_-\hat{a}_+\psi_n=\left(n+1\right)\psi_n
+      \end{cases} ~~~~ \surd \\ \\
+      $
+      Now it is time to find $<x>, <p>, <x^2>, <p^2>, <T>$ and $<V>$. \\
+      \\
+      $
+        <x>=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \psi_n(x)\hat{x}dx=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \psi_n(x) \left(\sqrt{\dfrac{\hbar}{2m\omega}}(\hat{a}_+ +\hat{a}_-)\right)dx \\
+        \\
+        \\
+        =\sqrt{\dfrac{\hbar}{2m\omega}} \bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \left[\hat{a}_+ \psi_n(x)+\hat{a}_- \psi_n(x)\right]dx \\
+        \\
+        \\
+        =\sqrt{\dfrac{\hbar}{2m\omega}} \bigints_{-\infty}^{+\infty} \psi_*(x) \left[A_{n+1} \psi_{n+1}(x)+A_{n-1} \psi_{n-1}(x)\right])dx=0 \\
+        \\
+        \\
+        \therefore ~ <x>=0 ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        <x^2>=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \psi_n(x)\hat{x}^2 dx=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \left[\sqrt{\dfrac{\hbar}{2m\omega}}(\hat{a}_+ + \hat{a}_-)\right]^2 \psi_n(x) dx \\
+        \\
+        \\
+        =\dfrac{\hbar}{2m\omega} \bigints_{-\infty}^{+\infty} \psi^*_n(x) \left[\hat{a}^2_+ \psi_n(x)+\hat{a}_+ \hat{a}_- \psi_n(x)+ \hat{a}_- \hat{a}_+ \psi_n(x)+\hat{a}^2_- \psi_n(x)\right]dx \\
+        \\
+        \\
+        \dfrac{\hbar}{2m\omega} \bigints_{-\infty}^{+\infty} \psi^*_n(x) \left[A_{n+2} \psi_{n+2}(x)+n\psi_n(x)+(n+1)\psi_n(x)+A_{n-2}\psi_{n-2}(x)\right]dx \\
+        \\
+        \\
+        \therefore ~ <x^2>=\dfrac{\hbar}{2m\omega} \left[2n+1\right] ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        <p>=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \psi_n(x)\hat{p} dx=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \left[i\sqrt{\dfrac{\hbar m \omega}{2}}(\hat{a}_+ - \hat{a}_-)\right] \psi_n(x) dx \\
+        \\
+        \\
+        =-i\sqrt{\dfrac{\hbar m \omega}{2}} \bigints_{-\infty}^{+\infty} \psi^{*}_n(x)\left[\hat{a}_+ \psi_n(x)- \hat{a}_- \psi_n(x)\right]dx \\
+        \\
+        \\
+        =-i\sqrt{\dfrac{\hbar m \omega}{2}} \bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \left[A_{n+1} \psi_{n+1}(x)-A_{n-1} \psi_{n-1}(x)\right] dx \\
+        \\
+        \\
+        =i\sqrt{\dfrac{\hbar m \omega}{2}} \left[A_{n+1} \bigints_{-\infty}^{+\infty} \psi^*_n(x) \psi_{n+1}(x)-A_{n-1} \bigints_{-\infty}^{+\infty} \psi^*_n \psi_{n-1}(x)\right]dx \\
+        \\
+        \\
+        \therefore ~ <p>=0 ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        <p^2>=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \psi_n(x)\hat{p}^2 dx=\bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \left[i\sqrt{\dfrac{\hbar m \omega}{2}}(\hat{a}_+ - \hat{a}_-)\right]^2 \psi_n(x) dx \\
+        \\
+        \\
+        =-\dfrac{\hbar m \omega}{2} \bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \left[\hat{a}^2_+ - \hat{a}_+ \hat{a}_- -\hat{a}_- \hat{a}_+ +\hat{a}^2_-\right] \psi_n(x) dx \\
+        \\
+        \\
+        =-\dfrac{\hbar m \omega}{2} \bigints_{-\infty}^{+\infty} \psi^{*}_n(x) \left[A_{n+2} \psi_{n+2}(x)-n \psi_n(x)-(n+1) \psi_n(x)+A_{n-2} \psi_{n-2}(x)\right] dx=-\dfrac{\hbar m \omega}{2} \left[-n-(n+1)\right] \\
+        \\
+        \\
+        \therefore ~ <p^2>=\dfrac{\hbar m \omega}{2}(2n+1) ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        \begin{cases}
+          \sigma_x=\sqrt{<x^2>-<x>^2}=\sqrt{\dfrac{\hbar}{2m \omega}(2n+1)} \\
+          \\
+          \sigma_p=\sqrt{<p^2>-<p>^2}=\sqrt{\dfrac{\hbar m \omega}{2}(2n+1)}
+        \end{cases} \Longrightarrow \sigma_x \sigma_p=\dfrac{\hbar}{2}(2n+1) ~~~ \surd \\ \\
+        \\
+        \\
+        $
+        Note that the uncertainty principle is satisfied for the nth eigenstate. ($\sigma_x \sigma_p \geq \dfrac{\hbar}{2}$) \\ \\
+        $
+        \begin{cases}
+          <T>=<\dfrac{p^2}{2m}>=\dfrac{1}{2m}<p^2>=\dfrac{1}{2m}\left(\dfrac{\hbar m \omega}{2}(2n+1)\right)=\dfrac{\hbar \omega}{4}(2n+1) \\
+          \\
+          <V>=<\dfrac{1}{2}m \omega^2 x^2>=\dfrac{1}{2}m \omega^2<x^2>=\dfrac{1}{2}m \omega^2 \left(\dfrac{\hbar}{2m \omega}(2n+1)\right)=\dfrac{\hbar \omega}{4}(2n+1)
+        \end{cases} \\ \\
+        \\
+        <T>+<V>=E_n
+      $
     }
-    
+
   \end{itemize}
 
-  \rule{15cm}{1pt}
+  \pagebreak
 
   \textbf{2.13}
   \begin{itemize}
