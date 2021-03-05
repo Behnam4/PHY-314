@@ -383,6 +383,11 @@
       \item Find $<x>$ and $<p>$. Check that Ehrenfest's theorem (Equation 1.38) holds, for this wave function.
 
       \item If you measured the energy of this particle, what values might you get, and with what probabilities?
+
+        \textcolor{hwColor}{
+          Behnam was here
+        }
+
     \end{enumerate}
   \end{itemize}
 
@@ -397,6 +402,48 @@
     extends from $-\sqrt{\dfrac{2E}{m \omega^2}}$ to $+\sqrt{\dfrac{2E}{m \omega^2}}$. Look in math table
     under "Normal Distribution" or "Error Function" for the numerical value of the integral, or evaluate
     it by computer.
+
+      \textcolor{hwColor}{
+        Born's interpretation, says that the probability distribution for the particle’s position in the
+        ground state at time t is given by $|\Psi_0(x,t)|^2$. Classically, the probability that the particle 
+        lies in the allowed region is \\ \\ 
+        $$\bigints_{-a}^{+a} |\Psi_0(x,t)|^2 dx$$ \\
+        \\
+        The probability that it’s not in this region is: \\
+        \\
+        $
+          1-\bigints_{-a}^{+a} |\Psi_0(x,t)|^2 dx=1-\bigints_{-a}^{+a} \Psi_0(x,t) \Psi^*_0(x,t) dx=1-\bigints_{-a}^{+a} \left[\Psi_0(x,t) e^{-i E_0 t/\hbar}\right] \left[\Psi^*_0(x,t) e^{i E_0 t/\hbar}\right] dx \\
+          \\
+          \\
+          =1-\bigints_{-a}^{+a} |\Psi_0(x,t)|^2 dx=1-\bigints_{-a}^{+a} \left[\left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)\right]^2 dx \\
+          \\
+          \\
+          =1-\sqrt{\dfrac{m \omega}{\pi \hbar}} \bigints_{-a}^{+a} ~ exp\left(-\dfrac{m \omega}{\hbar} x^2\right)dx  \\ \\ 
+        $
+        Like the previous problems using $\xi \equiv \sqrt{\dfrac{m \omega}{\hbar}x}$ defined variable helps us to solve this problem faster. \\
+        \\
+        \\
+        $
+          1-\bigints_{-a}^{+a} |\Psi_0(x,t)|^2 dx=1-\sqrt{\dfrac{m \omega}{\pi \hbar}} \bigint_{-\sqrt{\dfrac{m \omega}{\hbar}a}}^{+\sqrt{\dfrac{m \omega}{\hbar}a}} ~ \sqrt{\dfrac{\hbar}{m \omega}} ~ exp(-\xi^2) d\xi \\
+          \\
+          \\
+          =1-\dfrac{2}{\sqrt{\pi}} \bigint_{0}^{+\sqrt{\dfrac{m \omega}{\hbar}a}} exp(-\xi^2) d\xi \\
+          \\
+        $
+        The error function is $erf ~ z=\dfrac{2}{\sqrt{\pi}} \bigint_{0}^{z} exp(-x^2) dx$. So now we can rewrite 
+        the probability as the following: \\
+        \\
+        $
+          1-\bigints_{-a}^{+a} |\Psi_0(x,t)|^2 dx=1-erf(\sqrt{\dfrac{m \omega}{\hbar}a}) \\ \\
+        $
+        Now we cand find $a$ easily: $\dfrac{\hbar \omega}{2}=\dfrac{1}{2} m \omega^2 a^2 \Longrightarrow a=\sqrt{\dfrac{\hbar}{m \omega}}$.
+        Therefore, the probability that the particle lies outside the allowed region in the ground state is: \\
+        \\
+        $
+          1-erf(1) \approx 0.16
+        $
+      }
+
   \end{itemize}
 
   \rule{15cm}{1pt}
@@ -414,6 +461,11 @@
     fact that for normalizable solutions $\psi \longrightarrow 0$ at $\pm \infty$ to demonstrate that this constant
     is in fact zero. Conclude that $\psi_2$ is a multiple of $\psi_1$, and hence that the two solutions
     are not distinct.]
+
+      \textcolor{hwColor}{
+        Saman 
+      }
+
   \end{itemize}
 
 \end{document}
