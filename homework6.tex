@@ -463,7 +463,70 @@
     are not distinct.]
 
       \textcolor{hwColor}{
-        Saman 
+        Let's start with the one-dimensional Schr$\ddot{o}$dinger equation: \\
+        \\
+        $
+          i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V(x,t)\Psi(x,t) \\
+          \\
+          \\
+          \begin{cases}
+            i\hbar \dfrac{\phi^'(t)}{\phi(t)}=E \\
+            \\
+            -\dfrac{\hbar^2}{2m}\dfrac{\psi^{''}(x)}{\psi(x)}+V(x)=E
+          \end{cases} \\
+          \\ \\
+        $
+        This ODE in x is the time-independent Schr$\ddot{o}$dinger equation and can be written as: \\
+        \\
+        $
+          \dfrac{\partial^2 \psi}{\partial x^2}=\dfrac{2m}{\hbar} \left[V(x)-E\right]\psi \\
+          \\
+          \\
+          \begin{cases}
+            \dfrac{d^2 \psi_1}{dx^2}=\dfrac{2m}{\hbar^2}\left[V(x)-E\right]\psi_1 \\
+            \\
+            \dfrac{d^2 \psi_2}{dx^2}=\dfrac{2m}{\hbar^2}\left[V(x)-E\right]\psi_2
+          \end{cases} \Rightarrow \begin{cases}
+            \psi_2 \dfrac{d^2 \psi_1}{dx^2}=\dfrac{2m}{\hbar^2}\left[V(x)-E\right]\psi_1 \psi_2 \\
+            \\
+            \psi_1 \dfrac{d^2 \psi_2}{dx^2}=\dfrac{2m}{\hbar^2}\left[V(x)-E\right]\psi_2 \psi_2
+          \end{cases} \\
+          \\
+          \\
+          \psi_2 \dfrac{d^2 \psi_1}{dx^2}-\psi_1 \dfrac{d^2 \psi_2}{dx^2}=0 \\
+          \\
+          \\
+          \psi_2 \dfrac{d^2 \psi_1}{dx^2}+\dfrac{d \psi_2}{dx} \dfrac{d \psi_1}{dx}-\psi_1 \dfrac{d^2 \psi_2}{dx^2}-\dfrac{d \psi_1}{dx} \dfrac{d \psi_2}{dx}=0 \\
+          \\
+          \\
+          \dfrac{d}{dx}\left(\psi_2 \dfrac{\psi_1}{dx}\right)-\dfrac{d}{dx}\left(\psi_1 \dfrac{d\psi_2}{dx}\right)=0 \\ \\
+        $
+        Let's take integral of both sides now: \\
+        \\
+        $
+          \psi_2 \dfrac{d\psi_1}{dx}-\psi_1 \dfrac{d \psi_2}{dx}=C \\ \\
+        $
+        What we found now must hold for any value of $x$, so set $x=\infty$ to find $C$. \\
+        \\
+        $
+          \psi_2 \dfrac{d\psi_1}{dx}\Big|_{x=\infty}-\psi_1 \dfrac{d \psi_2}{dx}\Big|_{x=\infty}=C \\ \\
+        $
+        The boundary conditions say $\psi_1(x)=0$ and $\psi_2(x)=0$ when $x\longrightarrow \pm \infty$, therefore $C=0$. \\ \\  
+        $
+          \Longrightarrow \psi_2 \dfrac{d\psi_1}{dx}-\psi_1 \dfrac{d \psi_2}{dx}=0 \rightarrow \dfrac{d}{dx}ln \psi_1(x)=\dfrac{d}{dx}ln \psi_2(x) \\
+          \\
+          \\
+          \therefore ~~ ln \psi_1(x)=ln \psi_2(x)+W \\
+          \\
+          \\
+          \psi_1(x)=e^{ln \psi_2(x)+W} \\
+          \\
+          \psi_1(x)=\psi_2(x) e^W \\
+          \\
+          \psi_1(x)=A\psi_2(x) \\ \\
+        $
+        Therefore, there are no degenerate bound states in one dimension. To elaborate on this, $\psi_1$ is a constant multiple 
+        of $\psi_2(x)$. This is denying the assumption that $\psi_1(x)$ and $\psi_2(x)$ are linearly independent.  
       }
 
   \end{itemize}
