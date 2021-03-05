@@ -79,14 +79,14 @@
         <x>=\bigints_{-\infty}^{+\infty} \psi^{*}_0(x) \psi_0(x)xdx=\bigints_{-\infty}^{+\infty}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2) ~ exp(-\dfrac{m \omega}{2\hbar}x^2)(\dfrac{m \omega}{\pi \hbar})^{1/4} dx \\
         \\
         =\left(\dfrac{m \omega}{\pi \hbar}\right)\bigints_{-\infty}^{+\infty} x ~ exp(-\dfrac{m \omega}{\hbar} x^2)dx=0 \\ \\
-        \therefore ~ <x>=0 \\
+        \therefore ~ <x>=0 ~~~ \surd \\
         \\
         \\
         <x^2>=\bigints_{-\infty}^{+\infty} x^2 \psi^{*}_0(x) \psi_0(x) dx=\bigints_{-\infty}^{+\infty} x^2(\dfrac{m \omega}{\pi \hbar})^{1/4} (\dfrac{m \omega}{\pi \hbar})^{1/4} ~ exp(-\dfrac{m \omega}{2\hbar}x^2) ~ exp(-\dfrac{m \omega}{2\hbar}x^2)(\dfrac{m \omega}{\pi \hbar})^{1/4} dx \\
         \\
         =(\dfrac{m \omega}{\pi \hbar})^{1/2} \bigints_{-\infty}^{+\infty} x^2 ~ exp(-\dfrac{m \omega}{\hbar}x^2)dx=\dfrac{\hbar}{2m \omega} \\
         \\
-        \therefore ~ <x^2>=\dfrac{\hbar}{2m \omega} \\
+        \therefore ~ <x^2>=\dfrac{\hbar}{2m \omega} ~~~ \surd\\
         \\
         \\
         \\
@@ -96,7 +96,7 @@
         \\
         =m\omega i \sqrt{\dfrac{m \omega}{\pi \hbar}} \bigints_{-\infty}^{+\infty} x ~ exp(-\dfrac{m \omega}{\hbar} x^2) dx=0 \\
         \\
-        \therefore ~ <p>=0 \\
+        \therefore ~ <p>=0 ~~~ \surd \\
         \\
         \\
         \\
@@ -123,8 +123,124 @@
         =\dfrac{2\hbar m \omega}{\sqrt{\pi}} \left[\bigints_{0}^{+\infty} exp(-\xi^2) d\xi-\bigints_{0}^{+\infty} \xi^2 exp(-\xi^2) d\xi\right]=\dfrac{2\hbar m \omega}{\sqrt{\pi}} \times \dfrac{\sqrt{\pi}}{4} \\
         \\
         \\
-        \therefore ~ <p^2>=\dfrac{\hbar m \omega}{2}
+        \therefore ~ <p^2>=\dfrac{\hbar m \omega}{2} ~~~ \surd \\
+        \\
+        \\
+        \\
+        \begin{cases}
+          \sigma_x=\sqrt{<x^2>-<x>^2}=\sqrt{\dfrac{\hbar}{2m \omega}} \\
+          \\
+          \sigma_p=\sqrt{<p^2>-<p>^2}=\sqrt{\dfrac{\hbar m \omega}{2}}
+        \end{cases} \Longrightarrow \sigma_x \sigma_p=\dfrac{\hbar}{2} ~~~ \surd \\ \\
       $
+      We just showed that the uncertainty principle $\geq 2$ holds. \\
+      \\
+      $
+        \begin{cases}
+          <T>=<\dfrac{p^2}{2m}>=\dfrac{1}{2m}<p^2>=\dfrac{1}{2m}\left(\dfrac{\hbar m \omega}{2}\right)=\dfrac{\hbar \omega}{4} \\
+          \\
+          <V>=<\dfrac{1}{2}m \omega^2 x^2>=\dfrac{1}{2}m \omega^2<x^2>=\dfrac{1}{2}m \omega^2 \left(\dfrac{\hbar}{2m \omega}\right)=\dfrac{\hbar \omega}{4}
+        \end{cases} \\ \\
+      $
+      Now let's fnd the sum of $<T>$ and $<V>$: \\
+      \\
+      $
+        <T>+<V>=\dfrac{\hbar \omega}{2} \\ \\
+      $
+      This is what we expected as it is the energy of the ground state. \\
+      \\
+      \rule{15cm}{1pt}
+    }
+
+    \textcolor{hwColor}{
+      \textbf{For $\psi_1$:} \\ \\
+      $
+        <x>=\bigints_{-\infty}^{+\infty} \psi^{*}_1(x) \psi_1(x)xdx=\bigints_{-\infty}^{+\infty} (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2) (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2)x dx \\
+        \\
+        \\
+        =\sqrt{\dfrac{4m^3 \omega^3}{\pi \hbar^3}} \bigints_{-\infty}^{+\infty} x^3 exp\left(-\dfrac{m \omega}{\hbar}x^2\right)dx=0 \\
+        \\
+        \\
+        \therefore <x>=0 ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        <x^2>=\bigints_{-\infty}^{+\infty} \psi^{*}_1(x) \psi_1(x)x^2dx=\bigints_{-\infty}^{+\infty} (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2) (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2)x^2 dx \\
+        \\
+        \\
+        =\sqrt{\dfrac{4 m^3 \omega^3}{\pi h^3}}\bigints_{-\infty}^{+\infty} x^4 ~ exp\left(-\dfrac{m \omega}{\hbar}x^2\right)dx \\
+        \\
+      $
+      Let's use $\xi \equiv \sqrt{\dfrac{m \omega}{\hbar}}x$. \\
+      \\
+      \\
+      $
+        =\sqrt{\dfrac{4 \hbar}{\pi m \omega}} \bigints_{-\infty}^{+\infty} \xi^4 ~ exp(-\xi^2) \left(\sqrt{\dfrac{h}{m \omega}}\right)d\xi=\dfrac{4}{\sqrt{\pi}}\dfrac{\hbar}{m \omega} \bigints_{0}^{\infty} \xi^4 ~ exp(-\xi^2) d\xi=\dfrac{3\hbar}{2 m \omega} \\
+        \\
+        \\
+        \therefore ~ <x^2>=\dfrac{3\hbar}{2 m \omega} ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        <p>=\bigints_{-\infty}^{+\infty} \psi^{*}_1(x) \left(-i \hbar \dfrac{\partial}{\partial x}\right) \psi_1(x)dx \\
+        \\
+        =-i \hbar \bigints_{-\infty}^{+\infty} (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2) (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4} \left[exp\left(-\dfrac{m \omega}{2 \hbar}x^2\right)+x ~ exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)\left(-\dfrac{m \omega}{2\hbar}x\right)\right]dx \\
+        \\
+        =i \hbar \sqrt{\dfrac{4 m^3 \omega^3}{\pi \hbar^3}} \bigints_{-\infty}^{+\infty} x \left(\dfrac{m \omega}{\hbar}x^2-1\right) ~ exp\left(-\dfrac{m \omega}{\hbar}x^2\right)dx=0 \\
+        \\
+        \\
+        \therefore ~ <p>=0 ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        <p^2>=\bigints_{-\infty}^{+\infty} \psi^{*}_1(x) \left(-i \hbar \dfrac{\partial}{\partial x}\right)^2 \psi_1(x)dx=-\hbar^2 \bigints_{-\infty}^{+\infty} \psi^{*}_1(x) \dfrac{d^2 \psi_1}{dx^2} dx \\
+        \\
+        \\
+        =-\hbar^2 \bigints_{-\infty}^{+\infty} (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4}x ~ exp(-\dfrac{m \omega}{2\hbar}x^2) (\dfrac{4m^3 \omega^3}{\pi \hbar^3})^{1/4} ~ \dfrac{d}{dx}\left(exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)+exp\left(-\dfrac{m \omega}{2\hbar}x^2\right)\left(\dfrac{-m\omega}{\hbar}x\right)x\right)dx \\
+        \\
+        \\
+        =-\hbar^2 \sqrt{\dfrac{4m^3 \omega^3}{\pi \hbar^3}} \bigints_{-\infty}^{+\infty} x \left(-\dfrac{m \omega}{\hbar}x\right)\left[3-\dfrac{m \omega}{\hbar}x^2\right] ~ exp\left(-\dfrac{m \omega}{\hbar}x^2\right) dx \\
+        \\
+        \\
+        =\hbar^2 \sqrt{\dfrac{4m^3 \omega^3}{\pi \hbar^3}} \bigints_{-\infty}^{+\infty} x^2 \dfrac{m \omega}{\hbar} \left[3-\dfrac{m \omega}{\hbar}x^2\right] ~ exp\left(-\dfrac{m \omega}{\hbar}x^2\right) dx \\
+        \\
+        \\
+        =\hbar^2 \sqrt{\dfrac{4m^3 \omega^3}{\pi \hbar^3}} \bigints_{-\infty}^{+\infty} \xi^2 (3-\xi^2) ~ exp(-\xi^2) \left(\sqrt{\dfrac{\hbar}{m \omega}}\right) d\xi \\
+        \\
+        \\
+        =\dfrac{4 \hbar m \omega}{\sqrt{\pi}} \bigints_{0}^{+\infty} \xi^2 (3-\xi^2) ~ exp(-\xi^2) d\xi=\dfrac{4 \hbar m \omega}{\sqrt{\pi}} \left(\dfrac{3 \sqrt{\pi}}{8}\right) \\
+        \\
+        \\
+        \therefore ~ <p^2>=\dfrac{3 \hbar m \omega}{2} ~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        \begin{cases}
+          \sigma_x=\sqrt{<x^2>-<x>^2}=\sqrt{\dfrac{3\hbar}{2m \omega}} \\
+          \\
+          \sigma_p=\sqrt{<p^2>-<p>^2}=\sqrt{\dfrac{3\hbar m \omega}{2}}
+        \end{cases} \Longrightarrow \sigma_x \sigma_p=\dfrac{3\hbar}{2} ~~~ \surd \\ \\
+        \\
+      $
+      We just showed that the uncertainty principle $\geq 2$ holds. \\
+      \\
+      $
+      \begin{cases}
+        <T>=<\dfrac{p^2}{2m}>=\dfrac{1}{2m}<p^2>=\dfrac{1}{2m}\left(\dfrac{3\hbar m \omega}{2}\right)=\dfrac{3\hbar \omega}{4} \\
+        \\
+        <V>=<\dfrac{1}{2}m \omega^2 x^2>=\dfrac{1}{2}m \omega^2<x^2>=\dfrac{1}{2}m \omega^2 \left(\dfrac{3\hbar}{2m \omega}\right)=\dfrac{3\hbar \omega}{4}
+      \end{cases} \\ \\
+      $
+      Now let's fnd the sum of $<T>$ and $<V>$: \\
+      \\
+      $
+        <T>+<V>=\dfrac{3\hbar \omega}{2} \\ \\
+      $
+      This is the energy of the first excited state. \\
     }
 
   \end{itemize}
@@ -134,7 +250,12 @@
   \textbf{2.12}
   \begin{itemize}
     \item Find $<x>, <p>, <x^2>, <p^2>$ and $<T>$, for the nth stationary state of the harmonic oscillator,
-    using the method of Example 2.5. Check that the uncertainty principle is satisfied. 
+    using the method of Example 2.5. Check that the uncertainty principle is satisfied.
+    
+    \textcolor{hwColor}{
+      Behnam was here
+    }
+    
   \end{itemize}
 
   \rule{15cm}{1pt}
