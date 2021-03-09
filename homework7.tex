@@ -1,0 +1,124 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm]
+
+    \textsc{\LARGE Quantum Physics I }\\[1.5cm]
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework Seven}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Richard Kirian}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill 
+
+  \end{titlepage}
+
+  \textbf{1.14} \\ \\
+  Let $P_{ab}(t)$ be the probability of finding the particle in the range $(a<x<b)$, at time $t$.
+  \begin{itemize}
+    \item Show that $$\dfrac{dP_{ab}}{dt}=J(a,t)-J(b,t)$$ \\
+    , where \\
+    $$J(x,t)\equiv \dfrac{i \hbar}{2m} \left(\Psi \dfrac{\partial \Psi^*}{\partial x}-\Psi^* \dfrac{\partial \Psi}{\partial x}\right)$$
+    What are the units of $J(x,t)?$ Comment: $J$ is called the \textbf{probability current}, because it tells you the rate at which 
+    probability is "flowing" past the point $x$. If $P_{ab}(t)$ is increasing, then more probability is flowing into the region
+    at one end than flows out at the other.
+    
+    \item Find the probability current for the wave function in Problem 1.9. (This is not a very pithy example, I am afraid
+    ; we will encounter more substantial ones in due course.)
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.18}
+  \begin{itemize}
+    \item Find the probability current, J (Problem 1.14) for the free particlen wave function Equation 2.95. which
+    direction does the probability flow?
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.20} \\ \\
+  A free particle has the initial wave function \\
+  $$\Psi(x,0)=Ae^{-a|x|}$$
+  where $A$ and $a$ are positive real constants.
+  \begin{itemize}
+    \item Normalize $\Psi(x,0)$.
+
+    \item Find $\phi(k)$.
+
+    \item Construct $\Psi(x,t)$, in the form of an integral.
+
+    \item Discuss the limiting cases (a very large, and a very small).
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.45} \\ \\
+  In this problem you will show that the number of nodes of the stationary states of a one-dimensional potential always 
+  increases with energy. Consider two (real, normalized) solutions ($\psi_n$ and $\psi_m$) to the time-independent 
+  Schr$\ddot{o}$dinger equation (for a given potential $V(x)$), with energies $E_n > E_m$.
+  \begin{itemize}
+    \item Show that \\
+    $$\dfrac{d}{dx} \left(\dfrac{d \psi_m}{dx}\psi_n-\psi_m\dfrac{d \psi_n}{dx}\right)=\dfrac{2m}{\hbar^2}(E_n-E_m) \psi_m \psi_n$$
+
+    \item Let $x_1$ and $x_2$ be two adjacent nodes of the function $\psi_m(x)$.Show that \\
+    $$\psi^'_m(x_2) \psi_n(x_2)-\psi^'_m(x_1) \psi_n(x_1)=\dfrac{2m}{\hbar^2}(E_n-E_m) \bigints_{x_1}^{x_2} \psi_m \psi_n dx$$
+
+    \item If $\psi_n(x)$ has no nodes between $x_1$ and $x_2$, then it must have the same sign everywhere 
+    in the interval. Show that (b) then leads to a contradiction. Therefore, between every pair of nodes of
+    $\psi_m(x), ~ \psi_n(x)$ must have at \emph{least} one node, and in particular the number of nodes 
+    increases with energy.
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.46}
+  \\
+  Imagine a bead of mass $m$ that slides frictionlessly around a circular wire ring of circumference $L$. 
+  (This is just like a free particle, except that $\psi(x+L)=\psi(x)$) Find trhe stationary states (with
+  appropriate normalization) and the corresponding allowed energies. Note that there are (with one exception)
+  \emph{two} independent solutions for each energy $E_n$ corresponding to clockwise and counterf-clockwise
+  circulation; call them $\psi^+_n(x)$ and $\psi^-_n(x)$. How do you account for this degeneracy, in
+  view of the theorem in Problem 2.44 (why does the theorem fail, in this case)?
+
+\end{document}
