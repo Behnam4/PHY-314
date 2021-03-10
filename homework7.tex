@@ -178,11 +178,109 @@
   \begin{itemize}
     \item Normalize $\Psi(x,0)$.
 
+    \textcolor{hwColor}{
+      We need to start with the Schr$\ddot{o}$dinger equation: \\
+      \\
+      $
+        i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V \Psi \\ \\
+      $
+      We know that for a free particle $V=0$, therfore we are left with: \\
+      \\
+      $
+        i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2} \\ \\
+      $
+      At this point we need to take the Fourier transform of both sides of the Schr$\ddot{o}$dinger equation: \\
+      \\
+      \\
+      $
+        \mathcal{F} \left(i\hbar \dfrac{\partial \Psi}{\partial t}\right)=\mathcal{F} \left(-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}\right) \\
+        \\
+        \\
+        i\hbar \mathcal{F} \left( \dfrac{\partial \Psi}{\partial t}\right)=-\dfrac{\hbar^2}{2m}\mathcal{F} \left(\dfrac{\partial^2 \Psi}{\partial x^2}\right) 
+        \Rightarrow i\hbar \dfrac{d \tilde{\Psi}}{dt}=-\dfrac{\hbar^2}{2m} (ik)^2 \tilde{\Psi}(k,t) \\
+        \\
+      $
+      We made our life easier. Why? Because now we have a first order differential equation which we can easily 
+      find its solution: \\
+      \\
+      $
+        i\dfrac{\dfrac{d \tilde{\Psi}(k,t)}{dt}}{\tilde{\Psi}(k,t)}=\dfrac{\hbar k^2}{2m} \Rightarrow Ln \tilde{\Psi}(k,t)=-\dfrac{i \hbar}{2m}k^2 t \\
+        \\
+        \\
+        \therefore ~~~ \tilde{\Psi}(k,t)=\tilde{\Psi}_0(k) e^{-\dfrac{i \hbar}{2m}k^2 t} \\ \\
+      $
+      We are interested in $\Psi(k,t)$, hence by taking the inverse Fourier transform we have: \\
+      \\
+      \\
+      $
+        \Psi(x,t)=\mathcal{F}^{-1} \left[\tilde{\Psi}(k,t)\right]=\mathcal{F}^{-1} \left[\tilde{\Psi}_0(k) e^{-\dfrac{i \hbar}{2m}k^2 t}\right]=\dfrac{1}{\sqrt{2\pi}} \bigints_{-\infty}^{+\infty} e^{ikx} \tilde{\Psi}_0(k) e^{-\dfrac{i \hbar}{2m}k^2 t} dk \\
+        \\
+        \\
+        \therefore ~~~ \Psi(x,t)=\dfrac{1}{\sqrt{2\pi}}  \bigints_{-\infty}^{+\infty} e^{ikx-\dfrac{\hbar ik^2 t}{2m}} \tilde{\Psi}_0(k) e^{-\dfrac{i \hbar}{2m}k^2 t} dk
+      $ 
+    }
+
     \item Find $\phi(k)$.
 
+      \textcolor{hwColor}{
+        $\phi(k)$ is the Fourier transform of the initial wave function. \\
+        \\
+        $$
+          \phi(k)=\tilde{\Psi}_0(k) \\ \\
+        $$
+        In order to find $\tilde{\Psi}_0(k)$ we have to find the normalized of the initial wave function. \\
+        \\
+        \\
+        $
+          \bigints_{-\infty}^{+\infty} |\Psi(x,0)|^2 dx=\bigints_{-\infty}^{+\infty} A^2 e^{-2ax} dx=2A^2 \bigints_{0}^{+\infty} e^{-2ax} dx=1 \\
+          \\
+          \\
+          \therefore ~~~ \dfrac{A^2}{a}=1 \Longrightarrow A=\sqrt{a} \Longrightarrow \Psi_0(x)=\sqrt{a} e^{-ax} \\
+        $
+        It's time to find $\phi(k)$; \\
+        \\
+        \\
+        $
+          \phi(k)=\tilde{\Psi}_0(k)=\mathcal{F} \left[\Psi_0(x)\right]=\mathcal{F} \left[\sqrt{a} e^{-ax}\right]=\dfrac{1}{\sqrt{2 \pi}} \bigints_{-\infty}^{+\infty} e^{-ikx} \sqrt{a} e^{-ax} dx \\
+          \\
+          \\
+          =\sqrt{\dfrac{a}{2 \pi}} \left[\bigints_{-\infty}^{0} e^{-ikx+ax} dx+ \bigints_{0}^{+\infty} e^{-ikx-ax} dx\right] \\
+          \\
+          \\
+          \therefore ~~~ \phi(k)=\sqrt{\dfrac{a}{2\pi}} \dfrac{2a}{k^2+a^2}
+        $
+      }
+
     \item Construct $\Psi(x,t)$, in the form of an integral.
+    
+      \textcolor{hwColor}{
+        $
+          \Psi(x,t)=\dfrac{1}{\sqrt{2\pi}} \bigints_{-\infty}^{+\infty} exp\left(ikx-\dfrac{\hbar ik^2t}{2m}\right) \tilde{\Psi}_0(k) dk \\
+          \\
+          =\dfrac{\sqrt{a^3}}{\pi} \bigints_{-\infty}^{+\infty} \dfrac{1}{k^2+a^2}exp\left(ikx-\dfrac{\hbar ik^2t}{2m}\right) \tilde{\Psi}_0(k) dk
+        $
+      }
 
     \item Discuss the limiting cases (a very large, and a very small).
+
+      \textcolor{hwColor}{
+        \[\lim_{x\to 0} \Psi(x,t)=\lim_{x\to 0} \dfrac{\sqrt{a^3}}{\pi} \bigints_{-\infty}^{+\infty} \dfrac{1}{k^2+a^2} exp\left(ikx-\dfrac{\hbar ik^2 t}{2m}\right) dk\] \\
+        \[=\dfrac{1}{\pi} \bigints_{-\infty}^{+\infty} exp\left(ikx-\dfrac{\hbar ik^2 t}{2m}\right) \lim_{x\to 0} \left(\dfrac{\sqrt{a^3}}{k^2+a^2}\right) dk\] \\
+        \[=\dfrac{1}{\pi} \bigints_{-\infty}^{+\infty} exp\left(ikx-\dfrac{\hbar ik^2 t}{2m}\right) \times 0 dk=0\] \\
+      }
+
+      \rule{15cm}{1pt}
+
+      \textcolor{hwColor}{
+        \[\lim_{x\to\infty} \Psi(x,t)=\lim_{x\to\infty} \dfrac{\sqrt{a^3}}{\pi} \bigints_{-\infty}^{+\infty} \dfrac{1}{k^2+a^2} exp\left(ikx-\dfrac{\hbar ik^2 t}{2m}\right) dk\] \\
+        \[=\dfrac{1}{\pi} \bigints_{-\infty}^{+\infty} exp\left(ikx-\dfrac{\hbar ik^2 t}{2m}\right)  \lim_{x \to \infty} \dfrac{\sqrt{a^3}}{k^2+a^2}  dk=0\] \\
+        \\
+        The Fourier transform of $\Psi(x,0)$ is basically the wave function for the particle’s momentum at $t=0$. 
+        For low $a$ a low certainty in the particle’s position and a high certainty in the particle’s momentum initially. \\
+        \\
+        For high $a$, the following graphs indicate a high certainty in the particle’s position and a low certainty in the particle’s momentum initially.
+      }
+
   \end{itemize}
 
   \rule{15cm}{1pt}
