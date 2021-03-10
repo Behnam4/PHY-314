@@ -300,9 +300,77 @@
     in the interval. Show that (b) then leads to a contradiction. Therefore, between every pair of nodes of
     $\psi_m(x), ~ \psi_n(x)$ must have at \emph{least} one node, and in particular the number of nodes 
     increases with energy.
+
+    \textcolor{hwColor}{
+      The goal is to show that the number of nodes in any stationary state increases with increasing energy. Suppose we have 
+      two real linearly independent solutions $\psi_n(x)$ and $\psi_m(x)$ with corresponding energies $E_n$ and $E_m$ where $E_n > E_m$. \\ \\ 
+      The Schr$\ddot{o}$dinger equation is $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V(x,t) \Psi(x,t)$ \\
+      \\
+      \\
+      Assume $V(x,t)=V(x)$, then we have 
+      $
+        \begin{cases}
+          E=i \hbar \dfrac{\phi^'(t)}{\phi(t)} ~~~~~~~~~~~~~~~~~~ \mathbf{(A)} \\
+          \\
+          E=V(x)-\dfrac{\hbar^2}{2m}\dfrac{\psi^{''}(x)}{\psi(x)} ~~~~ \mathbf{(B)}
+        \end{cases} \\ \\
+      $
+      We can tell recognize that \textbf{(B)} is s the time-independent Schr$\ddot{o}$dinger equation, therefore we can write; \\
+      \\
+      \\
+      $
+        \begin{cases}
+          \dfrac{d^2 \psi_m}{dx^2}=\dfrac{2m}{\hbar^2} \psi_m \left(V(x)-E_m\right) \\
+          \\
+          \dfrac{d^2 \psi_n}{dx^2}=\dfrac{2m}{\hbar^2} \psi_n \left(V(x)-E_n\right) \\
+        \end{cases}
+      $ 
+      \\
+      \\
+      By doing some algebra we can get the needed/asked result. \\
+      \\
+      \\
+      $
+        \psi_n \dfrac{d^2 \psi_m}{dx^2}-\psi_m \dfrac{d^2 \psi_n}{dx^2}=\dfrac{2m}{\hbar^2}\left[\left(V(x)-E_m\right)\psi_m \psi_n- \left(V(x)-E_n\right)\psi_m \psi_n \right] \\
+        \\
+        =\dfrac{2m}{\hbar^2}\psi_m \psi_n \left(E_n-E_m\right) \\
+        \\
+        \\
+        \\
+        \psi_n \dfrac{d^2 \psi_m}{dx^2}-\psi_m \dfrac{d^2 \psi_n}{dx^2}+\dfrac{d \psi_n}{dx}\dfrac{d \psi_m}{dx}-\dfrac{d \psi_n}{dx}\dfrac{d \psi_m}{dx}=\dfrac{2m}{\hbar^2}\psi_m \psi_n \left(E_n-E_m\right) \\
+        \\
+        \\
+        \\
+        \dfrac{d}{dx}\left(\psi_n \dfrac{d \psi_m}{dx}-\psi_m\dfrac{d\psi_n}{dx}\right)=\dfrac{2m}{\hbar^2}\psi_m \psi_n \left(E_n-E_m\right) \\
+        \\
+        \\
+        \rule{15cm}{1pt}
+        \\
+        \\
+        \bigints_{x_1}^{x_2} \dfrac{d}{dx}\left(\psi_n \dfrac{d \psi_m}{dx}-\psi_m\dfrac{d\psi_n}{dx}\right) dx=\bigints_{x_1}^{x_2} \dfrac{2m}{\hbar^2}\psi_m \psi_n \left(E_n-E_m\right) dx=\dfrac{2m}{\hbar^2} \left(E_n-E_m\right) \bigints_{x_1}^{x_2} \psi_m \psi_n dx \\
+        \\
+        \\
+        \left[x_2  \psi_n(x_2) \dfrac{\psi_m}{dx}-x_2 \psi_m(x_2)\dfrac{d \psi_n}{dx}-x_1 \psi_n(x_1) \dfrac{d \psi_m}{dx}+x_1 \psi_m(x_1)\dfrac{d \psi_n}{dx}\right]=\dfrac{2m}{\hbar^2} \left(E_n-E_m\right) \bigints_{x_1}^{x_2} \psi_m \psi_n dx \\ 
+        \\
+      $
+      \\
+      Keep in mind that nodes are where a function is zero. \\
+      \\
+      \\
+      $
+        \therefore ~~~ \psi^'_m(x_2)\psi_n(x_2)-\psi^'_m(x_1)\psi_n(x_1)=\dfrac{2m}{\hbar^2} \left(E_n-E_m\right) \bigints_{x_1}^{x_2} \psi_m \psi_n dx \\
+        \\
+      $
+      \textbf{Conclusion:} \\
+      \\
+      Suppose $\psi_n(x)$ does not have any nodes between $x_1$ to $x_2$, then $\psi_n(x)$ has the same sign in that interval. 
+      Because $\psi_m(x)$ does not have any nodes, hence, $\psi_m$ has the same sign in the interval as well. \\
+      Based on the calculated equation, $\psi_n$ has at least one node  between $x_1$ and $x_2$. We can Conclude as the number of 
+      nodes increases we have increase in enegry as well. 
+    }
+  
   \end{itemize}
 
-  \rule{15cm}{1pt}
 
   \textbf{2.46}
   \\
