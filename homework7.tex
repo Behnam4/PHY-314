@@ -62,7 +62,69 @@
     What are the units of $J(x,t)?$ Comment: $J$ is called the \textbf{probability current}, because it tells you the rate at which 
     probability is "flowing" past the point $x$. If $P_{ab}(t)$ is increasing, then more probability is flowing into the region
     at one end than flows out at the other.
-    
+
+
+      \textcolor{hwColor}{
+        In the simplest form,Born’s interpretation states that the probability density of finding a particle at a given point, 
+        when measured, is proportional to the square of the magnitude of the particle's wavefunction at that point. \\
+        \\
+        $$
+          P_{ab}(t)= \bigints_{a}^{b} |\Psi(x,t)|^2 dx=\bigints_{a}^{b} \Psi(x,t) \Psi^*(x,t) dx \\ \\
+        $$
+        $
+          \dfrac{dP_{ab}}{dt}=\dfrac{d}{dt} \left(\bigints_{a}^{b} \Psi(x,t) \Psi^*(x,t) dx\right)=\bigints_{a}^{b} \dfrac{\partial}{\partial t} \left(\Psi(x,t) \Psi^*(x,t)\right) dx \\
+          \\
+          =\bigints_{a}^{b} \left[\dfrac{\partial \Psi}{\partial t}\Psi^*+\dfrac{\partial \Psi^*}{\partial t}\Psi\right] dx \\ \\
+        $
+        From the textbook we have the Schr$\ddot{o}$dinger equation as: \\
+        \\
+        $
+          i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V \Psi
+          \Rightarrow \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar}{2mi}\dfrac{\partial^2 \Psi}{\partial x^2}+\dfrac{1}{i\hbar}V \Psi \\
+        $
+        \\
+        \\
+        Let's multiple both sides by $\dfrac{i}{i}$, then we get: \\
+        \\
+        $
+          \dfrac{\partial \Psi}{\partial t}=\dfrac{\hbar i}{2m} \dfrac{\partial^2 \Psi}{\partial x^2}-\dfrac{i}{\hbar} V \Psi 
+          \Rightarrow \dfrac{\partial \Psi^*}{\partial t}=-\dfrac{\hbar i}{2m} \dfrac{\partial^2 \Psi^*}{\partial x^2}+\dfrac{i}{\hbar} V \Psi^* \\ \\
+          \\
+        $
+        Now, we are ready to evaluate $ \dfrac{dP_{ab}}{dt}$; \\
+        \\
+        $
+          \dfrac{dP_{ab}}{dt}=\bigints_{a}^{b} \left[\left(\dfrac{\hbar i}{2m} \dfrac{\partial^2 \Psi}{\partial x^2}-\dfrac{i}{\hbar} V \Psi\right) \Psi^*+\left(-\dfrac{\hbar i}{2m} \dfrac{\partial^2 \Psi^*}{\partial x^2}+\dfrac{i}{\hbar} V \Psi^*\right)\Psi\right] dx=\bigints_{a}^{b} \dfrac{\hbar i}{2m} \left[\dfrac{\partial^2 \psi}{\partial x^2}\Psi^*-\dfrac{\partial \Psi^*}{\partial x^2}\Psi\right]dx \\
+          \\
+          \\
+          =\dfrac{\hbar i}{2m} \bigints_{a}^{b} \left[\left(\dfrac{\partial \Psi^*}{\partial x}\dfrac{\partial \Psi}{\partial x}+\dfrac{\partial^2 \Psi}{\partial x^2} \Psi^*\right)-\left(\Psi \dfrac{\partial^2 \Psi^*}{\partial x^2}+\dfrac{\partial \Psi^*}{\partial x} \dfrac{\partial \Psi}{\partial x}\right)\right]dx \\
+          \\
+          \\
+          =\dfrac{\hbar i}{2m} \bigints_{a}^{b} \dfrac{\partial}{\partial x} \left[\dfrac{\partial \Psi}{\partial x} \Psi^* -\Psi \dfrac{\partial \Psi^*}{\partial x}\right]dx \\
+          \\
+          \\
+          =\dfrac{\hbar i}{2m} \left[\left(\Psi^*(b,t) \dfrac{\partial \Psi}{\partial x}(b,t)-\Psi(b,t) \dfrac{\Psi^*}{\partial x}(b,t)\right)-\left(\Psi^*(a,t) \dfrac{\partial \Psi}{\partial x}(a,t)-\Psi(a,t) \dfrac{\Psi^*}{\partial x}(a,t)\right)\right] \\
+          \\
+          \\
+          \\
+          \therefore ~~~ \dfrac{dP_{ab}}{dt}=\mathcal{J}(b,t)-\mathcal{J}(a,t) \\ \\
+        $
+        $P_{ab}$ is dimensionless, therefore $\mathcal{J}$ has $\dfrac{1}{s}$ as its unit. \\
+        \\
+        \\
+        $
+          J(x,t)=\dfrac{i \hbar}{2m} \left(\Psi \dfrac{\partial \Psi^*}{\partial x}-\Psi^* \dfrac{\partial \Psi}{\partial x}\right) \\
+          \\
+          \\
+          =\dfrac{i \hbar}{2m}\left(\sqrt[4]{\dfrac{2am}{\pi \hbar}}e^{-a\left[(mx^2/\hbar)+it\right]}\right) \dfrac{\partial}{\partial x} \left(\sqrt[4]{\dfrac{2am}{\pi \hbar}}e^{-a\left[(mx^2/\hbar)-it\right]}\right) \\ \\
+          -\dfrac{i \hbar}{2m}\left(\sqrt[4]{\dfrac{2am}{\pi \hbar}}e^{-a\left[(mx^2/\hbar)+it\right]}\right) \dfrac{\partial}{\partial x} \left(\sqrt[4]{\dfrac{2am}{\pi \hbar}}e^{-a\left[(mx^2/\hbar)-it\right]}\right)
+          \\
+          \\
+          \\
+          \therefore ~~~  J(x,t)=0
+        $
+      }
+
     \item Find the probability current for the wave function in Problem 1.9. (This is not a very pithy example, I am afraid
     ; we will encounter more substantial ones in due course.)
   \end{itemize}
