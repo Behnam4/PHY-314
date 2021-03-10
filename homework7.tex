@@ -111,7 +111,12 @@
         $
         $P_{ab}$ is dimensionless, therefore $\mathcal{J}$ has $\dfrac{1}{s}$ as its unit. \\
         \\
-        \\
+      }
+
+    \item Find the probability current for the wave function in Problem 1.9. (This is not a very pithy example, I am afraid
+    ; we will encounter more substantial ones in due course.)
+
+      \textcolor{hwColor}{
         $
           J(x,t)=\dfrac{i \hbar}{2m} \left(\Psi \dfrac{\partial \Psi^*}{\partial x}-\Psi^* \dfrac{\partial \Psi}{\partial x}\right) \\
           \\
@@ -125,8 +130,6 @@
         $
       }
 
-    \item Find the probability current for the wave function in Problem 1.9. (This is not a very pithy example, I am afraid
-    ; we will encounter more substantial ones in due course.)
   \end{itemize}
 
   \rule{15cm}{1pt}
@@ -135,6 +138,35 @@
   \begin{itemize}
     \item Find the probability current, J (Problem 1.14) for the free particlen wave function Equation 2.95. which
     direction does the probability flow?
+
+      \textcolor{hwColor}{
+        Let's rewrite equation $(2.95)$ from the textbook: \\
+        \\
+        $$\Psi_k(x,t)=A e^{i(kx-\dfrac{\hbar k^2}{2m}t)}$$ \\
+        \\
+        From problem $(1.14)$ we found $J(x,t)$. Let's calculate the probability current: \\
+        \\
+        \\
+        $
+          J(x,t)=\dfrac{\hbar i}{2m} \left[\Psi \dfrac{\partial \Psi^*}{\partial x}-\dfrac{\partial \Psi}{\partial x}\Psi^*\right] \\
+          \\
+          \\
+          =\dfrac{\hbar i}{2m} A e^{i(kx-\dfrac{\hbar k^2}{2m}t)} \dfrac{\partial }{\partial x} \left(A^* e^{i(-kx+\dfrac{\hbar k^2}{2m}t)}\right) \\
+          -\dfrac{\hbar i}{2m} A^* e^{i(-kx+\dfrac{\hbar k^2}{2m}t)} \dfrac{\partial }{\partial x} \left(A e^{i(kx-\dfrac{\hbar k^2}{2m}t)}\right) \\
+          \\
+          \\
+          =\dfrac{\hbar i |A|^2}{2m} \left(-ik-ik\right) \\
+          \\
+          \\
+          \\
+          \therefore ~~~  J(x,t)=\dfrac{\hbar k |A|^2}{m} \\ \\
+        $
+        Based on what we found, the direction of the probability flow depends on the sign of $k$. When $k$ is positive, 
+        the probability flow is in the x-direction. \\
+        \\
+        When $k$ is positive, the probability flow is in the negative x-direction. 
+      }
+
   \end{itemize}
 
   \rule{15cm}{1pt}
