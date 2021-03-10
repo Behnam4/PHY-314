@@ -365,20 +365,68 @@
       \\
       Suppose $\psi_n(x)$ does not have any nodes between $x_1$ to $x_2$, then $\psi_n(x)$ has the same sign in that interval. 
       Because $\psi_m(x)$ does not have any nodes, hence, $\psi_m$ has the same sign in the interval as well. \\
-      Based on the calculated equation, $\psi_n$ has at least one node  between $x_1$ and $x_2$. We can Conclude as the number of 
+      Based on the calculated equation, $\psi_n$ has at least one node between $x_1$ and $x_2$. We can Conclude as the number of 
       nodes increases we have increase in enegry as well. 
     }
   
   \end{itemize}
 
-
   \textbf{2.46}
   \\
   Imagine a bead of mass $m$ that slides frictionlessly around a circular wire ring of circumference $L$. 
-  (This is just like a free particle, except that $\psi(x+L)=\psi(x)$) Find trhe stationary states (with
+  (This is just like a free particle, except that $\psi(x+L)=\psi(x)$) Find the stationary states (with
   appropriate normalization) and the corresponding allowed energies. Note that there are (with one exception)
   \emph{two} independent solutions for each energy $E_n$ corresponding to clockwise and counterf-clockwise
   circulation; call them $\psi^+_n(x)$ and $\psi^-_n(x)$. How do you account for this degeneracy, in
   view of the theorem in Problem 2.44 (why does the theorem fail, in this case)?
+
+  \textcolor{hwColor}{
+    \\
+    Like the previous problems, we need to start with the Schr$\ddot{o}$dinger equation is: \\
+    \\
+    $
+      i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V(x,t) \Psi(x,t)
+    $
+    , where $-\infty<x<+\infty$ and $t>0$. \\
+    \\
+    \\
+    \textbf{A:} We need to solve the Schr$\ddot{o}$dinger equation. \\ 
+    \\
+    \textbf{B:} The bead is assumed to be frictionless, hence, $V(x,t)=0$. \\
+    \\
+    \\
+    $
+      i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2} \\ \\
+    $
+    As this problem states $\Psi(x,t)=\Psi(x+L,t) \Longrightarrow \dfrac{\partial \Psi}{\partial x}(x,t)=\dfrac{\partial \Psi}{\partial x}(x+l, t)$. \\ \\
+    After some gooling, I learned that for simplicity's sake, we should set $x=-\dfrac{L}{2}$ (For symmetry and simplify). \\
+    \\
+    $$
+      \dfrac{\partial \Psi}{\partial x}(-\dfrac{L}{2},t)=\dfrac{\partial \Psi}{\partial x}(+\dfrac{L}{2}, t)
+    $$
+    \\
+    \\
+    Our goal is to find the stationary states and their corresponding energies. We can use the method of separation of variables.
+    Assume a solution is $\Psi(x,t)=\psi(x) \phi(t)$, thus: \\
+    \\
+    $
+      i\hbar \dfrac{\partial}{\partial t} \left(\psi(x) \phi(t)\right)=-\dfrac{\hbar^2}{2m} \dfrac{\partial^2}{\partial x^2} \left(\psi(x) \phi(t)\right) \\
+      \\
+      \\
+      \begin{cases}
+        \dfrac{\partial \Psi}{\partial x}(-\dfrac{L}{2},t)=\dfrac{\partial \Psi}{\partial x}(\dfrac{L}{2}) \\
+        \\
+        \Psi(-\dfrac{L}{2},t)=\Psi(\dfrac{L}{2},t)
+      \end{cases} \Longrightarrow \begin{cases}
+        \psi^'(-\dfrac{L}{2}) \phi(t)=\psi^'(\dfrac{L}{2})\phi(t) \\
+        \\
+        \psi(-\dfrac{L}{2}) \phi(t)=\psi(\dfrac{L}{2})\phi(t)
+      \end{cases} \Longrightarrow \begin{cases}
+        \psi^'(-\dfrac{L}{2})=\psi^'(\dfrac{L}{2}) \\
+        \\
+        \psi(-\dfrac{L}{2}) =\psi(\dfrac{L}{2})
+      \end{cases}
+    $
+  }
 
 \end{document}
