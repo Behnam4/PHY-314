@@ -399,6 +399,9 @@
       i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2} \\ \\
     $
     As this problem states $\Psi(x,t)=\Psi(x+L,t) \Longrightarrow \dfrac{\partial \Psi}{\partial x}(x,t)=\dfrac{\partial \Psi}{\partial x}(x+l, t)$. \\ \\
+    \emph{"These periodic boundary conditions are different from the usual Dirichlet boundary conditions
+    $\Psi \rightarrow 0 as x \rightarrow \pm \infty$ and are the reason why the degeneracy theorem in Problem 2.44 fails.
+    "} \\ \\
     After some gooling, I learned that for simplicity's sake, we should set $x=-\dfrac{L}{2}$ (For symmetry and simplify). \\
     \\
     $$
@@ -426,6 +429,127 @@
         \\
         \psi(-\dfrac{L}{2}) =\psi(\dfrac{L}{2})
       \end{cases}
+    $ \\
+    \\
+    Let's get back to our earlier calculated Schr$\ddot{o}$dinger equation. Divide its both sides by 
+    $\psi(x) \phi(t)$ (assumed solution). Then what we end up getting is a function of $t$ on one side and a function of $x$
+    on the other side. \\ \\
+    Mathematically, speaking the two are \emph{only} equal \emph{when} both sides are equal to a constant. \\
+    \\
+    \\
+    $
+      \hbar i\dfrac{\dfrac{d \phi(t)}{dt}}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\dfrac{d^2 \psi(x)}{dx^2}}{\psi(x)}=E \Longrightarrow \begin{cases}
+        E=\hbar i \dfrac{\dfrac{d \phi(t)}{dt}}{\phi(t)} \\
+        \\
+        E=-\dfrac{\hbar^2}{2m} \dfrac{\dfrac{d^2 \psi(x)}{dx^2}}{\psi(x)}
+      \end{cases}
+    $ \\
+    \\
+    "Values of $E$ for which the boundary conditions are satisfied are called the eigenvalues (or
+    eigenenergies in this context), and the nontrivial solutions associated with them are called the
+    eigenfunctions (or eigenstates in this context). The ODE in x is known as the time-independent
+    Schr$\ddot{o}$dinger equation (TISE) and can be written as:" ~ Dr.Google $\ddot\smile$ \\
+    \\
+    \\
+    \textbf{1) If there are negative eigenvalues: $E=-\gamma^2$} \\ \\
+    $
+      \dfrac{d^2 \psi}{dx^2}=-\dfrac{2mE \psi}{\hbar^2}=\dfrac{2mE \gamma^2}{\hbar^2}, ~~~~ -\dfrac{L}{2}<x<\dfrac{L}{2} \\
+      \\
+      \psi(x)=C_1 cosh \left(\dfrac{\sqrt{2m}\gamma x}{\hbar}\right)+C_2 sinh \left(\dfrac{\sqrt{2m}\gamma x}{\hbar}\right)
+    $
+    \\
+    \\
+    Time to apply the conditions we found earlier: \\ \\
+    $
+      \begin{cases}
+        \psi^'(-\dfrac{L}{2})=\psi^'(\dfrac{L}{2}) \\
+        \\
+        \psi(-\dfrac{L}{2}) =\psi(\dfrac{L}{2})
+      \end{cases} \Longrightarrow \begin{cases}
+        2 \dfrac{\sqrt{2m} C_1 \gamma}{\hbar} sinh \left(\dfrac{\sqrt{2m} \gamma L}{2\hbar}\right)=0
+        \\
+        2C_2 sinh \left(\dfrac{\sqrt{2m} \gamma L}{2\hbar}\right)=0
+      \end{cases} \Longrightarrow \begin{cases}
+        C_1=0 \\ 
+        C_2=0
+      \end{cases} \\ \\
+    $
+    \rule{15cm}{1pt}
+    \\ 
+    \\
+    \textbf{2) If zero is an eigenvalue: $E=0$} \\ \\
+    $
+      \dfrac{d^2 \psi}{dx^2}=0 \Rightarrow \psi(x)=C_3x+C_4 \\
+      \\
+      \begin{cases}
+        \psi^'(-\dfrac{L}{2})=\psi^'(\dfrac{L}{2}) \\
+        \\
+        \psi(-\dfrac{L}{2}) =\psi(\dfrac{L}{2})
+      \end{cases} \Longrightarrow \begin{cases}
+        C_4-\dfrac{C_3 L}{2}=C_4+\dfrac{C_3 L}{2} \\ 
+        C_3=C_3
+      \end{cases} \\ \\
+      \\
+      \\
+      \\
+      \bigint_{-\dfrac{L}{2}}^{+\dfrac{L}{2}} \psi^2(x) dx=1 \Rightarrow C_4=\dfrac{1}{\sqrt{L}} \\
+      \\
+      \\
+    $
+    \rule{15cm}{1pt}
+    \\ 
+    \\
+    \textbf{3) If there are positive eigenvalues: $E=\mu^2$} \\ \\
+    $
+      \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m \mu^2 \psi}{\hbar^2} \Rightarrow \psi(x)=C_5 cos \left(\dfrac{\sqrt{2m} \mu x}{\hbar}\right)+C_6 sin \left(\dfrac{\sqrt{2m}\mu x}{\hbar}\right) \\
+      \\
+      \\
+      \begin{cases}
+        \psi \left(-\dfrac{L}{2}\right)=\psi \left(\dfrac{L}{2}\right) \\
+        \\
+        \psi^' \left(-\dfrac{L}{2}\right)=\psi^' \left(\dfrac{L}{2}\right)
+      \end{cases} \Longrightarrow \begin{cases}
+        2C_6 sin\dfrac{\sqrt{2m} \mu L}{2\hbar}=0 \\
+        \\
+        2 \dfrac{\sqrt{2m} C_5 \mu}{\hbar} sin \dfrac{\sqrt{2m} \mu L}{2\hbar}=0
+      \end{cases} \\ 
+    $
+    \\
+    When $sin \dfrac{\sqrt{2m} \mu L}{2\hbar}=0$ then, $\mu=\sqrt{\dfrac{2}{m}} \dfrac{n \pi \hbar}{L}$ where $n=1, 2, 3,...$. Hence: \\
+    \\
+    $
+      E_n=\dfrac{2n^2 \pi^2 \hbar^2}{mL^2} \Longrightarrow \psi(x)=C_5 cos \dfrac{2n \pi x}{L}+C_6 sin \dfrac{2n \pi x}{L} \\ \\
+      \\
+      \begin{cases}
+        \bigint_{-\dfrac{L}{2}}^{+\dfrac{L}{2}} \left(C_5 cos\dfrac{2n \pi x}{L}\right)^2 dx=1 \\
+        \\
+        \bigint_{-\dfrac{L}{2}}^{+\dfrac{L}{2}} \left(C_6 sin \dfrac{2n \pi x}{L}\right)^2 dx=1 \\
+      \end{cases} \Longrightarrow \begin{cases}
+        C_5=\sqrt{\dfrac{2}{L}} \\
+        \\
+        C_6=\sqrt{\dfrac{2}{L}}
+      \end{cases}
+    $ \\
+    \\
+    For $\phi(t)=e^{-i E_n t\hbar}$. The stationary states are: \\
+    \\
+    \\
+    $
+      \begin{cases}
+        \Psi_0(x,t)= \psi_0(x) \phi_0(t)=\dfrac{1}{\sqrt{L}} \\
+        \\
+        \Psi_n(x,t)=\sqrt{\dfrac{2}{L}} cos \dfrac{2n \pi x}{L} exp\{-i E_n \dfrac{t}{\hbar}\}=\sqrt{\dfrac{2}{L}} cos \dfrac{2n \pi x}{L} exp \{ -i\dfrac{2n^2 \pi^2 \hbar t}{mL^2}\} \\
+        \\
+        \Psi_n(x,t)=\sqrt{\dfrac{2}{L}} sin \dfrac{2n \pi x}{L} exp\{-i E_n \dfrac{t}{\hbar}\}=\sqrt{\dfrac{2}{L}} sin \dfrac{2n \pi x}{L} exp \{ -i\dfrac{2n^2 \pi^2 \hbar t}{mL^2}\}
+      \end{cases} \\ \\
+    $
+    \\
+    Hence, the allowed energies are $E=0$ and $E_n=\dfrac{2 n^2 \pi^2 \hbar^2}{mL^2}$. \emph{"According to the
+    principle of superposition, the general solution to the Schr¨odinger equation is a linear
+    combination of these stationary states"}. \\
+    \\
+    $
+      \Psi(x,t)=A_0 \dfrac{1}{\sqrt{L}}+\sum\limits_{n=1}^{\infty}A_n \sqrt{\dfrac{2}{L}} exp \{ -i\dfrac{2n^2 \pi^2 \hbar t}{mL^2}\} cos \dfrac{2n\pi x}{L}+\sum\limits_{n=1}^{\infty}B_n \sqrt{\dfrac{2}{L}} exp \{ -i\dfrac{2n^2 \pi^2 \hbar t}{mL^2}\} sin \dfrac{2n\pi x}{L}
     $
   }
 
