@@ -1,0 +1,151 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm]
+
+    \textsc{\LARGE Quantum Physics I }\\[1.5cm]
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework nine}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Richard Kirian}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill 
+
+  \end{titlepage}
+
+  \textbf{2.25} \\ \\
+  Check that the bound state of the delta-function well (Equation 2.132) is orthogonal to the 
+  scattering states (Equations 2.134 and 2.135).
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.27}
+  Consider the \emph{double delta-function} potential \\
+  $$V(x)=-\alpha \left[\delta(x+a)+ \delta(x-a)\right]$$
+  where $\alpha$ and $\beta$ are positive constants. \\ \\
+  \begin{itemize}
+    \item Sketch this potential.
+    
+
+    \item How many bound states does it possess? Find the allowed energies, for 
+    $\alpha =\dfrac{\hbar^2}{ma}$ and for $\alpha=\dfrac{\hbar^2}{4ma}$, and sketch 
+    the wave functions.
+
+    \item What are the bound state energies in the limiting cases $(i) ~ a \rightarrow  0$
+    and $(ii) ~ a \rightarrow \infty$ (holding $\alpha$ fixed?) Explain why your answers are reasonable, by comparison with the single
+    delta-function well.    
+  \end{itemize}
+
+
+  \rule{15cm}{1pt}
+
+  \textbf{2.34}
+  Consider the "step" potential: 
+  $$V(x)=\begin{cases}
+    0, ~~~ x\leqslant 0 \\
+    V_0, ~~~ x > 0
+  \end{cases}$$
+\begin{itemize}
+  \item Calculate the reflection coefficient, for the case $E>V_0$, and comment on the answer.
+
+  \item Calculate the reflection coefficient for the case $E>V_0$.
+
+  \item For a potential (such as this one) that does not go back to zero to the right of the barrier,
+  the transmission coefficient is not simply $|F|^2/|A|^2$ (with A the incident amplitude and F
+  the transmitted amplitude), because the transmitted wave travels at a different speed. Show
+  that
+  $$T=\sqrt{\dfrac{E-V_0}{E}}\dfrac{|F|^2}{|A|^2}$$
+  for $E>V_0$. \emph{Hint:} You can figure it out using Equation 2.99, or—more elegantly, but less
+  informatively—from the probability current (Problem 2.18). What is $T$, $E<V_0?$
+
+  \item For $E>V_0$, calculate the transmission coefficient for the step potential, and check that $T+R=1$.
+  
+\end{itemize}
+
+\rule{15cm}{1pt}
+
+\textbf{2.53 (part a only)}
+\textbf{The Scattering Matrix.} The theory of scattering generalizes in a pretty obvious way to
+arbitrary localized potentials (Figure 2.21). To the left (Region I), $V(x)=0$, so 
+$$\psi(x)=A e^{ikx}+B e^{-ikx}$$
+where $k\equiv \dfrac{\sqrt{2mE}}{\hbar}$
+\\
+\\
+To the right (Region III), V (x) is again zero, so 
+$$\psi(x)=F e^{ikx}+G e^{-ikx}$$ 
+In between (Region II), of course, I can’t tell you what $\psi$ is until you specify the potential, but
+because the Schr$\ddot{o}$dinger equation is a linear, second-order differential equation, the general
+solution has got to be of the form 
+$$\psi(x)=C f(x)+D g(x)$$,
+where f(x) and g(x) are two linearly independent particular solutions. There will be four
+boundary conditions (two joining Regions I and II, and two joining Regions II and III). Two of
+these can be used to eliminate C and D, and the other two can be “solved” for B and F in terms
+of A and G:
+$$B=S_{11} A+S_{12} G, ~~~ F=S_{21}A +S_{22} G.$$
+
+The four coefficients Sij , which depend on k (and hence on E), constitute a $2 \times 2$ matrix \textbf{S}, called
+the \textbf{scattering matrix} (or \textbf{S-matrix} for short). The S-matrix tells you the outgoing
+amplitudes (B and F) in terms of the incoming amplitudes (A and G):
+$$\begin{vmatrix}
+  B \\
+  F
+\end{vmatrix}=\begin{vmatrix}
+  S_{11} & S_{12} \\
+  S_{21} & S_{22}
+\end{vmatrix} \begin{vmatrix}
+  A \\
+  G
+\end{vmatrix}.$$
+In the typical case of scattering from the left, G = 0, so the reflection and transmission
+coefficients are 
+$$R_{\ell}=\dfrac{|B|^2}{|A|^2}\Big|=|S_{11}|^2, ~~~~~ T_{\ell}=\dfrac{|F|^2}{|A|^2}\Big|=|S_{21}|^2.$$
+
+For scattering from the right, $A=0$, and 
+$$R_r=\dfrac{|F|^2}{|G|^2}\Big|=|S_{22}|^2, ~~~~~ T_r=\dfrac{|B|^2}{|G|^2}\Big|=|S_{12}|^2.$$
+
+\begin{itemize}
+  \item Construct the S-matrix for scattering from a delta-function well (Equation 2.117).
+
+\end{itemize}
+
+\end{document}
