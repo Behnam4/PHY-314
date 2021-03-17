@@ -35,7 +35,7 @@
 
 
     \HRule \\[0.4cm]
-    { \huge \bfseries Homework nine}\\[0.4cm] 
+    { \huge \bfseries Homework Nine}\\[0.4cm] 
     \HRule \\[1.5cm]
 
     \textbf{Behnam Amiri}
@@ -56,6 +56,55 @@
   \textbf{2.25} \\ \\
   Check that the bound state of the delta-function well (Equation 2.132) is orthogonal to the 
   scattering states (Equations 2.134 and 2.135).
+
+    \textcolor{hwColor}{
+      \\\\
+      Equation (2.132) 
+      $$\psi(x)=\dfrac{\sqrt{m\alpha}}{\hbar} e^{-m\alpha|x|/\hbar^2}$$
+      and equations 2.134 and 2.135 are respectively $\psi(x)=A e^{ikx}+B e^{-ikx}$ and $\psi(x)=F e^{ikx}+G e^{-ikx}$. \\
+      \\
+      Checking the orthogonality: \\
+      \\
+      $
+        \bigints_{-\infty}^{+\infty} \psi^*_m \psi_n dx=\bigints_{-\infty}^{0} \psi^*_m \psi_n dx+\bigints_{0}^{+\infty} \psi^*_m \psi_n dx \\
+        \\
+        \\
+        =\bigints_{-\infty}^{0} \left(\dfrac{\sqrt{m\alpha}}{\hbar} e^{m\alpha x/\hbar^2}\right)^* \left(A e^{ikx}+B e^{-ikx}\right) dx
+        +\bigints_{0}^{+\infty} \left(\dfrac{\sqrt{m\alpha}}{\hbar} e^{-m\alpha x/\hbar^2}\right)^* \left(F e^{ikx}+G e^{-ikx}\right) dx \\
+        \\
+        \\
+        =\bigints_{-\infty}^{0} \left(\dfrac{\sqrt{m\alpha}}{\hbar} e^{m\alpha x/\hbar^2}\right) \left(A e^{ikx}+B e^{-ikx}\right) dx
+        +\bigints_{0}^{+\infty} \left(\dfrac{\sqrt{m\alpha}}{\hbar} e^{-m\alpha x/\hbar^2}\right) \left(F e^{ikx}+G e^{-ikx}\right) dx \\
+        \\
+        \\
+        =\dfrac{\sqrt{m\alpha}}{\hbar} \left[\bigints_{-\infty}^{0} \left(e^{m\alpha x/\hbar^2}\right) \left(A e^{ikx}+B e^{-ikx}\right) dx
+        +\bigints_{0}^{+\infty} \left(e^{-m\alpha x/\hbar^2}\right) \left(F e^{ikx}+G e^{-ikx}\right) dx \right] \\
+        \\
+        \\
+        =\dfrac{\sqrt{m\alpha}}{\hbar} (
+          \dfrac{A}{\dfrac{m \alpha}{\hbar^2}+ik}e^{(m\alpha/\hbar^2+ik)x}\Big|_{-\infty}^{0}
+          +\dfrac{B}{\dfrac{m \alpha}{\hbar^2}-ik}e^{(m\alpha/\hbar^2-ik)x}\Big|_{-\infty}^{0} \\
+          +\dfrac{F}{-\dfrac{m \alpha}{\hbar^2}+ik}e^{(-m\alpha/\hbar^2+ik)x}\Big|_{-\infty}^{0}
+          +\dfrac{G}{-\dfrac{m \alpha}{\hbar^2}-ik}e^{(-m\alpha/\hbar^2-ik)x}\Big|_{-\infty}^{0}
+        ) \\
+        \\
+        \\
+        =\dfrac{\sqrt{m\alpha}}{\hbar} \left[\dfrac{\dfrac{m \alpha}{\hbar^2}(A+B+F+G)+(-A+B+F-G)ik}{k^2+\left(\dfrac{m \alpha}{h^2}\right)^2}\right] \\
+        \\
+        \\
+      $
+      From page 66 of the textbook (Griffiths), the continuity of $\psi(x)$ at $x=0$ requires that: $F+G=A+B$, hence: \\
+      \\
+      \\
+      $
+        \Rightarrow \bigints_{-\infty}^{+\infty} \psi^*_m \psi_n dx=\dfrac{\sqrt{m\alpha}}{\hbar} \left[\dfrac{\dfrac{2m \alpha}{\hbar^2}(A+B)-\dfrac{2m \alpha}{\hbar^2}(A+B)}{k^2+\left(\dfrac{m \alpha}{h^2}\right)^2}\right] \\
+        \\
+        \\
+        \\
+        \therefore ~~~ \bigints_{-\infty}^{+\infty} \psi^*_m \psi_n dx=0 ~ \surd \\ \\
+      $
+      Since we got a zero, we can tell that the delta-function well is orthogonal to the scattering states. \\
+    }
 
   \rule{15cm}{1pt}
 
