@@ -122,9 +122,12 @@
 
     \item What are the bound state energies in the limiting cases $(i) ~ a \rightarrow  0$
     and $(ii) ~ a \rightarrow \infty$ (holding $\alpha$ fixed?) Explain why your answers are reasonable, by comparison with the single
-    delta-function well.    
+    delta-function well. 
   \end{itemize}
 
+    \textcolor{hwColor}{
+      Start here 
+    }
 
   \rule{15cm}{1pt}
 
@@ -134,67 +137,227 @@
     0, ~~~ x\leqslant 0 \\
     V_0, ~~~ x > 0
   \end{cases}$$
-\begin{itemize}
-  \item Calculate the reflection coefficient, for the case $E>V_0$, and comment on the answer.
+  \begin{itemize}
+    \item Calculate the reflection coefficient, for the case $E>V_0$, and comment on the answer.
 
-  \item Calculate the reflection coefficient for the case $E>V_0$.
+    \item Calculate the reflection coefficient for the case $E>V_0$.
 
-  \item For a potential (such as this one) that does not go back to zero to the right of the barrier,
-  the transmission coefficient is not simply $|F|^2/|A|^2$ (with A the incident amplitude and F
-  the transmitted amplitude), because the transmitted wave travels at a different speed. Show
-  that
-  $$T=\sqrt{\dfrac{E-V_0}{E}}\dfrac{|F|^2}{|A|^2}$$
-  for $E>V_0$. \emph{Hint:} You can figure it out using Equation 2.99, or—more elegantly, but less
-  informatively—from the probability current (Problem 2.18). What is $T$, $E<V_0?$
+    \item For a potential (such as this one) that does not go back to zero to the right of the barrier,
+    the transmission coefficient is not simply $|F|^2/|A|^2$ (with A the incident amplitude and F
+    the transmitted amplitude), because the transmitted wave travels at a different speed. Show
+    that
+    $$T=\sqrt{\dfrac{E-V_0}{E}}\dfrac{|F|^2}{|A|^2}$$
+    for $E>V_0$. \emph{Hint:} You can figure it out using Equation 2.99, or—more elegantly, but less
+    informatively—from the probability current (Problem 2.18). What is $T$, $E<V_0?$
 
-  \item For $E>V_0$, calculate the transmission coefficient for the step potential, and check that $T+R=1$.
-  
-\end{itemize}
+    \item For $E>V_0$, calculate the transmission coefficient for the step potential, and check that $T+R=1$.
+    
+  \end{itemize}
 
-\rule{15cm}{1pt}
+    \textcolor{hwColor}{
+      Let's start with our to-go equation, the Schr$\ddot{o}$dinger equation. \\
+      \\
+      \\
+      $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}+V \Psi$ \\
+      \\
+      For this problem, It's a good choice to use the method of separation of variables. \\
+      \\
+      \rule{15cm}{1pt} \\
+      \\
+      \textbf{Quick Review:} \\
+      \\
+      \textcolor{hwColor}{
+        The method of separation of variables relies upon the assumption that a function of the form $u(x,t)=\phi(x) G(t)$. 
+        will be a solution to a linear homogeneous partial differential equation in $x$ and $t$. This is called a product solution
+        and provided the boundary conditions are also linear and homogeneous this will also satisfy the boundary conditions.
+        The method of Separation of Variables cannot always be used and even when it can be used 
+        it will not always be possible to get much past the first step in the method. \\
+      }
+      \\
+      \rule{15cm}{1pt}
+      \\
+      \\
+      Alrighty, we assume $\Psi(x,t)=\psi(x) \phi(t)$ is a solution, then we have: \\
+      \\
+      $
+        i\hbar \dfrac{\partial}{\partial t} \left[\psi(x) \phi(t)\right]=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2}{\partial x} \left[\psi(x) \phi(t)\right]+V \left[\psi(x) \phi(t)\right] \\
+        \\
+        \\
+        i\hbar \psi(x) \phi^'(t)=-\dfrac{\hbar^2}{2m} \psi^{''}(x) \phi(t)+V(x) \psi(x) \phi(t) \\
+        \\
+        \\
+        i\hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)
+      $
+      \\
+      \\
+      We use $\lambda$ as the separation constant. Therefore, \\
+      \\
+      $
+      i\hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)=\lambda \Rightarrow \begin{cases}
+        \lambda=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)
+        \\
+        \\
+        \lambda=i\hbar \dfrac{\phi^'(t)}{\phi(t)}
+      \end{cases} \\ \\
+      $
+      \\
+      \textbf{The eigenvalues:} \\
+      \\
+      \\
+      $
+        \dfrac{d^2 \psi}{dx^2}=\dfrac{2m}{\hbar^2}\psi \left[V(x-\lambda)\right] \Rightarrow \begin{cases}
+          \dfrac{d^2 \psi}{dx^2}=\dfrac{2m}{\hbar^2} \psi\left(-V_0-\lambda\right), ~~~~ x>0 \\
+          \\
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m \lambda \psi}{\hbar^2}, ~~~~ x\leq 0
+        \end{cases}
+      $
+      \\
+      \\
+      \\
+      For $\psi$ we have three cases now (when $x>0$):
+      $$\begin{cases}
+        V_0-\lambda<0
+        \\
+        V_0-\lambda=0 
+        \\
+        V_0-\lambda>0
+      \end{cases}$$
+      \\
+      \\
+      Time to study each case: \\
+      \\
+      \textbf{(A) $V_0-\lambda>0$} \\
+      \\
+      $
+        \begin{cases}
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m\lambda \psi}{\hbar^2}, ~~~~ x \leq 0 \\
+          \\
+          \dfrac{d^2 \psi}{dx^2}=\dfrac{2m \psi}{\hbar^2} \left(V_0-\lambda\right)
+        \end{cases}
+      $ And the general solution is 
+      $
+        \psi(x)=\begin{cases}
+          Ae^{ikx}+Be^{-ikx}, ~~~~ x\leq 0
+          \\
+          Fe^{dx}+Ge^{-dx}, ~~~~ x>0
+        \end{cases}
+      $ where $k=\dfrac{\sqrt{2m\lambda}}{\hbar}, ~~~~ d=\dfrac{\sqrt{2m(V_0-\lambda)}}{\hbar}$ \\
+      \\
+      As $x \to \infty$ we have: \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          Ae^{ikx}+Be^{-ikx}, ~~~~ x\leq 0
+          \\
+          Ge^{-dx}, ~~~~~~~~~~~~~~~~ x>0
+        \end{cases}
+      $ \\
+      \\
+      $
+        T=\dfrac{\dfrac{i\hbar}{2m} \left[(Ge^{-dx})\dfrac{d}{dx}(G^*e^{-dx})- (G^*e^{-dx})\dfrac{d}{dx}(Ge^{-dx})\right]}{\dfrac{i\hbar}{2m} \left[(Ae^{ikx})\dfrac{d}{dx}(A^*e^{-ikx})-(A^*e^{-ikx})\dfrac{d}{dx}(Ae^{ikx})\right]} \\
+        \\
+        \\
+        =\dfrac{-de^{-2dx}GG^*+de^{-2dx}GG^*}{-2ikAA^*} \\
+        \\
+        \\
+        \therefore ~~~ T=0 ~~ \surd
+        \\
+        \\
+        R=\dfrac{\dfrac{i\hbar}{2m}  \left[(Be^{-ikx})\dfrac{d}{dx}(B^*e^{ikx})-(B^*e^{ikx})\dfrac{d}{dx}(Be^{-ikx})\right]}{\dfrac{i\hbar}{2m} \left[(Ae^{ikx})\dfrac{d}{dx}(A^*e^{-ikx})-(A^*e^{-ikx})\dfrac{d}{dx}(Ae^{ikx})\right]} \\
+        \\
+        \\
+        =\dfrac{2ikBB^*}{-2ikAA^*} \\
+        \\
+        \\
+        \therefore ~~~ R=\dfrac{|B|^2}{|A|^2} \\
+        \\
+        \\
+      $
+      Constants determination: \\
+      \\
+      $
+        \lim\limits_{x\to 0^+} \psi(x)=\lim\limits_{x\to 0^-} \psi(x): ~~ A+B=G \\
+        \\
+        \\
+        \bigints_{-\epsilon}^{+\epsilon} \dfrac{d^2 \psi}{dx^2}dx=\bigints_{-\epsilon}^{+\epsilon}  \dfrac{2m}{\hbar^2} \psi(x) \left[V(x)-\lambda\right]dx \\
+        \\
+        \dfrac{d \psi}{dx} \Big|_{-\epsilon}^{+\epsilon}=-\bigints_{-\epsilon}^{0} \dfrac{2m \lambda \psi(x)}{\hbar^2}dx+\bigints_{0}^{+\epsilon} \dfrac{2m \psi(x)(V_0-\lambda)}{\hbar^2} dx \\
+        \\
+        =-\dfrac{2m\lambda \psi(0) \epsilon}{\hbar^2}+\dfrac{2m\psi(0)\epsilon (V_0-\lambda)}{\hbar^2} \\
+        \\
+        \\
+        \dfrac{d \psi}{dx} \Big|_{0^-}^{0^+}, \longleftrightarrow \epsilon \rightarrow 0 \\
+        \\
+        \\
+        \lim\limits_{x\to 0^+} \dfrac{d\psi}{dx}=\lim\limits_{x\to 0^-} \dfrac{d\psi}{dx}: ~~ (A-b)ik=-dG \Longrightarrow
+        \begin{cases}
+          ik(A-b)=-d(A+B) \\
+          \\
+          B=\dfrac{-d-ik}{d-ik}A
+        \end{cases} \\
+        \\
+        \\
+      $
+      The reflection coefficient is: \\
+      \\
+      $
+        R=\left(\dfrac{A}{B}\right) \left(\dfrac{B}{A}\right)^*=\left(\dfrac{-d-ik}{d-ik}\right) \left(\dfrac{-d+ik}{d+ik}\right)=\dfrac{d^2+k^2}{d^2+k^2} \\
+        \\
+        \\
+        \therefore ~~~~ R+T=1
+      $
+      \\
+      \\
+      \rule{15cm}{1pt}
+      \\
+      \\
+      \textbf{(B) $V_0-\lambda=0$} \\
+    }
 
-\textbf{2.53 (part a only)}
-\textbf{The Scattering Matrix.} The theory of scattering generalizes in a pretty obvious way to
-arbitrary localized potentials (Figure 2.21). To the left (Region I), $V(x)=0$, so 
-$$\psi(x)=A e^{ikx}+B e^{-ikx}$$
-where $k\equiv \dfrac{\sqrt{2mE}}{\hbar}$
-\\
-\\
-To the right (Region III), V (x) is again zero, so 
-$$\psi(x)=F e^{ikx}+G e^{-ikx}$$ 
-In between (Region II), of course, I can’t tell you what $\psi$ is until you specify the potential, but
-because the Schr$\ddot{o}$dinger equation is a linear, second-order differential equation, the general
-solution has got to be of the form 
-$$\psi(x)=C f(x)+D g(x)$$,
-where f(x) and g(x) are two linearly independent particular solutions. There will be four
-boundary conditions (two joining Regions I and II, and two joining Regions II and III). Two of
-these can be used to eliminate C and D, and the other two can be “solved” for B and F in terms
-of A and G:
-$$B=S_{11} A+S_{12} G, ~~~ F=S_{21}A +S_{22} G.$$
+  \rule{15cm}{1pt}
 
-The four coefficients Sij , which depend on k (and hence on E), constitute a $2 \times 2$ matrix \textbf{S}, called
-the \textbf{scattering matrix} (or \textbf{S-matrix} for short). The S-matrix tells you the outgoing
-amplitudes (B and F) in terms of the incoming amplitudes (A and G):
-$$\begin{vmatrix}
-  B \\
-  F
-\end{vmatrix}=\begin{vmatrix}
-  S_{11} & S_{12} \\
-  S_{21} & S_{22}
-\end{vmatrix} \begin{vmatrix}
-  A \\
-  G
-\end{vmatrix}.$$
-In the typical case of scattering from the left, G = 0, so the reflection and transmission
-coefficients are 
-$$R_{\ell}=\dfrac{|B|^2}{|A|^2}\Big|=|S_{11}|^2, ~~~~~ T_{\ell}=\dfrac{|F|^2}{|A|^2}\Big|=|S_{21}|^2.$$
+  \textbf{2.53 (part a only)}
+  \textbf{The Scattering Matrix.} The theory of scattering generalizes in a pretty obvious way to
+  arbitrary localized potentials (Figure 2.21). To the left (Region I), $V(x)=0$, so 
+  $$\psi(x)=A e^{ikx}+B e^{-ikx}$$
+  where $k\equiv \dfrac{\sqrt{2mE}}{\hbar}$
+  \\
+  \\
+  To the right (Region III), V (x) is again zero, so 
+  $$\psi(x)=F e^{ikx}+G e^{-ikx}$$ 
+  In between (Region II), of course, I can’t tell you what $\psi$ is until you specify the potential, but
+  because the Schr$\ddot{o}$dinger equation is a linear, second-order differential equation, the general
+  solution has got to be of the form 
+  $$\psi(x)=C f(x)+D g(x)$$,
+  where f(x) and g(x) are two linearly independent particular solutions. There will be four
+  boundary conditions (two joining Regions I and II, and two joining Regions II and III). Two of
+  these can be used to eliminate C and D, and the other two can be “solved” for B and F in terms
+  of A and G:
+  $$B=S_{11} A+S_{12} G, ~~~ F=S_{21}A +S_{22} G.$$
 
-For scattering from the right, $A=0$, and 
-$$R_r=\dfrac{|F|^2}{|G|^2}\Big|=|S_{22}|^2, ~~~~~ T_r=\dfrac{|B|^2}{|G|^2}\Big|=|S_{12}|^2.$$
+  The four coefficients Sij , which depend on k (and hence on E), constitute a $2 \times 2$ matrix \textbf{S}, called
+  the \textbf{scattering matrix} (or \textbf{S-matrix} for short). The S-matrix tells you the outgoing
+  amplitudes (B and F) in terms of the incoming amplitudes (A and G):
+  $$\begin{vmatrix}
+    B \\
+    F
+  \end{vmatrix}=\begin{vmatrix}
+    S_{11} & S_{12} \\
+    S_{21} & S_{22}
+  \end{vmatrix} \begin{vmatrix}
+    A \\
+    G
+  \end{vmatrix}.$$
+  In the typical case of scattering from the left, G = 0, so the reflection and transmission
+  coefficients are 
+  $$R_{\ell}=\dfrac{|B|^2}{|A|^2}\Big|=|S_{11}|^2, ~~~~~ T_{\ell}=\dfrac{|F|^2}{|A|^2}\Big|=|S_{21}|^2.$$
 
-\begin{itemize}
-  \item Construct the S-matrix for scattering from a delta-function well (Equation 2.117).
+  For scattering from the right, $A=0$, and 
+  $$R_r=\dfrac{|F|^2}{|G|^2}\Big|=|S_{22}|^2, ~~~~~ T_r=\dfrac{|B|^2}{|G|^2}\Big|=|S_{12}|^2.$$
 
-\end{itemize}
+  \begin{itemize}
+    \item Construct the S-matrix for scattering from a delta-function well (Equation 2.117).
+
+  \end{itemize}
 
 \end{document}
