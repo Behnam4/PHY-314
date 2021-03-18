@@ -312,6 +312,105 @@
       \\
       \\
       \textbf{(B) $V_0-\lambda=0$} \\
+      \\
+      $
+        \begin{cases}
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2mV_0 \psi}{\hbar^2}, ~~~ x \leq 0 \\
+          \\
+          \dfrac{d^2 \psi}{dx^2}=0, ~~~~~~~~~~~~~~ x>0
+        \end{cases} \\ 
+      $
+      The general solution on $x>0$ is: \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          A e^{ikx}+B e^{-eikx}, ~~~ x \leq 0 \\
+          \\
+          Fx+G, ~~~~~~~~~~~~~~~ x>0
+        \end{cases} where ~ k=\dfrac{\sqrt{2mV_0}}{\hbar} \\ \\
+      $ 
+      Satisfy the boundary condition as $x \rightarrow \infty$, then set $F$ and $G$ to zero. \\ 
+      \\
+      $
+        \psi(x)=\begin{cases}
+          A e^{ikx}+B e^{-eikx}, ~~~ x \leq 0 \\
+          \\
+          0, ~~~~~~~~~~~~~~~~~~~~~~~~~ x>0
+        \end{cases} \\
+        \\
+        \\
+        \begin{cases}
+          \lim\limits_{x\to 0^+} \psi(x)=\lim\limits_{x\to 0^-} \psi(x): ~~ A+B=0 \\
+          \\
+          \lim\limits_{x\to 0^+} \dfrac{d \psi}{dx}=\lim\limits_{x\to 0^-} \dfrac{d\psi}{dx}: ~~ (A-B)ik=G
+        \end{cases} \Longrightarrow A=0, B=0, \psi(x)=0 \\ \\
+      $ \\ 
+      Hence, $E=V_0$ is \textbf{NOT} an eigenvalue! \\
+      \\
+      \rule{15cm}{1pt}
+      \\
+      \\
+      \textbf{(C) $V_0-\lambda<0$} \\
+      \\
+      $
+        \begin{cases}
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m\lambda \psi}{\hbar^2}, ~~~~~~~~~~~~ x \leq 0 \\
+          \\
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m\psi(\lambda-V_0)}{\hbar^2}, ~~~  x>0
+        \end{cases} \\ \\
+      $
+      The general solution on $x>0$ is: \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          Ae^{ikx}+Be^{-ikx}, ~~~~ x \leq 0 \\
+          \\
+          Fe^{ilx}+Ge^{-lx}, ~~~~~~ x>0
+        \end{cases}
+      $ where $l=\dfrac{\sqrt{2m(\lambda-V_0)}}{\hbar}$ and $k=\dfrac{\sqrt{2m\lambda}}{\hbar}$ \\ 
+      \\
+      Solving the ODE in $t$ yields $\phi(t)=e^{-i\lambda t/\hbar}$, which means the product solution is a linear combination
+      of waves travelling to the left and to the right. \\
+      \\
+      $
+        \psi(x) \phi(t)=\begin{cases}
+          Ae^{i(kx-\lambda t/\hbar)}+Be^{-i(kx+\lambda t/\hbar)}, ~~~ x \leq 0 \\
+          \\
+          F e^{i(\ell x-\lambda t/\hbar)}+G e^{-i(\ell x+\lambda t/\hbar)}
+        \end{cases}
+      $ \\
+      \\
+      Assuming a plane wave is only incident from the left, set $G=0$: \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          Ae^{ikx}+Be^{-ikx}, ~~~ x \leq 0 \\
+          \\
+          F e^{i \ell x}, ~~~~~~~~~~~~~~~~ x>0
+        \end{cases} \\
+      $ \\
+      \\
+      $
+        T=\dfrac{\dfrac{i \hbar}{2m} \left[(F e^{i \ell x})\dfrac{d}{dx}(F^* e^{-i \ell x})-(F^* e^{-i \ell x})\dfrac{d}{dx}(F e^{i \ell x})\right]}{\dfrac{i \hbar}{2m} \left[(Ae^{ikx})\dfrac{d}{dx}(A^*e^{-ikx})-(A^*e^{-ikx})\dfrac{d}{dx}(Ae^{ikx})\right]} \\
+        \\
+        =\dfrac{i \ell 2FF^*}{ik AA^*}=\dfrac{\ell}{k}\dfrac{|F|^2}{|A|^2} \\
+        \\
+        \\
+        \therefore ~~~ T=\sqrt{\dfrac{\lambda-V_0}{\lambda}}\dfrac{|F|^2}{|A|^2} ~~ \surd
+        \\
+        \\
+        \\
+        R=\dfrac{\dfrac{i \hbar}{2m} \left[(Be^{-ikx})\dfrac{d}{dx}(B^*e^{ikx})-(B^*e^{ikx})\dfrac{d}{dx}(Be^{-ikx})\right]}{\dfrac{i \hbar}{2m} \left[(Ae^{ikx})\dfrac{d}{dx}(A^*e^{-ikx})-(A^*e^{-ikx})\dfrac{d}{dx}(Ae^{ikx})\right]} \\
+        \\
+        =\dfrac{ik2BB^*}{-ik2AA^*} \\
+        \\
+        \\
+        \\
+        \therefore ~~~ R=\dfrac{|B|^2}{|A|^2} ~~ \surd \\
+        \\
+      $
+      \\
+      \\
     }
 
   \rule{15cm}{1pt}
