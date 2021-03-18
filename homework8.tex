@@ -408,7 +408,69 @@
         \\
         \therefore ~~~ R=\dfrac{|B|^2}{|A|^2} ~~ \surd \\
         \\
+      $ \\
+      Constants, require require the wave function to be continuous at $x=0$. \\ \\
       $
+        \lim\limits_{x\to 0^+} \psi(x)=\lim\limits_{x\to 0^-} \psi(x): ~~ A+B=F \\
+        \\
+        \\
+        \bigints_{-\epsilon}^{+\epsilon} \dfrac{d^2 \psi}{dx^2}dx=\bigints_{-\epsilon}^{+\epsilon}  \dfrac{2m}{\hbar^2} \psi(x) \left[V(x)-\lambda\right]dx \\
+        \\
+        \\
+        \dfrac{d \psi}{dx} \Big|_{-\epsilon}^{+\epsilon}=-\bigints_{-\epsilon}^{0} \dfrac{2m \lambda \psi(x)}{\hbar^2}dx+\bigints_{0}^{+\epsilon} \dfrac{2m \psi(x)(V_0-\lambda)}{\hbar^2} dx \\ 
+        \\
+        \\
+        =-\dfrac{2m \lambda \psi(0) \epsilon}{\hbar^2}+\dfrac{2m \psi(0)(V_0-\lambda) \epsilon}{\hbar^2} \\
+        \\
+        \\
+      $
+      Taking the limit as $\epsilon \to 0$, we have: $\dfrac{d \psi}{dx}\Big|_{0^-}^{0^+}=0$ \\
+      \\
+      \\
+      $
+        \lim\limits_{x\to 0^+} \dfrac{d\psi}{dx}=\lim\limits_{x\to 0^-} \dfrac{d\psi}{dx}: ~~~ ik(A-B)=i\ell f
+      $ \\
+      \\
+      Alrighty, so far we have found these: \\ 
+      \\
+      $
+        \begin{cases}
+          A+B=F \\
+          \\
+          A-B=\dfrac{\ell F}{k}
+        \end{cases} \Longrightarrow \begin{cases}
+          B=\dfrac{k-\ell}{2k}F \\
+          \\
+          F=\dfrac{2k}{k+\ell}A
+        \end{cases}
+      $ \\
+      \\
+      Now, let's rewrite the $T$ as: \\
+      \\
+      $
+        T=\sqrt{\dfrac{\lambda-V_0}{\lambda}}\dfrac{|F|^2}{|A|^2}=\sqrt{\dfrac{\lambda-V_0}{\lambda}} \left(\dfrac{F}{A}\right) \left(\dfrac{F}{A}\right)^*
+        =\sqrt{\dfrac{\lambda-V_0}{\lambda}} \left(\dfrac{2k}{k+\ell}\right) \left(\dfrac{2k}{k+\ell}\right)^* \\
+        \\
+        \\
+        =4\sqrt{\dfrac{\lambda-V_0}{\lambda}} \left(\dfrac{1}{1+\dfrac{\ell}{k}}\right) \left(\dfrac{1}{1+\dfrac{\ell}{k}}\right) \\
+        \\
+        \\
+        =\dfrac{4\sqrt{\dfrac{\lambda-V_0}{\lambda}}}{1+2\sqrt{\dfrac{\lambda-V_0}{\lambda}}+\dfrac{\lambda-V_0}{\lambda}} \\
+        \\
+        \\
+        \\
+        \\
+        B=\dfrac{k-\ell}{2k}F=\dfrac{k-\ell}{k+\ell}A \\
+        \\
+        \\
+        \Longrightarrow R=\dfrac{|B|^2}{|A|^2}=\left(\dfrac{k-\ell}{k+\ell}\right) \left(\dfrac{k-\ell}{k+\ell}\right)^*=\left(\dfrac{1-\dfrac{\ell}{k}}{1+\dfrac{\ell}{k}}\right) \left(\dfrac{1-\dfrac{\ell}{k}}{1+\dfrac{\ell}{k}}\right) \\
+        \\
+        \\
+        \\
+        \\
+        R+T=\left(\dfrac{1-\dfrac{\ell}{k}}{1+\dfrac{\ell}{k}}\right) \left(\dfrac{1-\dfrac{\ell}{k}}{1+\dfrac{\ell}{k}}\right) + \dfrac{4\sqrt{\dfrac{\lambda-V_0}{\lambda}}}{1+2\sqrt{\dfrac{\lambda-V_0}{\lambda}}+\dfrac{\lambda-V_0}{\lambda}} \\ \\
+      $
+      By doing some algebra we can see that $R+T=1 ~~~~ \surd$
       \\
       \\
     }
