@@ -519,6 +519,93 @@
   \begin{itemize}
     \item Construct the S-matrix for scattering from a delta-function well (Equation 2.117).
 
+      \textcolor{hwColor}{
+        Let's start again with the Schr$\ddot{o}$dinger equation. \\
+        \\
+        \\
+        $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}+V \Psi$ \\
+        \\
+        \\
+        When $V(x)=-\alpha \delta(x)$ then the Schr$\ddot{o}$dinger equation becomes: \\
+        \\
+        $
+          i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}-\alpha \delta(x) \Psi(x,t), -\infty<x<+\infty, ~~~ t>0
+        $ \\
+        \\
+        By the help of the method of separation of variables, we assume $\Psi(x,t)=\psi(x) \phi(t)$ is a solution, hence: \\
+        \\
+        \\
+        $
+          \begin{cases}
+            E=i\hbar \dfrac{\phi^'(t)}{\phi(t)} \\
+            \\
+            E=-\dfrac{\hbar^2}{2m}\dfrac{\psi^{''}(x)}{\psi(x)}-\alpha \delta(x)
+          \end{cases} \\
+          \\
+          \\
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m}{\hbar^2} \psi(x)\left[\alpha \delta(x)+E\right] \\ \\
+        $
+        Based on the definition of the delta function we have the following: \\
+        \\
+        \\
+        $
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2mE \psi(x)}{\hbar^2}, ~~~ x\neq 0
+        $ \\
+        \\
+        The general solution for scattering states is: \\
+        \\
+        $
+          \psi(x)=\begin{cases}
+            Ae^{ikx}+Be^{-ikx}, ~~~ x<0 \\
+            \\
+            Fe^{ikx}+Ge^{-ikx}, ~~~ x>0 \\
+          \end{cases} ~~~~ k=\dfrac{\sqrt{2mE}}{\hbar}. \\
+        $ \\
+        \\
+        $
+          \lim\limits_{x\to 0^+} \psi(x)=\lim\limits_{x\to 0^-} \psi(x): ~~ A+B=F+G \\
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          \bigints_{-\epsilon}^{+\epsilon} \dfrac{d^2 \psi}{dx^2}dx=\bigints_{-\epsilon}^{+\epsilon}  \dfrac{2m}{\hbar^2} \psi(x) \left[\alpha \delta(x)+E\right]dx \\
+          \\
+          \dfrac{d \psi}{dx} \Big|_{-\epsilon}^{+\epsilon}=-\dfrac{2m}{\hbar^2} \left[\alpha \bigints_{-\epsilon}^{+\epsilon} \delta(x) \psi(x) dx+E\bigints_{-\epsilon}^{+\epsilon} \psi(x) dx\right]
+          =-\dfrac{2m \psi(0)}{\hbar^2} \left[\alpha+2E \epsilon\right] \\
+          \\
+          \\
+        $
+        Taking the limit as $\epsilon \to 0$:
+        $
+          \dfrac{d \psi}{dx} \Big|_{0^-}^{0^+}=-\dfrac{2m \alpha \psi(0)}{\hbar^2} \\
+          \\
+          \\
+          \\
+          \lim\limits_{x\to 0^+} \dfrac{d\psi}{dx}-\lim\limits_{x\to 0^-} \dfrac{d\psi}{dx}=-\dfrac{2m \alpha \psi(0)}{\hbar^2}: ~~~~ ik(F-G)-ik(A-B)=-\dfrac{2m \alpha}{\hbar^2}(A+B) \\
+          \\
+          \\
+          \\
+          \begin{cases}
+            B=\dfrac{im \alpha A}{\hbar^2 k-im\alpha}+\dfrac{\hbar^2 kG}{\hbar^2 k-im\alpha}=S_{11}A+S_{12}G \\
+            \\
+            \\
+            F=\dfrac{im \alpha A}{\hbar^2 k-im\alpha}+\dfrac{\hbar^2 kG}{\hbar^2 k-im\alpha}=S_{21}A+S_{22}G
+          \end{cases} \\
+          \\
+        $
+        \\
+        \\
+        The scattering matrix for the delta-function:
+        $
+          S=\begin{pmatrix}
+            \dfrac{im \alpha}{\hbar^2 k-im \alpha} & \dfrac{\hbar^2 k}{\hbar^2 k-im \alpha} \\
+            \\
+            \dfrac{\hbar^2 k}{\hbar^2 k-im \alpha} & \dfrac{im \alpha}{\hbar^2 k-im \alpha}
+          \end{pmatrix}
+        $
+      }
+
   \end{itemize}
 
 \end{document}
