@@ -436,6 +436,93 @@
       \\
       \\
       \includegraphics[height=6cm, width=12cm]{3.JPG}
+      \\
+      \\
+      \rule{15cm}{1pt}
+      \\
+      \\
+      Now, it is time to find the eigenstate for the case where $K \approx -0.61 \dfrac{\hbar^2}{ma^2}$. \\
+      \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          C_1 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x<-a \\
+          \\
+          C_3 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right)+C_4 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ -a<x<+a \\
+          \\
+          C_6 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        =\begin{cases}
+          \left(C_3+C_4e^{2wa}\right) exp \left(\dfrac{1.10x}{a}\right), ~~~~~ x<-a \\
+          \\
+          C_3 exp\left(\dfrac{1.10x}{a}\right)+C_4 exp\left(-\dfrac{1.10x}{a}\right), ~~~~~ -a<x<+a \\
+          \\
+          \left(C_3 e^{2wa}+C_4\right) exp \left(-\dfrac{1.10x}{a}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        =\begin{cases}
+          \left[ C_4e^{2wa}\left(\dfrac{\hbar^2 w}{m \alpha}-1\right)+C_4e^{2wa}\right] exp\left(\dfrac{1.10x}{a}\right), ~~~~~ x<-a \\
+          \\
+          C_4 e^{2wa}\left(\dfrac{\hbar^2 w}{m \alpha}-1\right) exp\left(\dfrac{1.10x}{a}\right)+C_4 exp\left(-\dfrac{1.10x}{a}\right), ~~~~~ -a<x<+a \\
+          \\
+          \left[C_4 e^{4wa}\left(\dfrac{\hbar^2 w}{m \alpha}-1\right)+C_4\right]exp\left(-\dfrac{1.10x}{a}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        =\begin{cases}
+          10.18 C_4 exp\left(\dfrac{1.10x}{a}\right), ~~~~~ x<-a \\
+          \\
+          C_4 \left[exp\left(\dfrac{1.10x}{a}\right)+exp\left(-\dfrac{1.10x}{a}\right)\right], ~~~~~ -a<x<+a \\
+          \\
+          10.18 C_4 exp\left(-\dfrac{1.10x}{a}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+      $
+      $C_4$ is a normalization constant. \\
+      \\
+      \\
+      $
+        \bigints_{-\infty}^{+\infty} \left[\psi(x)\right]^2 dx=1 \\
+        \\
+        \\
+        =\bigints_{-\infty}^{-a} \left[\psi(x)\right]^2 dx+\bigints_{-a}^{+a} \left[\psi(x)\right]^2 dx+\bigints_{+a}^{+\infty} \left[\psi(x)\right]^2 dx \\
+        \\
+        \\
+        \therefore ~~~ C_4\approx \dfrac{0.2}{\sqrt{a}} \\
+        \\
+        \\
+      $
+      Therefore, the bound state with $K=-\dfrac{0.61 \hbar^2}{ma^2}$ when $\alpha=\dfrac{\hbar^2}{ma}$ is: \\
+      \\
+      \\
+      $
+        \therefore ~~~ \psi(x)=\begin{cases}
+          \dfrac{2.15}{\sqrt{a}} exp\left(\dfrac{1.10x}{a}\right), ~~~~~ x<-a \\
+          \\
+          \dfrac{0.21}{\sqrt{a}} \left[exp\left(-\dfrac{1.10x}{a}\right)-exp\left(\dfrac{1.10x}{a}\right)\right], ~~~~~ -a<x<+a \\
+          \\
+          \dfrac{2.15}{\sqrt{a}} exp\left(-\dfrac{1.10x}{a}\right)), ~~~~~ x>a
+        \end{cases} ~~~~ \surd
+      $
+      \\
+      \\
+      \\
+      \\
+      \includegraphics[height=6cm, width=12cm]{4.JPG} \\
+      \\
+      \\
+      \includegraphics[height=6cm, width=12cm]{5.JPG}
+      \\
+      \\
+      \rule{15cm}{1pt}
     }
 
   \rule{15cm}{1pt}
