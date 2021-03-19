@@ -523,6 +523,95 @@
       \\
       \\
       \rule{15cm}{1pt}
+      \\
+      \\
+      $
+        1=\left(4 wa-1\right)^2 e^{4wa} \Rightarrow 
+        \begin{cases}
+          wa \approx -0.63 \\
+          \\
+          wa \approx \Rightarrow \dfrac{\sqrt{-2mK}a}{\hbar}=0 \Rightarrow K=0\\
+          \\
+          wa \approx 0.36 \Rightarrow \dfrac{\sqrt{-2mK}a}{\hbar} \approx 0.36 \Rightarrow K=-\dfrac{0.06 \hbar^2}{ma^2}
+        \end{cases}
+      $ \\
+      \\
+      \\
+      We can ignore the first result since it is a negative value (\emph{the square root of a positive number must be a positive}). 
+      Since there is one negative energy, there is one bound state for this value of $\alpha$. \\
+      \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          C_1 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x<-a \\
+          \\
+          C_3 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right)+C_4 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ -a<x<+a \\
+          \\
+          C_6 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        =\begin{cases}
+          \left(C_3+C_4e^{2wa}\right) exp \left(\dfrac{1.10x}{a}\right), ~~~~~ x<-a \\
+          \\
+          C_3 exp\left(\dfrac{0.36x}{a}\right)+C_4 exp\left(-\dfrac{0.36x}{a}\right), ~~~~~ -a<x<+a \\
+          \\
+          \left(C_3 e^{2wa}+C_4\right) exp \left(-\dfrac{0.36x}{a}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        =\begin{cases}
+          \left[ C_4e^{2wa}\left(\dfrac{\hbar^2 w}{m \alpha}-1\right)+C_4e^{2wa}\right] exp\left(\dfrac{0.36x}{a}\right), ~~~~~ x<-a \\
+          \\
+          C_4 e^{2wa}\left(\dfrac{\hbar^2 w}{m \alpha}-1\right) exp\left(\dfrac{0.36x}{a}\right)+C_4 exp\left(-\dfrac{0.36x}{a}\right), ~~~~~ -a<x<+a \\
+          \\
+          \left[C_4 e^{4wa}\left(\dfrac{\hbar^2 w}{m \alpha}-1\right)+C_4\right]exp\left(-\dfrac{0.36x}{a}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        =\begin{cases}
+          3.09 C_4 exp\left(\dfrac{0.36x}{a}\right), ~~~~~ x<-a \\
+          \\
+          C_4 \left[exp\left(\dfrac{0.36x}{a}\right)+exp\left(-\dfrac{0.36x}{a}\right)\right], ~~~~~ -a<x<+a \\
+          \\
+          3.09 C_4 exp\left(-\dfrac{0.36x}{a}\right), ~~~~~ x>a
+        \end{cases}
+      $
+      \\
+      \\
+      \includegraphics[height=6cm, width=12cm]{5.JPG}
+      \\
+      \\
+      $C_4$ is a normalization constant. \\
+      \\
+      \\
+      $
+        \bigints_{-\infty}^{+\infty} \left[\psi(x)\right]^2 dx=1 \\
+        \\
+        \\
+        =\bigints_{-\infty}^{-a} \left[\psi(x)\right]^2 dx+\bigints_{-a}^{+a} \left[\psi(x)\right]^2 dx+\bigints_{+a}^{+\infty} \left[\psi(x)\right]^2 dx \\
+        \\
+        \\
+        \therefore ~~~ C_4\approx \dfrac{0.21}{\sqrt{a}} \\
+        \\
+        \\
+        \therefore ~~~ \psi(x)=\begin{cases}
+          \dfrac{0.67}{\sqrt{a}} exp\left(\dfrac{0.36x}{a}\right), ~~~~~ x<-a \\
+          \\
+          \dfrac{0.21}{\sqrt{a}} \left[exp\left(-\dfrac{0.36x}{a}\right)+exp\left(\dfrac{0.36x}{a}\right)\right], ~~~~~ -a<x<+a \\
+          \\
+          \dfrac{0.67}{\sqrt{a}} exp\left(-\dfrac{0.36x}{a}\right)), ~~~~~ x>a
+        \end{cases} ~~~~ \surd
+      $ \\
+      \\
+      \\
+      \includegraphics[height=6cm, width=12cm]{7.JPG}
+      \\
+      \\
+      \includegraphics[height=6cm, width=12cm]{8.JPG}
     }
 
   \rule{15cm}{1pt}
