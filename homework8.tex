@@ -103,7 +103,7 @@
         \\
         \therefore ~~~ \bigints_{-\infty}^{+\infty} \psi^*_m \psi_n dx=0 ~ \surd \\ \\
       $
-      Since we got a zero, we can tell that the delta-function well is orthogonal to the scattering states. \\
+      Since we got a zero, we can tell that the delta-function is orthogonal to the scattering states. \\
     }
 
   \rule{15cm}{1pt}
@@ -126,7 +126,208 @@
   \end{itemize}
 
     \textcolor{hwColor}{
-      Start here 
+      \\
+      Insert a picture here \\
+      \\
+      \\
+      \\
+      Let's start again with the Schr$\ddot{o}$dinger equation. \\
+      \\
+      \\
+      $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}+V(x,t) \Psi(x,t), ~~~~~ -\infty<x<+\infty, ~~ t>0$ \\
+      \\
+      \\
+      We have $V(x)=-\alpha \left[\delta(x+a)+ \delta(x-a)\right]$, let's plug it into the above equation: \\
+      \\
+      \\
+      $
+        i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}-\alpha \left[\delta(x+a)+ \delta(x-a)\right] \Psi(x,t)
+      $ \\
+      \\
+      By the method of separation of variables: \\
+      \\
+      \\
+      $
+        \Psi(x,t)=\psi(x) \phi(t) \Longrightarrow i\hbar \dfrac{\partial}{\partial t} \left[\psi(x) \phi(t)\right]=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2}{\partial x}\left[\psi(x) \phi(t)\right]-\alpha \left[\delta(x+a)+ \delta(x-a)\right] \left[\psi(x) \phi(t)\right] \\ \\
+        \\
+        \\
+        i \hbar \psi(x) \phi^'(t)=-\dfrac{\hbar^2}{2m} \psi^{''}(x) \phi(t)-\alpha \psi(x) \phi(t) \left[\delta(x+a)+\delta(x-a)\right] \\
+        \\
+        \\
+        i \hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}- \alpha \left[\delta(x+a)+\delta(x-a)\right] \\
+        \\
+        \\
+      $
+      On the left side we have a function of t and on the other side we have a function of x. Therefore, the only way are equal if they are both 
+      equal to a constant. Let's call that constant $K$. \\
+      \\
+      $
+        i \hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}- \alpha \left[\delta(x+a)+\delta(x-a)\right]=K \\
+        \\
+        \\
+        \begin{cases}
+          K=i \hbar \dfrac{\phi^'(t)}{\phi(t)} \\
+          \\
+          K=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}- \alpha \left[\delta(x+a)+\delta(x-a)\right]
+        \end{cases} \\ 
+      $
+      \\
+      Mathematically speaking, $K$ for which the boundary conditions are satisfied are called the eigenvalues
+      and the nontrivial solutions associated with them are called the eigenfunctions. 
+      The ODE in x is known as the time-independent Schr$\ddot{o}$dinger equation. \\
+      \\
+      \\
+      $
+        \dfrac{d^2 \psi}{dx^2}+ \psi(x)\dfrac{2m}{\hbar^2} \left[\alpha \left(\delta(x+a)+\delta(x-a)\right)+K\right]=0 ~~~~~~~~~~~~~~~ (A) \\
+        \\
+        \\
+        \dfrac{d^2 \psi}{dx^2}+\dfrac{2m \psi K}{\hbar^2}=0, ~~~ x\neq a, -a \\
+        \\
+        \\
+        \psi(x)=\begin{cases}
+          C_1 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right)+C_2 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x<-a \\
+          \\
+          C_3 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right)+C_4 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ -a<x<+a\\
+          \\
+          C_5 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right)+C_6 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x>a
+        \end{cases}
+        \\
+        \\
+        \\
+      $
+      To make our lives easier, let's set $C_2$ and $C_5$ equal to zero. Therefore, \\
+      \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          C_1 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x<-a \\
+          \\
+          C_3 exp\left(\dfrac{\sqrt{-2mK}x}{\hbar}\right)+C_4 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ -a<x<+a\\
+          \\
+          C_6 exp\left(-\dfrac{\sqrt{-2mK}x}{\hbar}\right), ~~~~~ x>a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        \begin{cases}
+          \lim\limits_{x\to -a^+} \psi(x)=\lim\limits_{x\to -a^-} \psi(x): ~~~ C_1 exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)=C_3 exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)+C_4 exp\left(\dfrac{\sqrt{-2mK}a}{\hbar}\right) \\
+          \\
+          \lim\limits_{x\to a^+} \psi(x)=\lim\limits_{x\to a^-} \psi(x): ~~~ C_6 exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)=C_3 exp\left(\dfrac{\sqrt{-2mK}a}{\hbar}\right)+C_4 exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)
+        \end{cases} 
+        \\
+        \\
+        \\
+      $
+      Taking the integral of (A), \\ \\ 
+      $
+        \bigints_{-a-\epsilon}^{-a+\epsilon} \left[\dfrac{d^2 \psi}{dx^2}+\dfrac{2m}{\hbar^2} \psi(x) \left(\alpha\left(\delta(x+a)+\delta(x-a)+K\right)\right)\right]dx=0 \\
+        \\
+        \\
+        \bigints_{-a-\epsilon}^{-a+\epsilon} \dfrac{d^2 \psi}{dx^2} dx+\dfrac{2m}{\hbar^2} \left[
+          \alpha \bigints_{-a-\epsilon}^{-a+\epsilon} \psi(x) \left[\delta(x+a)+\delta(x-a)\right] dx
+          +\bigints_{-a-\epsilon}^{-a+\epsilon} \psi(x) K dx
+        \right]=0 \\
+        \\
+        \\
+        \dfrac{d\psi}{dx} \Big|_{-a-\epsilon}^{-a+\epsilon}+\dfrac{2m}{\hbar^2} \left[-\alpha \psi a-2K\psi \epsilon \right]=0 \\
+        \\
+        \\
+      $
+      Taking the limit; \\
+      \\
+      $
+        \dfrac{d\psi}{dx} \Big|_{-a-\epsilon}^{-a+\epsilon}+\dfrac{2m \alpha \psi(-a)}{\hbar^2}=0 \Rightarrow \dfrac{2m \alpha \psi(-a)}{\hbar^2}=\lim\limits_{x\to -a^-} \dfrac{\psi(x)}{dx}-\lim\limits_{x\to -a^+} \dfrac{\psi(x)}{dx} \\
+        \\
+        \\
+        \\
+        C_1 \dfrac{2m \alpha}{\hbar} exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)=
+        C_1 \dfrac{\sqrt{-2mK}a}{\hbar} \left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right) \\ \\
+        -\left[
+          C_3 \dfrac{\sqrt{-2mK}a}{\hbar} exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)
+          -C_4 \dfrac{\sqrt{-2mK}a}{\hbar} exp\left(\dfrac{\sqrt{-2mK}a}{\hbar}\right)
+        \right] \\ \\
+      $
+      \rule{15cm}{1pt}
+      \\
+      \\
+      The final condition: \\
+      \\
+      \\
+      $
+        \bigints_{a-\epsilon}^{a+\epsilon} \left[\dfrac{d^2 \psi}{dx^2}+\dfrac{2m}{\hbar^2} \psi(x) \left(\alpha\left(\delta(x+a)+\delta(x-a)+K\right)\right)\right]dx=0 \\
+        \\
+        \\
+        \bigints_{a-\epsilon}^{a+\epsilon} \dfrac{d^2 \psi}{dx^2} dx+\dfrac{2m}{\hbar^2} \left[
+          \alpha \bigints_{a-\epsilon}^{a+\epsilon} \psi(x) \left[\delta(x+a)+\delta(x-a)\right] dx
+          +\bigints_{a-\epsilon}^{a+\epsilon} \psi(x) K dx
+        \right]=0 \\
+        \\
+        \\
+        \\
+        \dfrac{d\psi}{dx} \Big|_{a-\epsilon}^{a+\epsilon}+\dfrac{2m}{\hbar^2} \left[\alpha \psi(a)+2K \psi(a) \epsilon\right]=0
+        \\
+        \\
+      $
+      Taking the limit; \\
+      \\
+      \\
+      $
+        \dfrac{d\psi}{dx} \Big|_{a-\epsilon}^{a+\epsilon}+\dfrac{2m \alpha \psi(a)}{\hbar^2}=0 \Rightarrow \dfrac{2m \alpha \psi(a)}{\hbar^2}=\lim\limits_{x\to a^-} \dfrac{\psi(x)}{dx}-\lim\limits_{x\to a^+} \dfrac{\psi(x)}{dx} \\
+        \\
+        \\
+        \\
+        C_6 \dfrac{2m \alpha}{\hbar^2} exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)= 
+        +C_6 \dfrac{\sqrt{-2mK}a}{\hbar} exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right) \\ \\
+        +\left[
+          C_3 \dfrac{\sqrt{-2mK}a}{\hbar} exp \left(\dfrac{\sqrt{-2mK}a}{\hbar}\right)
+          -C_4 \dfrac{\sqrt{-2mK}a}{\hbar} exp\left(-\dfrac{\sqrt{-2mK}a}{\hbar}\right)
+        \right]
+      $
+      \\
+      \\
+      \\
+      Phew, now we have four equations. Let's list them all here: \\
+      \\
+      \\
+      $
+        \begin{cases}
+          C_1 e^{-w a}-C_3 e^{-w a}-C_4 e^{wa}=0 \\
+          \\
+          C_3 e^{w a}+C_4 e^{-w a}-C_6 e^{-wa}=0 \\
+          \\
+          C_1 \dfrac{2m \alpha}{\hbar^2} e^{-w a}-C_1 w e^{-w a}+C_3 we^{-w a}-C_4 w e^{w a}=0 \\
+          \\
+          C_6 \dfrac{2m \alpha}{\hbar^2} e^{-w a}-C_3 w e^{w a}+C_4 w e^{-w a}-C_6 w e^{-w a}=0 
+        \end{cases}, ~~~ where ~~~~ k=\dfrac{\sqrt{-2mK}}{\hbar}
+      $
+      \\
+      \\
+      $
+        \begin{cases}
+          C_1 e^{-w a} \left(\dfrac{2m \alpha}{\hbar^2}-w\right)=-C_3 we^{-w a}+C_4 w e^{w a} \\
+          \\
+          C_6 e^{-w a} \left(\dfrac{2m \alpha}{\hbar^2}-w\right)=C_3 w e^{w a}-C_4 w e^{-w a} 
+        \end{cases} \\
+        \\
+        \\
+        \begin{cases}
+           \left(C_3 e^{-w a}+C_4 e^{w a}\right) \left(\dfrac{2m \alpha}{\hbar^2}-w\right)=-C_3 we^{-w a}+C_4 w e^{w a} \\
+           \\
+           \left(C_3 e^{w a}+C_4 e^{-w a}\right) \left(\dfrac{2m \alpha}{\hbar^2}-w\right)=C_3 w e^{w a}-C_4 w e^{-w a} 
+        \end{cases} \Longrightarrow 
+        \begin{cases}
+          C_4 \dfrac{k \hbar^2}{m \alpha}=C_3 e^{-2 w a}+C_4 \\
+          \\
+          C_3 \dfrac{k \hbar^2}{m \alpha}=C_3 +C_4 e^{-2w a}
+        \end{cases} \\
+        \\
+        \\
+        \begin{cases}
+          C_3=C_4 \left(\dfrac{w \hbar^2}{m \alpha}-1\right) e^{2 w a} \\
+          \\
+          C_4=C_3 \left(\dfrac{w \hbar^2}{m \alpha}-1\right) e^{2 w a}
+        \end{cases}
+      $
     }
 
   \rule{15cm}{1pt}
