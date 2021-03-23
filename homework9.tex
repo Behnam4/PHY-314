@@ -58,6 +58,84 @@
   Derive the transcendental equation for the allowed energies, and solve it
   graphically. Examine the two limiting cases. Is there always an odd bound state?
 
+  \textcolor{hwColor}{
+    \\
+    Let's start with the Schr$\ddot{o}$dinger equation.
+    \\
+    $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}+V(x,t) \Psi(x,t), ~~~~ -\infty<x<+\infty, ~~ t>0$ \\
+    \\
+    From the textbook we know that a finite square well we have:
+    $$
+      V(x)=\begin{cases}
+        -V_0 ~~~ -a\leq x\leq +a \\
+        \\
+        0 ~~~~ |x|>a
+      \end{cases}
+    $$
+    That gives us $i \hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}+V(x) \Psi(x,t)$ \\
+    \\
+    \\
+    \rule{15cm}{1pt}
+    \\
+    \\
+    \textbf{A quick review:}
+    \\
+    The method of separation of variables relies upon the assumption that a function of the form
+    $u(x,t)=\phi(x)G(t)$ will be a solution to a linear homogeneous partial differential equation in x
+    and t. This is called a product solution and provided the boundary conditions are also linear and
+    homogeneous this will also satisfy the boundary conditions. The method of Separation of Variables
+    cannot always be used and even when it can be used it will not always be possible to get much past
+    the first step in the method.
+    \\
+    \rule{15cm}{1pt}
+    \\
+    we assume $\Psi(x,t)=\psi(x) \phi(t)$ is a solution, hence we have: \\
+    \\
+    $
+      i\hbar \dfrac{\partial}{\partial t} \left[\psi(x) \phi(t)\right]=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2}{\partial x} \left[\psi(x) \phi(t)\right]+V(x) \left[\psi(x) \phi(t)\right] \\
+      \\
+      \\
+      i\hbar \psi(x) \phi^'(t)=-\dfrac{\hbar^2}{2m} \psi^{''}(x) \phi(t)+V(x) \psi(x) \phi(t) \\
+      \\
+      \\
+      i\hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)
+      \\
+      \\
+    $
+      The only way a function of $t$ can be equal to a function of $x$ is if both are equal to a constant like $E$. \\
+    $
+      i\hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)=E \Rightarrow \begin{cases}
+        E=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)
+        \\
+        \\
+        E=i\hbar \dfrac{\phi^'(t)}{\phi(t)}
+      \end{cases} \\
+      \\
+      \dfrac{d^2 \psi}{dx^2}=\dfrac{2m \psi}{\hbar}\left(V(x)-E\right) \\ \\ 
+    $
+    Now for the $V(x)$ intervals we have: 
+    $
+      \begin{cases}
+        \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m E \psi}{\hbar^2}, ~~~~~ |x|>a \\
+        \\
+        \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m \psi}{\hbar^2}\left(V_0+E\right)
+      \end{cases} 
+    $
+    \\
+    \\
+    \\
+    The general solution is: 
+    $
+      \psi(x)=\begin{cases}
+        C_1 ~ exp\left(\sqrt{\dfrac{-2mE}{\hbar}}x\right)+C_2 ~ exp\left(-\sqrt{\dfrac{-2mE}{\hbar}}x\right) ~~~ x<-a \\
+        \\
+        C_3 ~ cos\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right)+C_4 ~ sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right) ~~~ -a \leq x\leq +a \\
+        \\
+        C_5 ~ exp\left(\sqrt{\dfrac{-2mE}{\hbar}}x\right)+C_6 ~ exp\left(-\sqrt{\dfrac{-2mE}{\hbar}}x\right) ~~~ x>a 
+      \end{cases}
+    $
+  }
+
   \rule{15cm}{1pt}
 
   \textbf{2.31} \\ \\
