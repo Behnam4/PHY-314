@@ -127,16 +127,198 @@
     The general solution is: 
     $
       \psi(x)=\begin{cases}
-        C_1 ~ exp\left(\sqrt{\dfrac{-2mE}{\hbar}}x\right)+C_2 ~ exp\left(-\sqrt{\dfrac{-2mE}{\hbar}}x\right) ~~~ x<-a \\
+        C_1 ~ exp\left(\dfrac{\sqrt{-2mE}}{\hbar}x\right)+C_2 ~ exp\left(-\dfrac{\sqrt{-2mE}}{\hbar}x\right) ~~~ x<-a \\
         \\
         C_3 ~ cos\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right)+C_4 ~ sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right) ~~~ -a \leq x\leq +a \\
         \\
-        C_5 ~ exp\left(\sqrt{\dfrac{-2mE}{\hbar}}x\right)+C_6 ~ exp\left(-\sqrt{\dfrac{-2mE}{\hbar}}x\right) ~~~ x>a 
+        C_5 ~ exp\left(\dfrac{\sqrt{-2mE}}{\hbar}x\right)+C_6 ~ exp\left(-\dfrac{\sqrt{-2mE}}{\hbar}x\right) ~~~ x>a 
+      \end{cases}
+    $
+    \\
+    \\
+    The goal here is to find these constants. If we want $\Psi(x,t)=\psi(x) \phi(t)=0$ when $x\rightarrow \pm \infty$
+    we need to set $C_2$ and $C_5$ to zero. And for the odd bound states let's set $C_3=0$ and $C_1=-C_6$. Hence we have: \\
+    \\
+    $
+      \psi(x)=\begin{cases}
+        C_1 ~ exp\left(\dfrac{\sqrt{-2mE}}{\hbar}x\right) ~~~ x<-a \\
+        \\
+        C_3 ~ cos\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right)+C_4 ~ sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right) ~~~ -a \leq x\leq +a \\
+        \\
+        C_6 ~ exp\left(-\dfrac{\sqrt{-2mE}}{\hbar}x\right) ~~~ x>a 
+      \end{cases} \\
+      \\
+      \\
+      \lim\limits_{x \to \pm a^-}=\lim\limits_{x \to \pm a^+} \Rightarrow C_4 ~ sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right)=C_6 ~ exp\left(-\dfrac{\sqrt{-2mE}}{\hbar}a\right) \\
+      \\
+      \Longrightarrow C_6=C_4  sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right) ~ exp\left(\dfrac{\sqrt{-2mE}}{\hbar}a\right)
+    $
+    \\
+    \\
+    Therefore, the odd bound state for the finite square well: \\
+    \\
+    $
+      \psi(x)=\begin{cases}
+        -C_4  sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right) ~ exp\left(\dfrac{\sqrt{-2mE}}{\hbar}(x+a)\right) ~~~ x<-a \\
+        \\
+        C_4 ~ sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right) ~~~ -a \leq x\leq +a \\
+        \\
+        C_4  sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right) ~ exp\left(-\dfrac{\sqrt{-2mE}}{\hbar}(x-a)\right) ~~~ x>a 
+      \end{cases}
+    $
+    \\
+    \\
+    The time-independent Schr$\ddot{o}$dinger equation is homogeneous meaning $C_4$ can be anything but if we
+    choice it wisely so that $\psi^2(x)=1$. \\
+    \\
+    \\
+    $
+      \bigints_{-\infty}^{+\infty} \left[\psi(x)\right]^2 dx=\bigints_{-\infty}^{-a} \left[\psi(x)\right]^2 dx+\bigints_{-a}^{+a} \left[\psi(x)\right]^2 dx+ \bigints_{+a}^{+\infty} \left[\psi(x)\right]^2 dx
+      \\
+      \\
+      =\bigints_{-\infty}^{-a} \left[-C_6 ~ exp\left(\dfrac{\sqrt{-2mE}}{\hbar}x\right)\right]^2 dx
+      +\bigints_{-a}^{+a} \left[C_4 ~ sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right)\right]^2 dx
+      +\bigints_{+a}^{+\infty} \left[C_6 ~ exp\left(-\dfrac{\sqrt{-2mE}}{\hbar}x\right)\right]^2 dx
+      \\
+      \\
+      \\
+      =C^2_6 \bigints_{-\infty}^{-a} exp\left(2\dfrac{\sqrt{-2mE}}{\hbar}x\right) dx
+      +C^2_4 \bigints_{-a}^{+a} sin^2\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right) dx
+      +C^2_6 \bigints_{+a}^{+\infty} exp\left(-2\dfrac{\sqrt{-2mE}}{\hbar}x\right) dx
+      \\
+      \\
+      \\
+      =C^2_6 \left[\dfrac{\hbar}{2\sqrt{-2mE}} ~ exp\left(\dfrac{2x\sqrt{-2mE}}{\hbar}\right) \Bigg|_{-\infty}^{-a}\right] \\
+      +C^2_4 \left[ x-\dfrac{\hbar}{2\sqrt{2m(V_0+E)}} sin\left( \dfrac{2x\sqrt{2m(V_0+E)}}{\hbar}\right)\Bigg|_{0}^{a}\right] \\
+      +C^2_6 \left[-\dfrac{\hbar}{2\sqrt{-2mE}} ~ exp\left(-\dfrac{2x\sqrt{-2mE}}{\hbar}\right) \Bigg|_{+a}^{+\infty}\right] 
+    $ \\
+    \\
+    \\
+    By doing some algebra we have: \\
+    \\
+    \\
+    $
+      \therefore ~~~ C_4=\dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}} sin^2 \left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right)-\dfrac{\hbar}{2\sqrt{2m (V_0+E)}} sin\left(\dfrac{2a\sqrt{2m(V_0+E)}}{\hbar}\right)}} ~~~~ \surd
+    $ 
+    \\
+    \\
+    The energy corresponding to the eigenstate $\psi(x)$: \\
+    \\
+    \\
+    $
+      \bigints_{a-\epsilon}^{a+\epsilon} \dfrac{d^2 \psi}{dx^2} dx=\bigints_{a-\epsilon}^{a+\epsilon} \dfrac{2m \psi(x)}{\hbar^2} \left(V(x)-E\right) dx \\
+      \\
+      \\
+      \dfrac{d\psi}{dx} \Bigg|_{a-\epsilon}^{a+\epsilon}=\bigints_{a-\epsilon}^{a} \dfrac{2m \psi(x)}{\hbar^2} \left(-V_0-E\right) dx-\bigints_{a}^{a+\epsilon} \dfrac{2m \psi(x) E}{\hbar^2} dx=-\dfrac{2m \psi(a) \epsilon}{\hbar^2} \left(V_0+E\right)-\dfrac{2m \psi(a)E}{\hbar^2} 
+    $
+    \\
+    \\
+    Taking the limit $\epsilon \to 0$ \\
+    \\
+    \\
+    $
+      \therefore ~~~ \dfrac{d\psi}{dx} \Bigg|_{a-}^{a+}=0 ~~~ \surd \\
+      \\
+      \\
+      \\
+      \lim\limits_{x\to a^-} \dfrac{d\psi}{dx}=\lim\limits_{x\to a^+} \dfrac{d\psi}{dx}: 
+      C_4\dfrac{\sqrt{2m(V_0+E)}}{\hbar} cos\left(\dfrac{\sqrt{2m(V_0+E)}a}{\hbar}\right)=-C_4 sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right) \left(\dfrac{\sqrt{-2mE}}{\hbar}\right)
+      \\
+      \\
+      \\
+      \Longrightarrow -\dfrac{\sqrt{2m(V_0+E)}}{\hbar} ~ cot\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right)=\dfrac{\sqrt{-2mE}}{\hbar}
+      \\
+      \\
+      \\
+      -a\dfrac{\sqrt{2m(V_0+E)}}{\hbar} ~ cot\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right)=a\dfrac{\sqrt{-2mE}}{\hbar} \\
+      \\
+      \\
+      -a\dfrac{\sqrt{2m(V_0+E)}}{\hbar} ~ cot\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right)=a\left[\sqrt{\dfrac{2mV_0}{\hbar^2}-\dfrac{2m(V_0+E)}{\hbar^2}}\right] \\
+      \\
+      \\
+      -a\dfrac{\sqrt{2m(V_0+E)}}{\hbar} ~ cot\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right)=\sqrt{\left(\dfrac{a\sqrt{2mV_0}}{\hbar}\right)^2-\left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right)^2} \\
+      \\
+      \\
+      \begin{cases}
+        z_0 \equiv \dfrac{a\sqrt{2mV_0}}{\hbar} \\
+        \\
+        z \equiv \dfrac{a\sqrt{2m(V_0+E)}}{\hbar}
+      \end{cases} \Longrightarrow -z cot(z)=\sqrt{z^2_0-z^2} 
+      \\
+      \\
+      \\
+      \therefore ~~~ -cot(z)=\sqrt{\left(\dfrac{z_0}{z}\right)^2-1} ~~~ \surd 
+    $
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \emph{The number of intersections indicates the number of legitimate odd bound states.}
+    \\
+    When $z_0$ is at $\dfrac{\pi}{2}$ then there is one intersection at $z=\dfrac{\pi}{2}$
+    \\
+    \\
+    \includegraphics[height=8cm, width=16cm]{two.JPG} \\
+    \\
+    \\
+    $
+      z_0=\dfrac{a\sqrt{2mV_0}}{\hbar} < \dfrac{\pi}{2} \Longrightarrow V_0 < \dfrac{\pi^2 \hbar^2}{8ma^2} \\
+      \\
+    $
+    While $V_0$ is less than that there are no odd bound states. \\
+    $  
+      \\
+      z=\dfrac{a\sqrt{2m(V_0+E)}}{\hbar} \approx n\pi \Longrightarrow V_0+E_n \approx \dfrac{\pi^2 \hbar^2(2n)^2}{8ma^2}
+    $
+    \\
+    \\
+    Since $\dfrac{\partial \Psi}{\partial x}$ at $x=a$, then we have: \\
+    \\
+    \\
+    $
+      \lim\limits_{x\to a^-} \dfrac{d\psi}{dx}=\lim\limits_{x\to a^+} \dfrac{d\psi}{dx}: 
+      C_4\dfrac{\sqrt{2m(V_0+E)}}{\hbar} cos\left(\dfrac{\sqrt{2m(V_0+E)}a}{\hbar}\right)=-C_4 sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right) \left(\dfrac{\sqrt{-2mE}}{\hbar}\right) \\
+      \\
+      \\
+      \dfrac{\hbar}{\sqrt{-2mE}} cos \left(a\dfrac{\sqrt{2m(V_0+E)}}{\hbar}\right)=-\dfrac{\hbar}{\sqrt{2m(V_0+E)}} sin\left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right) \\
+      \\
+      \\
+      \\
+      C_4=\dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}} sin^2 \left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right)-\dfrac{\hbar}{2\sqrt{2m (V_0+E)}} sin\left(\dfrac{2a\sqrt{2m(V_0+E)}}{\hbar}\right)}} \\
+      \\
+      \\
+      =\dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}} sin^2 \left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right)-\dfrac{\hbar}{2\sqrt{2m (V_0+E)}} sin\left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar} \right) cos\left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right)}} \\
+      \\
+      \\
+      =\dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}} sin^2 \left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right)+\dfrac{\hbar}{\sqrt{-2mE}} cos^2\left(\dfrac{a\sqrt{2m(V_0+E)}}{\hbar}\right)}} \\
+      \\
+      \\
+      \\
+      \therefore ~~~ C_4=\dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}}}} ~~~ \surd \\
+      \\
+      \\
+      \\
+    $
+    The odd bound state is: \\
+    \\
+    \\
+    $
+      \psi(x)=\begin{cases}
+        -\dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}}}}  sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right) ~ exp\left(\dfrac{\sqrt{-2mE}}{\hbar}(x+a)\right) ~~~ x<-a \\
+        \\
+        \dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}}}} ~ sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}x\right) ~~~ -a \leq x\leq +a \\
+        \\
+        \dfrac{1}{\sqrt{a+\dfrac{\hbar}{\sqrt{-2mE}}}}  sin\left(\dfrac{\sqrt{2m(V_0+E)}}{\hbar}a\right) ~ exp\left(-\dfrac{\sqrt{-2mE}}{\hbar}(x-a)\right) ~~~ x>a 
       \end{cases}
     $
   }
 
-  \rule{15cm}{1pt}
+  \pagebreak
 
   \textbf{2.31} \\ \\
   The Dirac delta function can be thought of as the limiting case of a
