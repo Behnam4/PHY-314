@@ -329,6 +329,122 @@
   Check that your answer is consistent with Equation 2.132. Also show that
   Equation 2.172 reduces to Equation 2.144 in the appropriate limit.
 
+    \textcolor{hwColor}{
+      From the textbook we have. \\
+      \\
+      $
+        \begin{cases}
+          V(x)=-\alpha \delta(x) ~~~~~~~~~~~~~~ (2.117) \\
+          \\
+          \psi(x)=\dfrac{\sqrt{m \alpha}}{\hbar} e^{-m \alpha |x|/\hbar^2}; E=-\dfrac{m \alpha^2}{2\hbar^2} ~~~~~~~~~~~~~~ (2.132) \\
+          \\
+          T^{-1}=1+\dfrac{V^2_0}{4E(E+V_0)} ~ sin^2 \left(\dfrac{2a}{\hbar} \sqrt{2m(E+V_0)}\right) ~~~~~~~~~~~~~~ (2.172)
+        \end{cases}
+      $
+      \\
+      \\
+      We got the square well potential as 
+      $
+        \begin{cases}
+          0 ~~~~~ x<-a \\
+          \\
+          -V_0 ~~~~~ -a\leqslant x \leqslant +a \\
+          \\
+          0 ~~~~~ x>a
+        \end{cases}
+      $ \\
+      \\
+      \\
+      We are asked to show the delta-function well is a weak potential as $z \to 0$. Let's start with
+      equation (2.117). 
+      \\ 
+      \\
+      $
+        V(x)=-\alpha \delta(x), ~~~~ V_0 \equiv \dfrac{\alpha}{\epsilon}, ~~~~ \alpha=\dfrac{\epsilon}{2}
+      $ \\
+      \\
+      \\
+      We have $z_0=\dfrac{a \sqrt{2mV_0}}{\hbar}=\dfrac{1}{\hbar}\sqrt{\dfrac{m \alpha \epsilon}{2}}$ \\ \\
+      Taking the limit as $\epsilon \to 0$ we get $\lim\limits_{\epsilon \to 0} z_0=0$. \\
+      \\
+      \\
+      We just showed \emph{the delta-function well is a weak potential}. \\
+      \\
+      \\
+      \textbf{The bound state energy for the delta-function potentia}: \\
+      \\
+      \\
+      $
+        tan(z)=\sqrt{(\dfrac{z_0}{z})^2-1} \\ \\
+        \begin{cases}
+          z_0=\dfrac{a \sqrt{2mV_0}}{\hbar} \\
+          \\
+          z=\dfrac{a\sqrt{2m(E+V_0)}}{\hbar}
+        \end{cases}
+        \Longrightarrow tan(\dfrac{a\sqrt{2m(E+V_0)}}{\hbar})=\sqrt{(\dfrac{\dfrac{a \sqrt{2mV_0}}{\hbar}}{\dfrac{a\sqrt{2m(E+V_0)}}{\hbar}})^2-1}
+        =\sqrt{\dfrac{V_0}{V_0+E}+1}
+      $
+      \\
+      \\
+      Based on the variables $\alpha$ and $\epsilon$ that we defined earlier, we can rewrite the above result as: 
+      \\
+      \\
+      $
+        tan\left(\dfrac{\epsilon \sqrt{2m(E+\alpha/\epsilon)}}{2\hbar}\right)=\sqrt{\dfrac{\dfrac{\alpha}{\epsilon}}{E+\dfrac{\alpha}{\epsilon}}-1}
+      $
+      \\
+      \\
+      We know from calculus that when $\theta$ is very small then $tan(\theta) \approx \theta$, with that said,
+      we have: \\
+      \\
+      \\
+      $
+        \dfrac{1}{\hbar}=\sqrt{\dfrac{\alpha m \epsilon}{2}}=\sqrt{\dfrac{1}{\dfrac{\epsilon E}{\alpha}+1}-1} \Longrightarrow 
+        E=-\dfrac{m \alpha^2}{\epsilon m \alpha+2\hbar^2} \\
+        \\
+        \\
+        \lim\limits_{\epsilon \to 0} E=\lim\limits_{\epsilon \to 0} \left(-\dfrac{m \alpha^2}{\epsilon m \alpha+2\hbar^2} \right) \\
+        \\
+        \\
+        \\
+        \therefore ~~~~ E=-\dfrac{m}{2} \left(\dfrac{\alpha}{\hbar}\right)^2 ~~~ \surd
+      $
+      \\
+      \\
+      What we just found is the energy of the bound state for $V(x)=-\alpha \delta(x)$ which is the same 
+      equation as 2.132 from the textbook.  \\
+      \\
+      \\
+      \\
+      Now it is time to show that equation 2.172 reduces to equation 2.144. \\
+      \\
+      \\
+      $
+        T^{-1}=1+\dfrac{V^2_0}{4E(E+V_0)} ~ sin^2 \left(\dfrac{2a}{\hbar} \sqrt{2m(E+V_0)}\right) \\
+        \\
+        \\
+        T^{-1}=1+\dfrac{\left(\dfrac{\alpha}{\epsilon}\right)^2}{4E(E+\dfrac{\alpha}{\epsilon})} sin^2\left(\dfrac{\epsilon}{\hbar} \sqrt{2m\left(E+\dfrac{\alpha}{\epsilon}\right)} \right)
+        =1+\dfrac{  \alpha^2 sin^2 \left(  \dfrac{1}{\hbar}  \sqrt{2mE \epsilon^2+2m\alpha \epsilon}  \right)  }{4 \epsilon^2 E^2 +4 \epsilon \alpha E}
+        \approx 1+\dfrac{\alpha^2 sin^2\left(\dfrac{1}{\hbar} \sqrt{2m\epsilon \alpha}\right)}{4E \epsilon \alpha}
+      $ \\
+      \\
+      \\
+      Since $sin(\theta) \approx \theta$ for very small angles, hence: \\
+      \\
+      $
+        T^{-1}=1+\dfrac{\alpha^2 sin^2\left(\dfrac{1}{\hbar} \sqrt{2m\epsilon \alpha}\right)}{4E \epsilon \alpha}
+        =1+\dfrac{\alpha^2}{4E\epsilon \alpha} \left(\dfrac{1}{\hbar} \sqrt{2m\alpha \epsilon}\right)^2
+        =1+\dfrac{\alpha}{4 \epsilon E} \left(\dfrac{2m \epsilon \alpha}{\hbar^2}\right) 
+        =1+\dfrac{\alpha^2 m}{2\hbar^2 E} \\
+        \\
+        \\
+        \therefore ~~~~ T=\dfrac{1}{1+\left(\dfrac{m \alpha^2}{2\hbar^2 E}\right)} ~~~~ \surd
+      $  \\
+      \\
+      \\
+      We just showed that equation 2.172 reduces to equation 2.144.
+    }
+
   \rule{15cm}{1pt}
   
   \textbf{2.33} \\ \\
