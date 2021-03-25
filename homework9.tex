@@ -62,7 +62,8 @@
     \\
     Let's start with the Schr$\ddot{o}$dinger equation.
     \\
-    $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}+V(x,t) \Psi(x,t), ~~~~ -\infty<x<+\infty, ~~ t>0$ \\
+    \\
+    $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V(x,t) \Psi(x,t), ~~~~ -\infty<x<+\infty, ~~ t>0$ \\
     \\
     From the textbook we know that a finite square well we have:
     $$
@@ -72,7 +73,7 @@
         0 ~~~~ |x|>a
       \end{cases}
     $$
-    That gives us $i \hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x}+V(x) \Psi(x,t)$ \\
+    That gives us $i \hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V(x) \Psi(x,t)$ \\
     \\
     \\
     \rule{15cm}{1pt}
@@ -89,7 +90,7 @@
     \\
     \rule{15cm}{1pt}
     \\
-    we assume $\Psi(x,t)=\psi(x) \phi(t)$ is a solution, hence we have: \\
+    We assume $\Psi(x,t)=\psi(x) \phi(t)$ is a solution, hence we have: \\
     \\
     $
       i\hbar \dfrac{\partial}{\partial t} \left[\psi(x) \phi(t)\right]=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2}{\partial x} \left[\psi(x) \phi(t)\right]+V(x) \left[\psi(x) \phi(t)\right] \\
@@ -455,12 +456,289 @@
   Partial answer: for $E<V_0$
   $$T^{-1}=1+\dfrac{V^2_0}{4E(V_0-E)} sinh^2 \left(\dfrac{2a}{\hbar} \sqrt{2m(V_0-E)}\right)$$
 
+    \textcolor{hwColor}{
+      \\
+      \\
+      \\
+      Let's start with the Schr$\ddot{o}$dinger equation. \\
+      \\
+      $i\hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V(x,t) \Psi(x,t), ~~~~ -\infty<x<+\infty, ~~ t>0$ \\
+      \\
+      From the textbook we know that a finite square well we have:
+      $$
+        V(x)=\begin{cases}
+          0 ~~~~ x<-a \\
+          \\
+          V_0 ~~~ -a\leq x\leq +a \\
+          \\
+          0 ~~~~ x>a
+        \end{cases}
+      $$
+      That gives us $i \hbar \dfrac{\partial \Psi}{\partial t}=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \Psi}{\partial x^2}+V(x) \Psi(x,t)$ \\
+      \\
+      \\
+      The method of separation of variables relies upon the assumption that a function of the form
+      $u(x,t)=\phi(x)G(t)$ will be a solution to a linear homogeneous partial differential equation in x
+      and t. This is called a product solution and provided the boundary conditions are also linear and
+      homogeneous this will also satisfy the boundary conditions. The method of Separation of Variables
+      cannot always be used and even when it can be used it will not always be possible to get much past
+      the first step in the method. \\ \\
+      We assume $\Psi(x,t)=\psi(x) \phi(t)$ is a solution, hence we have: \\
+      \\
+      $
+        i\hbar \dfrac{\partial}{\partial t} \left[\psi(x) \phi(t)\right]=-\dfrac{\hbar^2}{2m}\dfrac{\partial^2}{\partial x} \left[\psi(x) \phi(t)\right]+V(x) \left[\psi(x) \phi(t)\right] \\
+        \\
+        \\
+        i\hbar \psi(x) \phi^'(t)=-\dfrac{\hbar^2}{2m} \psi^{''}(x) \phi(t)+V(x) \psi(x) \phi(t) \\
+        \\
+        \\
+        i\hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)
+        \\
+        \\
+      $
+      The only way a function of $t$ can be equal to a function of $x$ is if both are equal to a constant like $E$. \\
+      $
+        i\hbar \dfrac{\phi^'(t)}{\phi(t)}=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)=E \Rightarrow \begin{cases}
+          E=-\dfrac{\hbar^2}{2m} \dfrac{\psi^{''}(x)}{\psi(x)}+V(x)
+          \\
+          \\
+          E=i\hbar \dfrac{\phi^'(t)}{\phi(t)}
+        \end{cases} \\
+        \\
+        \dfrac{d^2 \psi}{dx^2}=\dfrac{2m \psi}{\hbar^2}\left(V(x)-E\right) \\ \\ 
+      $
+      Now for the $V(x)$ intervals we have: 
+      $
+        \begin{cases}
+          \dfrac{d^2 \psi}{dx^2}=-\dfrac{2m E \psi}{\hbar^2}, ~~~~~~~~~~ |x|>a \\
+          \\
+          \dfrac{d^2 \psi}{dx^2}=\dfrac{2m \psi}{\hbar^2}\left(V_0-E\right) ~~~ -a \leq x \leq +a
+        \end{cases} 
+      $
+      \\
+      \\
+      \includegraphics[height=6cm, width=14cm]{three.JPG} \\
+      \\
+      \\
+      \textbf{Case $V_0-E >0$} \\
+      \\
+      \\
+      For this case the general solution from $-a \leq x \leq +a$ is: \\
+      \\
+      $
+        \psi(x)=\begin{cases}
+          A ~ e^{ikx}+B ~ e^{-ikx} ~~~~~ x<-a \\
+          \\
+          C ~ cosh(\ell x)+D ~ sinh(\ell x) ~~~~ -a \leq x \leq +a \\
+          \\
+          F ~ e^{ikx}+G ~ e^{-ikx} ~~~~~ x>+a  \\
+        \end{cases}, ~~~ \ell=\dfrac{\sqrt{2m(V_0-E)}}{\hbar}, ~~ k=\dfrac{\sqrt{2mE}}{\hbar}
+        \\
+        \\
+        \\
+        \\
+        \psi(x) \phi(t)=\begin{cases}
+          A ~ e^{i(kx-Et/\hbar)}+B ~ e^{-i(kx+Et/\hbar)} ~~~~~ x<-a \\
+          \\
+          C ~ e^{-iEt/\hbar} ~ cosh(\ell x)+D e^{-iEt/\hbar} ~ sinh(\ell x) ~~~~ -a \leq x \leq +a \\
+          \\
+          F ~ e^{i(kx-Et/\hbar)}+G ~ e^{-i(kx+Et/\hbar)} ~~~~~ x>+a
+        \end{cases} \\
+        \\
+        \\
+        \\
+        \begin{cases}
+          \lim\limits_{x\to -a^-} \psi(x)=\lim\limits_{x\to -a^+} \psi(x): A ~ e^{-ika}+B ~ e^{ika}=C ~ cosh(\ell a)-D ~ sinh(\ell a )\\
+          \\
+          \lim\limits_{x\to +a^-} \psi(x)=\lim\limits_{x\to +a^+} \psi(x): F ~ e^{ika}+G ~ e^{-ika}= C ~ cosh(\ell a)+D ~ sinh(\ell a) \\
+        \end{cases} \\
+        \\
+        \\
+      $
+      Integrating both sides of the time-independent Schr$\ddot{o}$dinger equation gives us: \\
+      \\
+      \\
+      $
+        \bigints_{-a-\epsilon}^{-a+\epsilon} \dfrac{d^2 \psi}{dx^2} dx=\bigints_{-a-\epsilon}^{-a+\epsilon} \dfrac{2m \psi(x)}{\hbar^2} \left(V(x)-E\right) dx 
+        \\
+        \\
+        \\
+        \dfrac{d \psi}{dx} \Bigg|_{-a-\epsilon}^{-a+\epsilon}=-\bigints_{-a-\epsilon}^{-a} \dfrac{2m E \psi(x)}{\hbar^2} dx+\bigints_{-a}^{-a+\epsilon} \dfrac{2m \psi(V_0-E)}{\hbar^2} dx
+        =-\dfrac{2mE \epsilon \psi(-a)}{\hbar^2}+\dfrac{2m \epsilon (V_0-E) \psi(-a)}{\hbar^2} \\
+        \\
+        \\
+        \lim\limits_{\epsilon \to 0} \dfrac{d \psi}{dx} \Bigg|_{-a}^{-a}=0 ~~~~ \surd
+      $
+      \\
+      \\
+      $\dfrac{\partial \Psi}{\partial x}$ is continuous when $x=-a$, hence: \\
+      \\
+      $
+        \lim\limits_{x\to -a^-} \psi(x)=\lim\limits_{x\to -a^+} \psi(x): ik\left(A ~ e^{-ika}-B ~ e^{ika}\right)=\ell \left(D ~ cosh(\ell a)-C ~ sinh(\ell a)\right)
+      $
+      \\
+      \\
+      Integrating both sides: \\
+      \\
+      $
+        \bigints_{a-\epsilon}^{a+\epsilon} \dfrac{d^2 \psi}{dx^2} dx=\bigints_{a-\epsilon}^{a+\epsilon} \dfrac{2m \psi(x)}{\hbar^2} \left(V(x)-E\right) dx
+        \\
+        \\
+        \\
+        \dfrac{d \psi}{dx} \Bigg|_{a-\epsilon}^{a+\epsilon}=\bigints_{a-\epsilon}^{a} \dfrac{2m \psi(x) (V_0-E)}{\hbar^2} dx-\bigints_{a}^{-a+\epsilon} \dfrac{2m E \psi(x)}{\hbar^2} dx
+        =\dfrac{2m \psi(a) \epsilon (V_0-E)}{\hbar^2}-\dfrac{2m \epsilon \psi(a) E}{\hbar^2} \\
+        \\
+        \\
+        \lim\limits_{\epsilon \to 0} \dfrac{d \psi}{dx} \Bigg|_{a^-}^{a^+}=0 \\
+        \\
+        \\
+        \lim\limits_{x\to a^-} \psi(x)=\lim\limits_{x\to a^+} \psi(x): ik\left(F ~ e^{ika}-G ~ e^{-ika}\right)=\ell C ~ sinh(\ell a)+ \ell D ~ cosh(\ell a) 
+      $
+      \\
+      \\
+      \\
+      So far we have these four equations: \\
+      \\
+      $
+        \begin{cases}
+          A ~ e^{-ika}+B ~ e^{ika}=C ~ cosh(\ell a)-D ~ sinh(\ell a) \\
+          \\
+          F ~ e^{ika}=C ~ cosh(\ell a)+D ~ sinh(\ell a) \\
+          \\
+          ik(A ~ e^{-ika}-B ~ e^{ika})=-\ell C ~ sinh(\ell a)+\ell D ~ cosh(\ell a) \\
+          \\
+          ikF ~ e^{ika}= \ell \left(C ~ sinh(\ell a)+D ~ cosh(\ell a)\right) 
+        \end{cases}
+      $
+      \\
+      \\
+      \\
+      From the second and fourth equations we have:
+      \\
+      \\
+      $
+        \begin{cases}
+          C ~ cosh^2(\ell a)+D ~ sinh(\ell a) cosh(\ell a)=F ~ e^{ika} cosh(\ell a) \\
+          \\
+          C ~ sinh^2(\ell a)+D ~ sinh(\ell a) cosh(\ell a)=\dfrac{ik F ~ e^{ika} sinh(\ell a)}{\ell} 
+        \end{cases} \Longrightarrow 
+        \begin{cases}
+          C=F ~ e^{ika} \left(cosh(\ell a)-\dfrac{ik}{\ell} sinh(\ell a)\right) ~~~ \surd \\
+          \\
+          D=F ~ e^{ika} \left(\dfrac{ik}{\ell} cosh(\ell a)-sinh(\ell a)\right) ~~~ \surd 
+        \end{cases}
+      $
+      \\
+      \\
+      \\
+      For the first equation we have: \\
+      \\
+      $
+        A ~ e^{-ika}+B ~ e^{ika}=C ~ cosh(\ell a)-D ~ sinh(\ell a) \\
+        =\left(F ~ e^{ika} \left(cosh(\ell a)-\dfrac{ik}{\ell} sinh(\ell a)\right)\right) ~ cosh(\ell a)-\left(F ~ e^{ika} \left(\dfrac{ik}{\ell} cosh(\ell a)-sinh(\ell a)\right)\right) ~ sinh(\ell a) \\
+        =F ~ e^{ika} \left(\dfrac{ik}{\ell} cosh(2\ell a)- sinh(2\ell a)\right) ~~~ \surd 
+      $
+      \\
+      \\
+      \\
+      For the third equation we have: \\
+      \\
+      $
+        ik(A ~ e^{-ika}-B ~ e^{ika})=-\ell C ~ sinh(\ell a)+\ell D ~ cosh(\ell a) \\
+        =-\ell \left(F ~ e^{ika} \left(cosh(\ell a)-\dfrac{ik}{\ell} sinh(\ell a)\right)\right) ~ sinh(\ell a)+\ell \left(F ~ e^{ika} \left(\dfrac{ik}{\ell} cosh(\ell a)-sinh(\ell a)\right)\right) ~ cosh(\ell a)
+        =F ~ e^{ika} \left(\dfrac{ik}{\ell} cosh(2\ell a)-sinh(2\ell a)\right) ~~~ \surd 
+      $
+      \\
+      \\
+      Now we can rewrite the first and third equations as: \\
+      \\
+      \\
+      $
+        \begin{cases}
+          A ~ e^{-ika}+B ~ e^{ika}=F ~ e^{ika} \left(-\dfrac{ik}{\ell} sinh(2\ell a)+ cosh(2\ell a)\right) \\
+          \\
+          A ~ e^{-ika}-B ~ e^{ika}=F ~ e^{ika} \left(-\dfrac{\ell}{ik} sinh(2\ell a)+ cosh(2\ell a)\right)
+        \end{cases} \\
+        \\
+        \\
+        \Longrightarrow 2Be^{ika}=Fe^{ika} \left(-\dfrac{ik}{\ell} ~ sinh(2\ell a)+\dfrac{\ell}{ik} ~ sinh(2\ell a) \right)
+        \\
+        \\
+        \\
+        \therefore ~~~~ B=F\left(\dfrac{k^2+\ell^2}{2ik \ell}\right) ~ sinh(2 \ell a)  \\
+        \\
+        \\
+        \\
+        2A e^{-ika}=Fe^{ika} \left[2 ~ cosh(2 \ell a)-sinh(2 \ell a) \left(\dfrac{ik}{\ell}+\dfrac{\ell}{ik}\right) \right]
+        =Fe^{ika} \left(2 cosh(2 \ell a)+sinh(2 \ell a)\dfrac{k^2- \ell^2}{ik \ell}\right) 
+        \\
+        \\
+        \\
+        \therefore ~~~ F=\dfrac{A ~ e^{-2ika}}{cosh(2 \ell a)-i \dfrac{k^2-\ell^2}{2k \ell}sinh(2 \ell a)} ~~~~ \surd
+      $
+      \\
+      \\
+      \\
+      The transmission coefficient: \\
+      \\
+      \\
+      $
+        T=|\dfrac{F}{A}|^2=\left(\dfrac{F}{A}\right) \left(\dfrac{F}{A}\right)^*= \left[\dfrac{e^{-2ika}}{cosh(2 \ell a)-i \dfrac{k^2-\ell^2}{2k \ell}sinh(2 \ell a)}\right] \left[\dfrac{e^{2ika}}{cosh(2 \ell a)+i \dfrac{k^2-\ell^2}{2k \ell}sinh(2 \ell a)}\right] \\
+        \\
+        \\
+        \\
+        \therefore ~~~ T=\dfrac{1}{cosh^2(2 \ell a)+\dfrac{(k^2-\ell^2)^2}{(2k \ell)^2}sinh^2(2 \ell a)} ~~~~ \surd \\
+        \\
+        \\
+        \\
+        \rightarrow T^{-1}=cosh^2(2 \ell a)+\dfrac{(k^2-\ell^2)^2}{(2k \ell)^2}sinh^2(2 \ell a) \\
+        =cosh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right)+sinh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right) \dfrac{(V_0-2E)^2}{4E(V_0-E)} \\
+        =cosh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right)+sinh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right) \dfrac{V^2_0-4EV_0+4E^2}{4E(V_0-E)} \\
+        =cosh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right)+sinh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right) \dfrac{V^2_0}{4E(V_0-E)}-sinh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right) \dfrac{4EV_0-4E^2}{4E(V_0-E)} \\
+        \\
+        \\
+        \\
+        \therefore ~~~ T^{-1}=1+\dfrac{V^2_0}{4E(V_0-E)}sinh^2\left(\dfrac{2a\sqrt{2m(V_0-E)}}{\hbar}\right) ~~~~ \surd
+      $
+      \\
+      \\
+      \\
+      Earlier we found that  \\ \\
+      $
+        B=F\left(\dfrac{k^2+\ell^2}{2ik \ell}\right) ~ sinh(2 \ell a)=\dfrac{Ae^{-2ika} ~ sinh(2 \ell a)}{cosh(2 \ell a)-i \dfrac{k^2-\ell^2}{2kl} sinh(2 \ell a)} \left(\dfrac{k^2+\ell^2}{2i\ell k}\right) \\
+        =\dfrac{A e^{-2ika} \left(\dfrac{k^2+\ell^2}{2k \ell}\right) sinh(2 \ell a)}{sinh(2 \ell a) \dfrac{k^2-\ell^2}{2k \ell}+i cosh(2 \ell a)} \\
+        \\
+        \\
+        \\
+        \\
+        R=\Bigg|\dfrac{B}{A}\Bigg|^2=\left(\dfrac{B}{A}\right) \left(\dfrac{B}{A}\right)^*
+        =\left[\dfrac{e^{-2ika} \left(\dfrac{k^2+\ell^2}{2k \ell}\right) sinh(2 \ell a)}{sinh(2 \ell a) \dfrac{k^2-\ell^2}{2k \ell}+i cosh(2 \ell a)}\right] \left[\dfrac{e^{2ika} \left(\dfrac{k^2+\ell^2}{2k \ell}\right) sinh(2 \ell a)}{sinh(2 \ell a) \dfrac{k^2-\ell^2}{2k \ell}-i cosh(2 \ell a)}\right] \\
+        \\
+        \\
+        \therefore ~~~ R=\dfrac{1}{1+\dfrac{4E(V_0-E)}{V^2_0} ~ csch^2 \left(\dfrac{2a \sqrt{2m(V_0-E)}}{\hbar}\right)} \\
+        \\
+        \\
+      $
+      Hence, the reflection coefficient when $V_0-E >0$ is: \\
+      \\
+      \\
+      $
+        \therefore ~~~ R^{-1}=1+\dfrac{4E(V_0-E)}{V^2_0} ~ csch^2 \left(\dfrac{2a \sqrt{2m(V_0-E)}}{\hbar}\right) ~~~ \surd
+      $
+      \\
+      \\
+      \rule{15cm}{2pt}
+      \\
+      \\
+      \textbf{Case $V_0-E=0$} \\
+      \\
+      \\
+    }
 
   \rule{15cm}{1pt}
   
   \textbf{2.40} \\ \\
-  A particle of mass m in the harmonic oscillator potential (Equation
-  2.44) starts out in the state
+  A particle of mass m in the harmonic oscillator potential (Equation 2.44) starts out in the state
   $$\Psi(x,0)=A \left(1-2\sqrt{\dfrac{m \omega}{\hbar}}x\right)^2 ~ e^{-\dfrac{m\omega}{2\hbar} x^2}$$
   for some constant $A$.
   \begin{itemize}
