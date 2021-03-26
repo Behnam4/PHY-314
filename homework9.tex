@@ -1226,7 +1226,11 @@
     \item Estimate the energy of N isolated atoms, by treating each one as an
     electron in the ground state of an infinite square well of width a
     (Figure 2.23(a)).
-    
+
+      \textcolor{hwColor}{
+        When there are $N$ isolated atoms, then the total energy is $N E_1=\dfrac{N \pi^2 \hbar^2}{2m_e a^2}$
+      }
+      
     \item When these atoms come together to form a metal, we get N electrons in a
     much larger infinite square well of width Na (Figure 2.23(b)). Because of
     the Pauli exclusion principle (which we will discuss in Chapter 5) there
@@ -1234,16 +1238,83 @@
     each allowed state. What is the lowest energy for this system
     (Figure 2.23(b))?
 
+      \textcolor{hwColor}{
+        The lowest energy occurs when the N electrons occupy the bottom N states of the infinite square well. \\ \\
+        $
+          E=\dfrac{\pi^2 \hbar^2}{2 m_e(Na)^2}+\dfrac{4 \pi^2 \hbar^2}{2 m_e(Na)^2}+...+\dfrac{(N-1)^2\pi^2 \hbar^2}{2 m_e(Na)^2}+\dfrac{N^2\pi^2 \hbar^2}{2 m_e(Na)^2}
+          =\sum\limits_{n=1}^{N} \dfrac{n^2 \pi^2 \hbar^2}{2 m_e(Na)^2}
+          \\
+          \\
+          =\dfrac{\pi^2 \hbar^2}{2 m_e(Na)^2} \sum\limits_{n=1}^{N} n^2 \\
+          \\
+          \\
+          \\
+          \therefore ~~~ E=\dfrac{\pi^2 \hbar^2}{2m_e a^2} \dfrac{(N+1)(2N+1)}{6N} ~~~~ \surd
+        $
+      }
+
     \item The difference of these two energies is the \textbf{cohesive energy} of the metal—
     the energy it would take to tear it apart into isolated atoms. Find the
     cohesive energy per atom, in the limit of large N.
 
+      \textcolor{hwColor}{
+        $
+          E_c=NE_1-E=\dfrac{N \pi^2 \hbar^2}{2m_e a^2}-\dfrac{\pi^2 \hbar^2}{2m_e a^2} \dfrac{(N+1)(2N+1)}{6N} \\
+          \\
+          \\
+          =\dfrac{\pi^2 \hbar^2}{2m_e a^2} \left[N-\dfrac{(N+1)(2N+1)}{6N}\right] \\
+          \\
+          \\
+          =\dfrac{\pi^2 \hbar^2}{2m_e a^2} \left[\dfrac{6N^2-2N^2-N-2N-1}{6N}\right] \\
+          \\
+          \\
+          =\dfrac{\pi^2 \hbar^2}{2m_e a^2} \left[\dfrac{4N^2-3N-1}{6N}\right] \\
+          \\
+          \\
+          \\
+          \Longrightarrow ~~~ \dfrac{E_c}{N}=\dfrac{\pi^2 \hbar^2}{2m_e a^2} \left[\dfrac{4N^2-3N-1}{6N^2}\right] \\
+          \\
+          \\
+          \\
+          \lim\limits_{N \to \infty} \dfrac{E_c}{N}=\lim\limits_{N \to \infty} \dfrac{\pi^2 \hbar^2}{2m_e a^2} \left[\dfrac{4N^2-3N-1}{6N^2}\right] \\
+          \\
+          \\
+          \\
+          \therefore ~~~ \lim\limits_{N \to \infty} \dfrac{E_c}{N}=\dfrac{\pi^2 \hbar^2}{3m_e a^2} ~~~~ \surd
+        $
+      }
 
-    \item Atypical atomic separation in a metal is a few Ångström (say, $a \approx 4 ~ \mbox{\normalfont\AA}$).
+
+    \item A typical atomic separation in a metal is a few Ångström (say, $a \approx 4 ~ \mbox{\normalfont\AA}$).
     What is the numerical value of the cohesive energy per atom, in this
     model? (Measured values are in the range of 2–4 eV.)
 
     \includegraphics[height=6cm, width=10cm]{one.JPG}
+
+      \textcolor{hwColor}{
+        We know that: \\
+        \\
+        $
+          \begin{cases}
+            \hbar \approx 1.05 \times 10^{-34} ~~ J.s \\
+            \\
+            \pi \approx 3.14 \\
+            \\
+            a \approx 4 \times 10^{-10} ~~ m \\
+            \\
+            m_e \approx 9.11 \times 10^{-31} ~~ kg
+          \end{cases}
+        $
+        \\
+        Therefore we have: \\
+        \\
+        $
+          \lim\limits_{N \to \infty} \dfrac{E_c}{N}=\dfrac{\pi^2 \hbar^2}{3m_e a^2}=2.49 \times 10^{-19} ~~ J \times \dfrac{1 ~~ eV}{1.6 \times 10^{-19} ~~ J} \\
+          \\
+          \\
+          \therefore ~~~ \lim\limits_{N \to \infty} \dfrac{E_c}{N} \approx 1.57 ~~ eV ~~~ \Longrightarrow \textbf{From 2 to 4 eV range.}
+        $
+      }
     
   \end{itemize}
 
