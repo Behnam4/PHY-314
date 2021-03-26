@@ -1012,16 +1012,208 @@
     \item Determine $A$ and the coefficients $c_n$ in the expansion of this state in terms
     of the stationary states of the harmonic oscillator.
 
+      \textcolor{hwColor}{
+        $
+          1=\bigints_{-\infty}^{+\infty} |\Psi(x,0)|^2 dx=\bigints_{-\infty}^{+\infty} \left(A \left(1-2\sqrt{\dfrac{m \omega}{\hbar}}x\right)^2 ~ e^{-\dfrac{m\omega}{2\hbar} x^2}\right)^2 dx 
+          \\
+          \\
+          =A^2 [
+            \bigints_{-\infty}^{+\infty} exp\left(-\dfrac{m \omega x^2}{\hbar}\right)dx \\
+            -8\sqrt{\dfrac{m \omega}{\hbar}} \bigints_{-\infty}^{+\infty} x ~ exp\left(-\dfrac{m \omega x^2}{\hbar}\right)dx \\
+            +\dfrac{24 m \omega}{\hbar}\bigints_{-\infty}^{+\infty} x^2 ~ exp\left(-\dfrac{m \omega x^2}{\hbar}\right) dx \\
+            -32 \sqrt{\dfrac{(m \omega)^3}{\hbar^3}} \bigints_{-\infty}^{+\infty} x^3 ~ exp\left(-\dfrac{m \omega x^2}{\hbar}\right)dx \\
+            +\dfrac{16m^2 \omega^2}{\hbar^2}\bigints_{-\infty}^{+\infty} x^4 ~ exp\left(-\dfrac{m \omega x^2}{\hbar}\right)dx
+          ] \\
+          \\
+          \\
+          =A^2 \left[
+            2\sqrt{\pi} \left(\dfrac{\sqrt{\dfrac{\hbar}{m \omega}}}{2}\right)
+            +\dfrac{48 m \omega \sqrt{\pi}}{\hbar} \dfrac{2!}{1!} \left(\dfrac{\sqrt{\dfrac{\hbar}{m \omega}}}{2}\right)^3
+            +\dfrac{32 m^2 \omega^2 \sqrt{\pi}}{\hbar^2} \dfrac{4!}{2!} \left(\dfrac{\sqrt{\dfrac{\hbar}{m \omega}}}{2}\right)^5
+          \right]
+          \\
+          \\
+          \\
+          =A^2 \left(\sqrt{\dfrac{\pi \hbar}{m \omega}}+24\sqrt{\dfrac{\pi \hbar}{m \omega}}\right) \\
+          \\
+          \\
+          \therefore ~~~~ A=\dfrac{1}{5}\left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~~~ \surd
+          \\
+          \\
+          \rule{15cm}{2pt}
+          \\
+          \\
+          \Psi(x,0)=\left(\dfrac{1}{5}\left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4}\right) \left(1-2\sqrt{\dfrac{m \omega}{\hbar}}x\right)^2 ~ e^{-\dfrac{m\omega}{2\hbar} x^2} \\
+          \\
+          \\
+          \\
+          \therefore ~~~~ \Psi(x,0)=  \left[\dfrac{1}{5}\left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4}-\dfrac{4x}{5} \left(\dfrac{m^3 \omega^3}{\pi \hbar^3}\right)^{1/4}+\dfrac{4x^2 m \omega}{5\hbar} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4}\right]e^{-\dfrac{m\omega}{2\hbar} x^2}
+          \\
+          \\
+          \\
+        $
+        This is a polynomial of rank 2, therefore the first three eigenstates for the harmonic
+        oscillator are needed. \\
+        \\
+        \\
+        $
+          \Psi(x,t)=B_0 \psi_0(x) e^{-iE_0 t/\hbar}+B_1 \psi_1(x) e^{-iE_1 t/\hbar}+B_2 \psi_2(x) e^{-iE_2 t/\hbar}
+          \\
+          \\
+          =B_0 ~ \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp\left(-\dfrac{m \omega x^2}{2 \hbar}\right) e^{-i\omega t/2} \\         
+          B_1 ~ x\left(\dfrac{4m^3 \omega^3}{\pi \hbar^3}\right)^{1/4} ~ exp\left(-\dfrac{m \omega x^2}{2 \hbar}\right) e^{-3i \omega t/2} \\
+          B_2 ~ \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(\dfrac{2m \omega x^2}{\hbar}-1\right) ~ exp\left(-\dfrac{m \omega x^2}{2 \hbar}\right) e^{-i5\omega t/2}
+          \\
+          \\
+          \\
+          \\
+          \Psi(x,0)=B_0 ~ \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} ~ exp\left(-\dfrac{m \omega x^2}{2 \hbar}\right) \\         
+          B_1 ~ x\left(\dfrac{4m^3 \omega^3}{\pi \hbar^3}\right)^{1/4} ~ exp\left(-\dfrac{m \omega x^2}{2 \hbar}\right)  \\
+          B_2 ~ \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(\dfrac{2m \omega x^2}{\hbar}-1\right) ~ exp\left(-\dfrac{m \omega x^2}{2 \hbar}\right)
+          \\
+          \\
+          \\
+          =exp\left(-\dfrac{m \omega x^2}{2 \hbar}\right) \left[
+            B_0 ~ \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4}
+            B_1 ~ x\left(\dfrac{4m^3 \omega^3}{\pi \hbar^3}\right)^{1/4}
+            B_2 ~ \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \left(\dfrac{2m \omega x^2}{\hbar}-1\right)
+          \right]
+          \\
+          \\
+          \\
+          \\
+          \Longrightarrow \begin{cases}
+            \left(B_0-\dfrac{B_2}{\sqrt{2}}\right) \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4}=\dfrac{1}{5} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4} \\
+            \\
+            B_1 \sqrt{2} \left(\dfrac{m^3 \omega^3}{\pi \hbar^3}\right)^{1/4}=-\dfrac{4}{5} \left(\dfrac{m^3 \omega^3}{\pi \hbar^3}\right)^{1/4} \\
+            \\
+            B_2 \dfrac{\sqrt{2} m \omega}{\hbar} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4}=\dfrac{4 m \omega}{5 \hbar} \left(\dfrac{m \omega}{\pi \hbar}\right)^{1/4}
+          \end{cases} \Longrightarrow 
+          \begin{cases}
+            B_0=\dfrac{3}{5} \\
+            \\
+            B_1=-\dfrac{2\sqrt{2}}{5} \\
+            \\
+            B_2=\dfrac{2\sqrt{2}}{5} \\
+            \\
+            B_n=0, ~~ n>2
+          \end{cases}
+          \\
+          \\
+          \\
+          \\
+        $
+      }
+
     \item In a measurement of the particle’s energy, what results could you get, and
     what are their probabilities? What is the expectation value of the energy?
+
+      \textcolor{hwColor}{
+        Based on the values we found for $B_0, ..., B_n$ we have the general solution: \\
+        \\
+        $
+          \Psi(x,t)=B_0 \psi_0(x) e^{-iE_0 t/\hbar}+B_1 \psi_1(x) e^{-iE_1 t/\hbar}+B_2 \psi_2(x) e^{-iE_2 t/\hbar} \\
+          \\
+          =\dfrac{3}{5} \psi_0(x) e^{-iE_0 t/\hbar}-\dfrac{2\sqrt{2}}{5} \psi_1(x) e^{-iE_1 t/\hbar}+\dfrac{2\sqrt{2}}{5} \psi_2(x) e^{-iE_2 t/\hbar}
+        $
+        \\
+        \\
+        For the below $E$s we have the probabilities: \\
+        \\
+        \\
+        $
+          E_0=\dfrac{\hbar \omega}{2}, ~~ 
+          E_1=\dfrac{3\hbar \omega}{2}, ~~
+          E_2=\dfrac{5\hbar \omega}{2} \\
+          \\
+          \\
+          \begin{cases}
+            P(E_0)=\Bigg|\dfrac{3}{5}\Bigg|^2 \\
+            \\
+            P(E_1)=\Bigg|-\dfrac{2\sqrt{2}}{5}\Bigg|^2 \\
+            \\
+            P(E_2)=\Bigg|\dfrac{2\sqrt{2}}{5}\Bigg|^2
+          \end{cases}
+        $
+        With what we have found, the expectation value of energy is: \\
+        \\
+        \\
+        $
+          <E>=\sum\limits_{n} E_n P(E_n)=
+          \dfrac{\hbar \omega}{2} \left(\dfrac{9}{25}\right)+
+          \dfrac{3\hbar \omega}{2} \left(\dfrac{8}{25}\right)+
+          \dfrac{5\hbar \omega}{2} \left(\dfrac{8}{25}\right) \\
+          \\
+          \\
+          \\
+          \therefore ~~~~ <E>=1.46 \hbar \omega ~~~ \surd
+        $
+      }
 
     \item At a later time T the wave function is
     $$\Psi(x,T)=B\left(1+2\sqrt{\dfrac{m \omega}{\hbar}}x\right)^2 ~ e^{-\dfrac{m\omega}{2\hbar} x^2}$$
     for some constant B. What is the smallest possible value of $T$?
+
+      \textcolor{hwColor}{
+        $
+          \Psi(x,T)=B\left(1+2\sqrt{\dfrac{m \omega}{\hbar}}x\right)^2 ~ e^{-\dfrac{m\omega}{2\hbar} x^2} \\
+          \\
+          =\dfrac{3}{5} \psi_0(x) e^{-iE_0 T/\hbar}-\dfrac{2\sqrt{2}}{5} \psi_1(x) e^{-iE_1 T/\hbar}+\dfrac{2\sqrt{2}}{5} \psi_2(x) e^{-iE_2 T/\hbar}
+        $ 
+        \\
+        \\
+        \\
+        \emph{Because the Schr$\ddot{o}$dinger equation  is linear and homogeneous, any constant multiple of a solution is
+        also a solution. If this constant has a magnitude of 1, then the wave function will remain
+        normalized. Include the constant $e^{-irT}$.}
+        \\
+        \\
+        $
+          \Psi(x,T)=e^{-irT} \dfrac{3}{5} \psi_0(x) e^{-iE_0 T/\hbar}-e^{-irT}\dfrac{2\sqrt{2}}{5} \psi_1(x) e^{-iE_1 T/\hbar}+e^{-irT}\dfrac{2\sqrt{2}}{5} \psi_2(x) e^{-iE_2 T/\hbar} \\
+          \\
+          \\
+          \\
+          \begin{cases}
+            exp\left[-i T\left(r+\dfrac{\omega}{2}\right)\right]=1 \\
+            \\
+            exp\left[-i T\left(r+\dfrac{3\omega}{2}\right)\right]=-1 \\
+            \\
+            exp\left[-i T\left(r+\dfrac{5\omega}{2}\right)\right]=1
+          \end{cases}
+        $
+        \\
+        \\
+        \\
+        There’s only a solution if $r=-\dfrac{\omega}{2}+2\omega q$. \\
+        \\
+        \\
+        $
+          \begin{cases}
+            e^{2i \omega T}=1 \\
+            \\
+            e^{i \omega T}=-1 \\
+            \\
+            e^0=1
+          \end{cases} \Longrightarrow 
+          \begin{cases}
+            cos(2\omega T)+i ~ sin(2 \omega T)=1 \\
+            \\
+            cos(\omega T)+i ~ sin(\omega T)=-1
+          \end{cases} \Longrightarrow 
+          \begin{cases}
+            2 \omega T=2k \pi \\
+            \\
+            \omega T=k \pi
+          \end{cases}
+        $
+        \\
+        \\
+        Hence, the smallest possible value of T occurs when the integer $k=1 \longleftrightarrow T=\dfrac{\pi}{\omega}$.  
+      }
+
   \end{itemize}
 
-
-  \rule{15cm}{1pt}
+  \pagebreak
   
   \textbf{2.58} \\ \\
   In a monovalent metal, one electron per atom is free to roam
