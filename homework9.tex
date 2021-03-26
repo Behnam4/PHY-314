@@ -727,15 +727,282 @@
       $
       \\
       \\
-      \rule{15cm}{2pt}
+      \rule{15cm}{3pt}
       \\
       \\
       \textbf{Case $V_0-E=0$} \\
       \\
       \\
+      For this case the general solution is: \\
+      \\
+      \\
+      $
+        k \equiv \dfrac{\sqrt{2mV_0}}{\hbar} \\ \\
+        \psi(x)=\begin{cases}
+          A ~ e^{ika}+B ~ e^{-ika}  ~~~~~~~~~  x<-a \\
+          \\
+          Cx+D ~~~~~~~~~~~~ -a \leq x\leq +a \\
+          \\
+          F ~ e^{ika}+G ~ e^{-ikx}  ~~~~~~ x>a \\
+        \end{cases}
+      $
+      \\
+      \\
+      \\
+      We assume $\Psi(x,t)=\psi(x) \phi(t)$ is a solution, hence we have: \\
+      \\
+      $
+        \psi(x) \phi(t)=\begin{cases}
+          A ~ e^{i(kx-Et/\hbar)}+B ~ e^{-i(kx+Et/\hbar)}  ~~~~~~~~~  x<-a \\
+          \\
+          C x~ e^{-iEt/\hbar}+D ~ e^{-iEt/\hbar} ~~~~~~~~~~~~ -a \leq x\leq +a \\
+          \\
+          F ~ e^{i(kx-Et/\hbar)}+G ~ e^{-i(kx+Et/\hbar)}  ~~~~~~ x>a \\
+        \end{cases}
+        \\
+        \\
+        \\
+        \begin{cases}
+          \lim\limits_{x\to -a^-} \psi(x)=\lim\limits_{x\to -a^+} \psi(x): A ~ e^{-ika}+B ~ e^{ika}=-Ca+D ~~~~~~ \surd \\
+          \\
+          \lim\limits_{x\to a^-} \psi(x)=\lim\limits_{x\to a^+} \psi(x): F ~ e^{ika}+G ~ e^{-ika}=C a+D ~~~~~~ \surd
+        \end{cases}\\ 
+        \\
+        \\
+        \\
+        \bigints_{-a-\epsilon}^{-a+\epsilon} \dfrac{d^2 \psi}{dx^2} dx=\bigints_{-a-\epsilon}^{-a+\epsilon} \dfrac{2m \psi(x)}{\hbar^2} \left(V(x)-E\right) dx 
+        \\
+        \\
+        \\
+        \dfrac{d \psi}{dx} \Bigg|_{-a-\epsilon}^{-a+\epsilon}=-\bigints_{-a-\epsilon}^{-a} \dfrac{2m E \psi(x)}{\hbar^2} dx+\bigints_{-a}^{-a+\epsilon} \dfrac{2m \psi(V_0-E)}{\hbar^2} dx
+        =-\dfrac{2m V_0 \psi(-a)}{\hbar^2} \bigints_{-a-\epsilon}^{-a} dx \\
+        =-\dfrac{2mV_0 \epsilon \psi(-a)}{\hbar^2} \\
+        \\
+        \\
+        \\
+        \lim\limits_{\epsilon \to 0} \dfrac{d \psi}{dx} \Bigg|_{-a^-}^{-a^+}=0 \\
+        \\
+        \\
+        \\
+        \bigints_{a-\epsilon}^{a+\epsilon} \dfrac{d^2 \psi}{dx^2} dx=\bigints_{a-\epsilon}^{a+\epsilon} \dfrac{2m \psi(x)}{\hbar^2} \left(V(x)-E\right) dx 
+        \\
+        \\
+        \dfrac{d \psi}{dx} \Bigg|_{a-\epsilon}^{a+\epsilon}
+        =\bigints_{a-\epsilon}^{a} \dfrac{2m \psi(x)}{\hbar^2} \left(V_0-E\right)  dx-\bigints_{a}^{a+\epsilon} \dfrac{2mE \psi(x)}{\hbar^2} dx
+        =-\dfrac{2mV_0 \epsilon \psi(a)}{\hbar^2} 
+        \\
+        \\
+        \\
+        \lim\limits_{\epsilon \to 0} \dfrac{d \psi}{dx} \Bigg|_{a^-}^{a^+}=0 \\
+      $
+      \\
+      \\
+      \\
+      To summarize, there are four equations involving A, B, C, D, and F. G is set equal to zero: \\
+      \\
+      $
+        \begin{cases}
+          A ~ e^{-ika}+B ~ e^{ika}=-Ca+D \\
+          \\
+          F ~ e^{ika}=Ca+D \\
+          \\
+          ik\left(A ~ e^{-ika}-B ~ e^{ika}\right)=C \\
+          \\
+          ik \left(F e^{ika}\right)=C
+        \end{cases} \Longrightarrow \begin{cases}
+          C=ikF ~ e^{ika} \\
+          \\
+          D=Fe^{ika} \left(1-ika\right)
+        \end{cases} \Longrightarrow \begin{cases}
+          A ~ e^{-ika}+B ~ e^{ika}=F e^{ika} \left(1-2ika\right) \\
+          \\
+          A ~ e^{-ika}-B ~ e^{ika}=F ~ e^{ika}
+        \end{cases} 
+        \\
+        \\
+        \\
+        \Longrightarrow \begin{cases}
+          F=\dfrac{A ~ e^{-2ika}}{1-ika} \\
+          \\
+          B=-ikaF
+        \end{cases}
+      $
+      \\
+      \\
+      The transmission coefficient: \\
+      \\
+      $
+        T=\Bigg|\dfrac{F}{A}\Bigg|^2=\left(\dfrac{F}{A}\right) \left(\dfrac{F}{A}\right)^*=\left(\dfrac{e^{-2ika}}{1-ika}\right)\left(\dfrac{e^{2ika}}{1+ika}\right) \\
+        \\
+        \\
+        \therefore ~~~ T=\dfrac{\hbar^2}{\hbar^2+2ma^2 V_0} ~~~ \surd
+      $
+      \\
+      \\
+      The reflection coefficient: \\
+      \\
+      \\
+      $
+        R=\Bigg|\dfrac{B}{A}\Bigg|^2=\left(\dfrac{B}{A}\right) \left(\dfrac{B}{A}\right)^*=\left(-ika \dfrac{e^{-2ika}}{1-ika}\right) \left(ika \dfrac{e^{2ika}}{1+ika}\right) \\
+        \\
+        \\
+        \therefore ~~~ R=\dfrac{2ma^2 V_0}{2ma^2V_0+\hbar^2} ~~~~ \surd
+      $
+      \\
+      \\
+      \rule{15cm}{3pt} 
+      \\
+      \\
+      \textbf{Case $V_0-E<0$} \\
+      \\
+      \\
+      In this case, the genral solution is: \\
+      \\
+      \\
+      $
+        k \equiv \dfrac{\sqrt{2mE}}{\hbar} ~~~ and ~~~ \ell=\dfrac{\sqrt{2m(E-V_0)}}{\hbar}
+        \\ 
+        \\
+        \psi(x)=\begin{cases}
+          A ~ e^{ika}+B ~ e^{-ika}  ~~~~~~~~~  x<-a \\
+          \\
+          C_0 ~ sin(\ell x)+D_0 ~ cos(\ell a) ~~~~~~~~~~~~ -a \leq x\leq +a \\
+          \\
+          F ~ e^{ika}+G ~ e^{-ikx}  ~~~~~~ x>a \\
+        \end{cases}
+      $
+      We can show that for this case (I am skipping some steps), we have: \\
+      \\
+      \\
+      $
+        \begin{cases}
+          A ~ e^{-ika}+B ~ e^{ika}=-C_0 sin(\ell a)+D_0 ~ cos(\ell a) \\
+          \\
+          F ~ e^{ika}=C_0 ~ sin(\ell a)+D_0 ~ cos(\ell a) \\
+          \\
+          ik\left(A ~ e^{-ika}-B ~ e^{ika}\right)= \ell \left(C_0 ~ cos(\ell a)+D_0 ~ sin(\ell a)\right) \\
+          \\
+          \ell \left(C_0 ~ cos(\ell a)-D_0 ~ sin(\ell a)\right)=ikF ~ e^{ika}
+        \end{cases} 
+        \\
+        \\
+        \\
+        \begin{cases}
+          C_0 ~ sin(\ell a) cos(\ell a)+D_0 cos^2(\ell a)=F~e^{ika} cos(\ell a) \\
+          \\
+          C_0 ~ sin(\ell a)-D_0 ~ sin^2(\ell a)=\dfrac{ik}{\ell} F e^{ika} sin(\ell a)
+        \end{cases} \Longrightarrow \begin{cases}
+          D_0=F ~ e^{ika} \left(cos(\ell a)-\dfrac{ik}{\ell} sin(\ell a)\right) \\
+          \\
+          C_0=F ~ e^{ika} \left(sin(\ell a)+\dfrac{ik}{\ell} cos(\ell a)\right)
+        \end{cases}
+      $
+      We need to substitute these values into the first and the third equations. \\
+      \\
+      \\
+      $
+        A~ e^{-ika}+B ~ e^{ika}=-C_0 sin(\ell a)+D_0 cos(\ell a) \\
+        =-F ~ e^{ika} \left(sin(\ell a)+\dfrac{ik}{\ell} cos(\ell a)\right) sin(\ell a)+F ~ e^{ika} \left(cos(\ell a)-\dfrac{ik}{\ell} sin(\ell a)\right)  cos(\ell a) \\
+        =F ~ e^{ika} \left(cos(2 \ell a)-\dfrac{ik}{\ell} sin(2 \ell a)\right) \\
+        \\
+        \\
+        \\
+        \\
+        ik\left(A ~ e^{-ika}-B ~ e^{ika}\right)= C_0 ~ cos(\ell a)+D_0 ~ sin(\ell a) \\
+        = F ~ e^{ika} \left(sin(\ell a)+\dfrac{ik}{\ell} cos(\ell a)\right) ~ cos(\ell a)+F ~ e^{ika} \left(cos(\ell a)-\dfrac{ik}{\ell} sin(\ell a)\right) ~ sin(\ell a) \\
+        =F ~ e^{ika} \left(sin(2 \ell a)+\dfrac{ik}{\ell} cos(2 \ell a)\right) \\
+        \\
+        \\
+        \\
+        \Longrightarrow \begin{cases}
+          A e^{-ika}+B e^{ika}=F ~ e^{ika} \left(cos(2 \ell a)-\dfrac{ik}{\ell} sin(2 \ell a)\right)  \\
+          \\
+          A e^{-ika}-B e^{ika}=F ~ e^{ika} \left(sin(2 \ell a)+\dfrac{ik}{\ell} cos(2 \ell a)\right)
+        \end{cases} \Longrightarrow \begin{cases}
+          B=iF \dfrac{sin(2\ell a)}{2k \ell} \left(\ell^2-k^2\right) \\
+          \\
+          F=\dfrac{A ~ e^{-2ika}}{cos(2 \ell a)-i \dfrac{k^2+\ell^2}{2k \ell} sin(2 \ell a)}
+        \end{cases} \\
+        \\
+        \\
+      $
+      The transmission and reflection coefficients are: \\
+      \\
+      \\
+      $
+        T=\Bigg|\dfrac{F}{A}\Bigg|^2=\left(\dfrac{F}{A}\right)\left(\dfrac{F}{A}\right)^* \\
+        =\left(\dfrac{e^{-2ika}}{cos(2 \ell a)-i \dfrac{k^2+\ell^2}{2k \ell} sin(2 \ell a)}\right) \left(\dfrac{e^{2ika}}{cos(2 \ell a)+i \dfrac{k^2+\ell^2}{2k \ell} sin(2 \ell a)}\right) \\
+        \\
+        \\
+        T^{-1}=cos^2(2 \ell a)+\dfrac{(k^2+\ell^2)^2}{4 k^2 \ell^2} sin^2(2 \ell a) \\
+        \\
+        \\
+        \\
+        B=iF\dfrac{sin(2 \ell a)}{2 k \ell}\left(\ell^2-k^2\right)=i\left(\dfrac{A ~ e^{-2ika}}{cos(2 \ell a)-i \dfrac{k^2+\ell^2}{2k \ell} sin(2 \ell a)}\right)\dfrac{sin(2 \ell a)}{2 k \ell}\left(\ell^2-k^2\right) \\
+        \\
+        \\
+        R=\Bigg|\dfrac{B}{A}\Bigg|^2=\left(\dfrac{B}{A}\right) \left(\dfrac{B}{A}\right)^*
+        =\left(i\left(\dfrac{e^{-2ika}}{cos(2 \ell a)-i \dfrac{k^2+\ell^2}{2k \ell} sin(2 \ell a)}\right)\dfrac{sin(2 \ell a)}{2 k \ell}\left(\ell^2-k^2\right)\right) \\
+        \left(-i\left(\dfrac{e^{2ika}}{cos(2 \ell a)+i \dfrac{k^2+\ell^2}{2k \ell} sin(2 \ell a)}\right)\dfrac{sin(2 \ell a)}{2 k \ell}\left(\ell^2-k^2\right)\right) \\
+        \\
+        \\
+        \\
+        \therefore ~~~~ R^{-1}=1+\dfrac{4E(V_0+E)}{V_0^2} csc^2\left(\dfrac{2a \sqrt{2m(V_0+E)}}{\hbar}\right) ~~~ \surd
+      $
+      \\
+      \\
+      Now we need to plug in $\ell$ and $k$ into $R$ and $T$. \\
+      \\
+      \\
+      $
+        T^{-1}=cos^2(2 \ell a)+\dfrac{(k^2+\ell^2)^2}{4 k^2 \ell^2} sin^2(2 \ell a)
+        =cos^2(2 \ell a)+\dfrac{(2E-V_0)^2}{4E(E-V_0)} sin^2\left(\dfrac{2a \sqrt{2m(E-V_0)}}{\hbar}\right) \\
+        \\
+        \\
+        \\
+        \therefore ~~~~ T^{-1}=1+\dfrac{V^2_0}{4E(E-V_0)} sin^2\left(\dfrac{2a \sqrt{2m(E-V_0)}}{\hbar}\right) ~~~~ \surd \\
+        \\
+        \\
+        \\
+        \\
+        R=\dfrac{(\ell^2-k^2)^2}{4k^2 \ell^2} \dfrac{sin^2(2 \ell a)}{T^{-1}}=\dfrac{  \dfrac{V^2_0}{4E(E-V_0)} sin^2\left(\dfrac{2a \sqrt{2m(E-V_0)}}{\hbar}\right)}{1+\dfrac{V^2_0}{4E(E-V_0)} sin^2\left(\dfrac{2a \sqrt{2m(E-V_0)}}{\hbar}\right)} \\
+        \\
+        \\
+        \\
+        \therefore ~~~ R^{-1}=1+\dfrac{4E(E-V_0)}{V^2_0} csc^2 \left(\dfrac{2a \sqrt{2m(E-V_0)}}{\hbar}\right) ~~~~ \surd 
+        \\
+        \\
+        \\
+        \Longrightarrow T+R=1 ~~~~~ \surd
+      $
+      \\
+      \\
+      Result: \\
+      \\
+      \\
+      $
+      T^{-1}=\begin{cases}
+          1+\dfrac{V^2_0}{4E(V_0-E)} sinh^2\left(\dfrac{2a \sqrt{2m(V_0-E)}}{\hbar}\right) ~~~~~ E<V_0 \\
+          \\
+          \dfrac{\hbar^2+2ma^2 V_0}{\hbar^2} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ E=V_0 \\
+          \\
+          1+\dfrac{V^2_0}{4E(-V_0+E)} sinh^2\left(\dfrac{2a \sqrt{2m(-V_0+E)}}{\hbar}\right) ~~~ E>V_0
+        \end{cases} 
+        \\
+        \\
+        \\
+        \\
+        R^{-1}=\begin{cases}
+          1+\dfrac{4E(V_0-E)}{V^2_0} csch^2\left(\dfrac{2a \sqrt{2m(V_0-E)}}{\hbar}\right) ~~~~~~ E<V_0 \\
+          \\
+          \dfrac{\hbar^2+2ma^2 V_0}{2ma^2 V_0} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ E=V_0 \\
+          \\
+          1+\dfrac{4E(-V_0+E)}{V^2_0} csch^2\left(\dfrac{2a \sqrt{2m(-V_0+E)}}{\hbar}\right) ~~~ E>V_0
+        \end{cases} \\ \\
+        \\
+        \\
+      $
     }
-
-  \rule{15cm}{1pt}
   
   \textbf{2.40} \\ \\
   A particle of mass m in the harmonic oscillator potential (Equation 2.44) starts out in the state
