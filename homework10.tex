@@ -1,0 +1,132 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm]
+
+    \textsc{\LARGE Quantum Physics I }\\[1.5cm]
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework Ten}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Richard Kirian}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill 
+
+  \end{titlepage}
+
+
+  \textbf{2.13 Zettili} \\ \\
+  In the following expressions, where $\hat{A}$ is an operator, specify the nature of each expression 
+  (i.e., specify whether it is an operator, a bra, or a ket); then find its Hermitian conjugate.
+  \begin{itemize}
+    \item $\langle \phi | \hat{A} | \psi \rangle \langle  \psi |$
+
+    \item $\hat{A} | \psi \rangle \langle \phi |$
+    
+    \item $\langle \phi | \hat{A} | \psi \rangle | \psi \rangle \langle \phi | \hat{A}$
+    
+    \item $\langle \psi | \hat{A} | \phi \rangle | \phi \rangle + i \hat{A} | \psi \rangle$
+    
+    \item $\left(| \phi \rangle  \langle \phi | \hat{A} \right)-i\left(\hat{A} | \psi \rangle \langle \psi |\right)$
+  \end{itemize}
+
+  \rule{15cm}{1pt}
+
+  \textbf{3.5} \\ \\
+  \begin{enumerate}
+    \item Find the Hermitian conjugates of $x, i$ and $\dfrac{d}{dx}$
+
+    \item Show that $(\hat{Q} \hat{R})^{\dagger}=\hat{R}^{\dagger} \hat{Q}^{\dagger}$ 
+    (note the reversed order), $(\hat{Q}+\hat{R})=\hat{Q}^{\dagger}+\hat{R}^{\dagger}$, and 
+    $(c \hat{Q})^{\dagger}=c^* \hat{Q}^{\dagger}$ for a complex number c.
+
+
+    \item Construct the Hermitian conjugate of $a_+$ (Equation 2.48).
+  \end{enumerate}
+
+  \rule{15cm}{1pt}
+
+  \textbf{3.7} \\ \\
+  \begin{itemize}
+    \item Suppose that $f(x)$ and $g(x)$ are two eigenfunctions of an operator $\hat{Q}$,
+    with the same eigenvalue $q$. Show that any linear combination of $f$ and $q$ is
+    itself an eigenfunction of $\hat{Q}$, with eigenvalue $q$.
+
+
+    \item Check that $f(x)=exp(x)$ and $g(x)=exp(-x)$ are eigenfunctions of
+    the operator $\dfrac{d^2}{dx^2}$, with the same eigenvalue. Construct two linear
+    combinations of $f$ and $g$ that are orthogonal eigenfunctions on the interval $(-1,1)$.
+    
+  \end{itemize}
+
+
+  \rule{15cm}{1pt}
+
+  \textbf{3.10} \\ \\
+  Is the ground state of the infinite square well an eigenfunction of
+  momentum? If so, what is its momentum? If not, why not? [For further
+  discussion, see Problem 3.34.]
+
+
+  \rule{15cm}{1pt}
+
+  \textbf{3.33} \\ \\
+  An operator $\hat{A}$, representing observable
+  A, has two (normalized) eigenstates $\psi_1$ and $\psi_2$ with eigenvalues $a_1$ and $a_2$
+  ,respectively. Operator $\hat{B}$ representing observable B, has two (normalized)
+  eigenstates $\phi_1$ and $\phi_2$, with eigenvalues and . The eigenstates are related
+  by
+  $$\psi_1=\dfrac{3\phi_1+4\phi_2}{5}, ~~~ \psi_2=\dfrac{4\phi_1-3\phi_2}{5}$$
+  \begin{itemize}
+    \item Observable A is measured, and the value $a_1$ is obtained. What is the state
+    of the system (immediately) after this measurement?
+
+    \item If B is now measured, what are the possible results, and what are their
+    probabilities?
+    
+    \item Right after the measurement of B, A is measured again. What is the
+    probability of getting $a_1$? (Note that the answer would be quite different if
+    I had told you the outcome of the B measurement.)
+    
+  \end{itemize}
+
+\end{document}
