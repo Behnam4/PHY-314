@@ -125,26 +125,26 @@
 
     \item Construct the Hermitian conjugate of $a_+$ (Equation 2.48).
 
-    \textcolor{hwColor}{
-      $
-        a_+=\dfrac{1}{\sqrt{2 \hbar m \omega}} \left(m \omega x-ip\right)
-        =\dfrac{1}{\sqrt{2 \hbar m \omega}} \left[m \omega x-i\left(-i\hbar \dfrac{\partial}{\partial x}\right)\right]
-        =\dfrac{1}{\sqrt{2 \hbar m \omega}} \left(m \omega x-\hbar \dfrac{\partial}{\partial x} \right) \\
-        \\
-        \\
-        \langle f | a_+ g \rangle=\dfrac{1}{\sqrt{2 \hbar m \omega}} \left( m \omega \bigints\limits_{-\infty}^{+\infty} xgf^* dx-\bigints\limits_{-\infty}^{+\infty} \hbar f^* \left(\dfrac{\partial g}{\partial x}\right) dx\right) \\
-        \\
-        =\dfrac{1}{\sqrt{2 \hbar m \omega}}  \left[
-          m \omega \bigints\limits_{-\infty}^{+\infty} (xf)^* g dx+ \bigints\limits_{-\infty}^{+\infty} \hbar \left(\dfrac{\partial f}{\partial x}\right)^* gdx
-        \right] 
-        \\
-        \\
-        =\langle a^{\dagger}_+ f | g \rangle=\langle a_- f|g \rangle \\
-        \\
-        \\
-        \therefore ~~~ a^{\dagger}_+=a_- ~~~ \surd  
-      $
-    }
+      \textcolor{hwColor}{
+        $
+          a_+=\dfrac{1}{\sqrt{2 \hbar m \omega}} \left(m \omega x-ip\right)
+          =\dfrac{1}{\sqrt{2 \hbar m \omega}} \left[m \omega x-i\left(-i\hbar \dfrac{\partial}{\partial x}\right)\right]
+          =\dfrac{1}{\sqrt{2 \hbar m \omega}} \left(m \omega x-\hbar \dfrac{\partial}{\partial x} \right) \\
+          \\
+          \\
+          \langle f | a_+ g \rangle=\dfrac{1}{\sqrt{2 \hbar m \omega}} \left( m \omega \bigints\limits_{-\infty}^{+\infty} xgf^* dx-\bigints\limits_{-\infty}^{+\infty} \hbar f^* \left(\dfrac{\partial g}{\partial x}\right) dx\right) \\
+          \\
+          =\dfrac{1}{\sqrt{2 \hbar m \omega}}  \left[
+            m \omega \bigints\limits_{-\infty}^{+\infty} (xf)^* g dx+ \bigints\limits_{-\infty}^{+\infty} \hbar \left(\dfrac{\partial f}{\partial x}\right)^* gdx
+          \right] 
+          \\
+          \\
+          =\langle a^{\dagger}_+ f | g \rangle=\langle a_- f|g \rangle \\
+          \\
+          \\
+          \therefore ~~~ a^{\dagger}_+=a_- ~~~ \surd  
+        $
+      }
 
   \end{enumerate}
 
@@ -156,10 +156,57 @@
     with the same eigenvalue $q$. Show that any linear combination of $f$ and $q$ is
     itself an eigenfunction of $\hat{Q}$, with eigenvalue $q$.
 
+      \textcolor{hwColor}{
+        $
+          \begin{cases}
+            \hat{Q} f=qf \\
+            \\
+            \hat{Q} g=qg
+          \end{cases} 
+          \\
+          \\
+          h(x)=af(x)+bg(x)
+        $ \\
+        \\
+        $a$ and $b$ are constants. \\
+        \\
+        $
+          \hat{Q} h= \hat{Q} \left(bg+af\right)=a \left(\hat{Q} f\right)+b \left(\hat{Q} g\right)=a(qf)+b(qg) 
+          \Longrightarrow \hat{Q} h=qh 
+        $ \\
+        \\
+        We just showed that the linear combination of $f$ and $q$ is an eigenfunction. \\
+      }
+
 
     \item Check that $f(x)=exp(x)$ and $g(x)=exp(-x)$ are eigenfunctions of
     the operator $\dfrac{d^2}{dx^2}$, with the same eigenvalue. Construct two linear
     combinations of $f$ and $g$ that are orthogonal eigenfunctions on the interval $(-1,1)$.
+
+      \textcolor{hwColor}{
+        $
+          \begin{cases}
+            \dfrac{d^2 f}{dx^2}=\dfrac{d^2}{dx^2} \left(e^x\right)=e^x=f \\
+            \\
+            \dfrac{d^2 g}{dx^2}=\dfrac{d^2}{dx^2} \left(e^{-x}\right)=e^{-x}=g
+          \end{cases}
+        $ \\
+        \\
+        \\
+        Hence, $f(x)$ and $g(x)$ are eigenfunctions of $\dfrac{d^2}{dx^2}$ witht the same eigenvalue of 1. \\
+        \\
+        Two linear combinations: \\
+        \\
+        $
+          \begin{cases}
+            cosh(x)=\dfrac{e^x+e^{-x}}{2}=\dfrac{f+g}{2} \\
+            \\
+            sinh(x)=\dfrac{e^x-e^{-x}}{2}=\dfrac{f-g}{2} 
+          \end{cases}
+        $ \\
+        \\
+        The two linear combinations are $\bot. ~~~~ \surd$
+      }
     
   \end{itemize}
 
