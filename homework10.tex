@@ -244,19 +244,57 @@
   An operator $\hat{A}$, representing observable
   A, has two (normalized) eigenstates $\psi_1$ and $\psi_2$ with eigenvalues $a_1$ and $a_2$
   ,respectively. Operator $\hat{B}$ representing observable B, has two (normalized)
-  eigenstates $\phi_1$ and $\phi_2$, with eigenvalues and . The eigenstates are related
+  eigenstates $\phi_1$ and $\phi_2$, with eigenvalues $b_1$ and $b_2$. The eigenstates are related
   by
   $$\psi_1=\dfrac{3\phi_1+4\phi_2}{5}, ~~~ \psi_2=\dfrac{4\phi_1-3\phi_2}{5}$$
   \begin{itemize}
     \item Observable A is measured, and the value $a_1$ is obtained. What is the state
     of the system (immediately) after this measurement?
 
+      \textcolor{hwColor}{
+        After this measurement, the system is in only one of the two $\psi_1$ and $\psi_2$. 
+        Since the value of $a_1$ is obtained from observable A then the state of the system 
+        (immediately) after this measurement is $\psi_1$.
+      }
+
     \item If B is now measured, what are the possible results, and what are their
     probabilities?
-    
+
+      \textcolor{hwColor}{
+        We just showed that the system is in state $\psi_1$ and we are interested in observable B. So let's find
+        use $$\psi_1=\dfrac{3\phi_1+4\phi_2}{5}$$
+        Based on this equation, there are only two possible outcomes.
+        \\
+        \begin{itemize}
+          \item A) $\phi_1$ and eigenvalue $b_1$
+          \\
+          \item B) $\phi_2$ and eigenvalue $b_2$ 
+        \end{itemize}
+      }
+
+      \textcolor{hwColor}{
+        We know the probabilities, because we interpret the squared modules of the coefficients in the 
+        basis expansion as the probabilities of measuring the certain eigenvalue, therefore the probability
+        of $b_1$ is $\left(\dfrac{3}{5}\right)^2=\dfrac{9}{25}$ and the probability of $b_2$ is 
+        $\left(\dfrac{4}{5}\right)^2=\dfrac{16}{25}$.
+      }
+
     \item Right after the measurement of B, A is measured again. What is the
     probability of getting $a_1$? (Note that the answer would be quite different if
     I had told you the outcome of the B measurement.)
+
+      \textcolor{hwColor}{
+        In this case we do not know the outcome of the B measurement so we cannot know in which state 
+        the system is in afterward. what we can do is that sum up the probabilities.
+        \\
+        \\
+        $
+          P=\left(\dfrac{9}{25}\right)^2+\left(\dfrac{16}{25}\right)^2 \\
+          \\
+          \\
+          \therefore ~~~ P=0.5392  ~~~ \surd 
+        $
+      }
     
   \end{itemize}
 
