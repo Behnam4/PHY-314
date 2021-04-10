@@ -75,12 +75,77 @@
   \begin{enumerate}
     \item Find the Hermitian conjugates of $x, i$ and $\dfrac{d}{dx}$
 
+      \textcolor{hwColor}{
+        Let's define the Hermitian conjugates before we start. The Hermitian conjugates 
+        of an operator $\hat{S}$ is $\hat{S}^{\dagger}$ so that 
+        $$\langle f | \hat{S} g \rangle= \langle\hat{S}^{\dagger} f | g \rangle$$
+        \\
+        $
+          \langle f | xg \rangle=\bigints\limits_{-\infty}^{+\infty} xgf^* dx=\bigints\limits_{-\infty}^{+\infty} g(xf)^* dx=\langle x f|g \rangle \\
+          \\
+          \\
+          \therefore ~~~ x=x^{\dagger} ~~~ \surd 
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          \langle f | ig \rangle=\bigints\limits_{-\infty}^{+\infty} igf^* dx=\bigints\limits_{-\infty}^{+\infty} g(-if)^* dx=\langle -i f|g \rangle \\
+          \\
+          \\
+          \therefore ~~~ i^{\dagger}=-i ~~~ \surd
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          \langle f | \dfrac{d g}{dx} \rangle=\bigints\limits_{-\infty}^{+\infty} \dfrac{dg}{dx} f^* dx=-\bigints\limits_{-\infty}^{+\infty} g\left(\dfrac{df}{dx}\right)^* dx+f^* g\Big|_{-\infty}^{+\infty}=-\bigints\limits_{-\infty}^{+\infty} g\left(\dfrac{df}{dx}\right)^* dx \\
+          \\
+          \\
+          \therefore ~~~ \left(\dfrac{d}{dx}\right)^{\dagger}=-\dfrac{d}{dx} ~~~ \surd
+        $
+      }
+
     \item Show that $(\hat{Q} \hat{R})^{\dagger}=\hat{R}^{\dagger} \hat{Q}^{\dagger}$ 
     (note the reversed order), $(\hat{Q}+\hat{R})=\hat{Q}^{\dagger}+\hat{R}^{\dagger}$, and 
     $(c \hat{Q})^{\dagger}=c^* \hat{Q}^{\dagger}$ for a complex number c.
 
+      \textcolor{hwColor}{
+        $
+          \langle f| \hat{Q} \hat{R} g \rangle=\langle \hat{Q}^{\dagger} f | Rg \rangle=\langle \hat{R}^{\dagger} \hat{Q}^{\dagger} f | g \rangle \\
+          \\
+          \\
+          Note: ~~~ \langle f |\hat{Q} \hat{R} g \rangle=\langle \left(\hat{Q} \hat{R}\right)^{\dagger} f | g \rangle \\
+          \\
+          \\
+          \therefore ~~~  \langle \hat{R}^{\dagger} \hat{Q}^{\dagger} f | g \rangle=\langle \left(\hat{Q} \hat{R}\right)^{\dagger} f | g \rangle 
+          \Longrightarrow \left(\hat{Q} \hat{R}\right)^{\dagger}= \hat{R}^{\dagger} \hat{Q}^{\dagger} ~~~ \surd
+        $
+      }
 
     \item Construct the Hermitian conjugate of $a_+$ (Equation 2.48).
+
+    \textcolor{hwColor}{
+      $
+        a_+=\dfrac{1}{\sqrt{2 \hbar m \omega}} \left(m \omega x-ip\right)
+        =\dfrac{1}{\sqrt{2 \hbar m \omega}} \left[m \omega x-i\left(-i\hbar \dfrac{\partial}{\partial x}\right)\right]
+        =\dfrac{1}{\sqrt{2 \hbar m \omega}} \left(m \omega x-\hbar \dfrac{\partial}{\partial x} \right) \\
+        \\
+        \\
+        \langle f | a_+ g \rangle=\dfrac{1}{\sqrt{2 \hbar m \omega}} \left( m \omega \bigints\limits_{-\infty}^{+\infty} xgf^* dx-\bigints\limits_{-\infty}^{+\infty} \hbar f^* \left(\dfrac{\partial g}{\partial x}\right) dx\right) \\
+        \\
+        =\dfrac{1}{\sqrt{2 \hbar m \omega}}  \left[
+          m \omega \bigints\limits_{-\infty}^{+\infty} (xf)^* g dx+ \bigints\limits_{-\infty}^{+\infty} \hbar \left(\dfrac{\partial f}{\partial x}\right)^* gdx
+        \right] 
+        \\
+        \\
+        =\langle a^{\dagger}_+ f | g \rangle=\langle a_- f|g \rangle \\
+        \\
+        \\
+        \therefore ~~~ a^{\dagger}_+=a_- ~~~ \surd  
+      $
+    }
+
   \end{enumerate}
 
   \rule{15cm}{1pt}
