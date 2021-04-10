@@ -60,13 +60,78 @@
   \begin{itemize}
     \item $\langle \phi | \hat{A} | \psi \rangle \langle  \psi |$
 
+      \textcolor{hwColor}{
+        $
+          \left(\langle \phi | \hat{A} | \psi \rangle \langle  \psi |\right)^{\dagger} \\
+          \\
+          =\left(\langle \psi | \right)^{\dagger} \left(\langle \phi | \hat{A} | \psi \rangle\right)^{\dagger} \\
+          \\
+          =| \psi \rangle \langle \psi | \hat{A}^{\dagger} | \phi \rangle
+        $ 
+        \\
+        \\
+        This is a bra.  $\surd$
+      }
+
     \item $\hat{A} | \psi \rangle \langle \phi |$
+
+      \textcolor{hwColor}{
+        $
+          \left(\hat{A} | \psi \rangle \langle \phi |\right)^{\dagger} \\
+          \\
+          =\left(\langle \phi |\right)^{\dagger} \left(\hat{A} | \psi \rangle\right)^{\dagger}\\
+          \\
+          =| \phi \rangle \langle \psi | \hat{A}^{\dagger}
+        $ 
+        \\
+        \\
+        This is an operator.  $\surd$
+      }
     
     \item $\langle \phi | \hat{A} | \psi \rangle | \psi \rangle \langle \phi | \hat{A}$
+
+      \textcolor{hwColor}{
+        $
+          \left(\langle \phi | \hat{A} | \psi \rangle | \psi \rangle \langle \phi | \hat{A}\right)^{\dagger} \\
+          \\
+          =\left(\langle \phi | \hat{A} | \psi \rangle\right)^{\dagger} \left(| \psi \rangle \langle \phi | \hat{A}\right)^{\dagger} \\ 
+          \\
+          =\langle \psi | \hat{A}^{\dagger} | \phi \rangle \left(\langle | \hat{A}\right)^{\dagger} \left(| \psi \rangle\right)^{\dagger} \\
+          \\
+          =\langle \psi | \hat{A}^{\dagger} | \phi \rangle \hat{A}^{\dagger} | \phi \rangle \langle \psi |
+        $
+        \\
+        \\
+        This is an operator. $\surd$
+      }
     
     \item $\langle \psi | \hat{A} | \phi \rangle | \phi \rangle + i \hat{A} | \psi \rangle$
+
+      \textcolor{hwColor}{
+        $
+          \left[\langle \psi | \hat{A} | \phi \rangle | \phi \rangle + i \hat{A} | \psi \rangle\right]^{\dagger} \\
+          \\
+          =\left(\langle \psi | \hat{A} | \phi \rangle | \phi \rangle \right)^{\dagger}+ \left(i \hat{A} | \psi \rangle\right)^{\dagger} \\
+          \\
+          =\langle \phi | \langle \phi | \hat{A}^{\dagger} | \psi \rangle-i \langle \psi | \hat{A}^{\dagger} \\
+          \\ 
+        $
+        This is a ket. $\surd$
+      }
     
-    \item $\left(| \phi \rangle  \langle \phi | \hat{A} \right)-i\left(\hat{A} | \psi \rangle \langle \psi |\right)$
+    \item $\left(| \phi \rangle  \langle \phi | \hat{A} \right)-i\left(\hat{A} | \psi \rangle \langle \psi |\right)$ 
+
+      \textcolor{hwColor}{
+        $
+          \left[\left(| \phi \rangle  \langle \phi | \hat{A} \right)-i\left(\hat{A} | \psi \rangle \langle \psi |\right)\right]^{\dagger} \\
+          \\
+          =\hat{A}^{\dagger} | \phi \rangle \langle \phi |+iA |\psi \rangle \langle \psi |
+        $
+        \\
+        \\
+        This is an operator.  $\surd$
+      }
+
   \end{itemize}
 
   \rule{15cm}{1pt}
@@ -105,6 +170,8 @@
           \therefore ~~~ \left(\dfrac{d}{dx}\right)^{\dagger}=-\dfrac{d}{dx} ~~~ \surd
         $
       }
+
+    \pagebreak
 
     \item Show that $(\hat{Q} \hat{R})^{\dagger}=\hat{R}^{\dagger} \hat{Q}^{\dagger}$ 
     (note the reversed order), $(\hat{Q}+\hat{R})=\hat{Q}^{\dagger}+\hat{R}^{\dagger}$, and 
